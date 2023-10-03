@@ -44,7 +44,13 @@
     } ],
     "codeMode" : "sparse",
     "buildSystem" : "maven",
-    "externalDependencies" : [ ],
+    "externalDependencies" : [ {
+      "type" : "pypi",
+      "id" : "8Gc6e",
+      "name" : "Prophecy Spark AI (Python)",
+      "enabled" : true,
+      "package" : "prophecy-spark-ai==0.1.8"
+    } ],
     "dependentProjectExternalDependencies" : [ {
       "projectUID" : "289",
       "projectName" : "ProphecySparkBasicsPython",

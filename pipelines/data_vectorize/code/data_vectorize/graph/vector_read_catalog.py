@@ -7,4 +7,4 @@ from data_vectorize.config.ConfigStore import *
 from data_vectorize.udfs.UDFs import *
 
 def vector_read_catalog(spark: SparkSession) -> DataFrame:
-    return spark.read.table("`spark_catalog`.`default`.`text_vectorized`")
+    return spark.read.table("`spark_catalog`.`default`.`content_vectorized`")

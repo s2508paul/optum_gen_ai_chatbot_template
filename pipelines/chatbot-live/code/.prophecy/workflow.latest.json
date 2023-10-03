@@ -38,7 +38,13 @@
     "hadoopConf" : [ ],
     "codeMode" : "sparse",
     "buildSystem" : "maven",
-    "externalDependencies" : [ ],
+    "externalDependencies" : [ {
+      "type" : "pypi",
+      "id" : "8Gc6e",
+      "name" : "Prophecy Spark AI (Python)",
+      "enabled" : true,
+      "package" : "prophecy-spark-ai==0.1.8"
+    } ],
     "dependentProjectExternalDependencies" : [ {
       "projectUID" : "289",
       "projectName" : "ProphecySparkBasicsPython",
@@ -643,7 +649,7 @@
       "metadata" : {
         "label" : "extract_fields",
         "slug" : "extract_fields",
-        "x" : -2320,
+        "x" : -2340,
         "y" : -600,
         "phase" : 0,
         "cache" : false,
@@ -762,7 +768,7 @@
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "F3XNk8IzReFhx3s_WVymH$$KLNuCOLlQccyuaW-38BvM##timestamp", "F3XNk8IzReFhx3s_WVymH$$KLNuCOLlQccyuaW-38BvM##value", "F3XNk8IzReFhx3s_WVymH$$KLNuCOLlQccyuaW-38BvM##value.msg" ]
+        "columnsSelector" : [ "F3XNk8IzReFhx3s_WVymH$$KLNuCOLlQccyuaW-38BvM##timestamp", "F3XNk8IzReFhx3s_WVymH$$KLNuCOLlQccyuaW-38BvM##value.msg", "F3XNk8IzReFhx3s_WVymH$$KLNuCOLlQccyuaW-38BvM##value" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",

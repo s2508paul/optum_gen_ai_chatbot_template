@@ -179,7 +179,12 @@ sqlSeeds: {}
 sqlSources: {}
 sqlUnreferencedSources: {}
 sqlPipeline: null
-dependencies: '[]'
+dependencies:
+- type: pypi
+  id: 8Gc6e
+  name: Prophecy Spark AI (Python)
+  enabled: false
+  package: prophecy-spark-ai==0.1.8
 projectDependencies:
   '289':
     projectUID: 289

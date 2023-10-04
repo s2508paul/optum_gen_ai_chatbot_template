@@ -21,7 +21,7 @@ def pipeline(spark: SparkSession) -> None:
     df_collect_results = collect_results(spark, df_formatting_timestamp)
     df_answer_question = answer_question(spark, df_collect_results)
     df_prepare_payload = prepare_payload(spark, df_answer_question)
-    bot_message(spark, df_prepare_payload)
+    bot_message(spark)
 
 def main():
     spark = SparkSession.builder\
@@ -32,15 +32,15 @@ def main():
                 .getOrCreate()\
                 .newSession()
     Utils.initializeFromArgs(spark, parse_args())
-    spark.conf.set("prophecy.metadata.pipeline.uri", "pipelines/chatbot-live")
+    spark.conf.set("prophecy.metadata.pipeline.uri", "pipelines/chatbot-msk")
     registerUDFs(spark)
 
     try:
         
-        MetricsCollector.start(spark = spark, pipelineId = "pipelines/chatbot-live", config = Config)
+        MetricsCollector.start(spark = spark, pipelineId = "pipelines/chatbot-msk", config = Config)
     except :
         
-        MetricsCollector.start(spark = spark, pipelineId = "pipelines/chatbot-live")
+        MetricsCollector.start(spark = spark, pipelineId = "pipelines/chatbot-msk")
 
     pipeline(spark)
     

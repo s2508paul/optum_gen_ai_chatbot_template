@@ -35,13 +35,7 @@
       "isSubscribedPipelineWithPipelineConfigs" : false
     },
     "sparkConf" : [ ],
-    "hadoopConf" : [ {
-      "name" : "fs.s3a.access.key",
-      "value" : "AKIAR6ESAR2JL6IENP4D"
-    }, {
-      "name" : "fs.s3a.secret.key",
-      "value" : "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"
-    } ],
+    "hadoopConf" : [ ],
     "codeMode" : "sparse",
     "buildSystem" : "maven",
     "externalDependencies" : [ {
@@ -680,7 +674,7 @@
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##url", "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##id", "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##openai_embedding" ]
+        "columnsSelector" : [ "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##id", "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##url", "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##content_chunk", "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##openai_embedding" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",

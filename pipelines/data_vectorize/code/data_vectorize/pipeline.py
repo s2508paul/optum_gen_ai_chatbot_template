@@ -26,8 +26,6 @@ def main():
                 .newSession()
     Utils.initializeFromArgs(spark, parse_args())
     spark.conf.set("prophecy.metadata.pipeline.uri", "pipelines/data_vectorize")
-    spark.sparkContext._jsc.hadoopConfiguration().set("fs.s3a.access.key", "AKIAR6ESAR2JL6IENP4D")
-    spark.sparkContext._jsc.hadoopConfiguration().set("fs.s3a.secret.key", "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")
     registerUDFs(spark)
 
     try:

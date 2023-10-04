@@ -6,21 +6,21 @@ from prophecy.libs import typed_lit
 from chatbotlive.config.ConfigStore import *
 from chatbotlive.udfs.UDFs import *
 
-def getQueries_kafka(spark: SparkSession) -> DataFrame:
+def getQueries_msk(spark: SparkSession) -> DataFrame:
     from pyspark.dbutils import DBUtils
     consumer_options = {
         "kafka.sasl.jaas.config": (
           f"kafkashaded.org.apache.kafka.common.security.scram.ScramLoginModule"
-          + f' required username="{DBUtils(spark).secrets.get(scope = "confluent", key = "usr")}" password="{DBUtils(spark).secrets.get(scope = "confluent", key = "pass_key")}";'
+          + f' required username="{DBUtils(spark).secrets.get(scope = "msk", key = "usr")}" password="{DBUtils(spark).secrets.get(scope = "msk", key = "pass_key")}";'
         ),
-        "kafka.sasl.mechanism": "PLAIN",
+        "kafka.sasl.mechanism": "SCRAM-SHA-512",
         "kafka.security.protocol": "SASL_SSL",
-        "kafka.bootstrap.servers": "pkc-p11xm.us-east-1.aws.confluent.cloud:9092",
+        "kafka.bootstrap.servers": "b-1.testvpc.zo3f1z.c4.kafka.eu-west-1.amazonaws.com:9096,b-2.testvpc.zo3f1z.c4.kafka.eu-west-1.amazonaws.com:9096",
         "kafka.session.timeout.ms": "6000",
         "group.id": "",
     }
-    consumer_options["subscribe"] = "prophecy"
-    consumer_options["startingOffsets"] = "latest"
+    consumer_options["subscribe"] = "prophecy-gen-ai"
+    consumer_options["startingOffsets"] = ""
     consumer_options["includeHeaders"] = False
 
     return (spark.readStream\

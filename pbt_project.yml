@@ -39,7 +39,23 @@ pipelines:
     datasets:
       inputs:
       - datasets/content_vectorized
-      - datasets/get_queries
+      - datasets/get_queries_msk
+      outputs:
+      - datasets/bot_message
+    subgraphs: []
+    dependencies: {}
+  pipelines/chatbot-msk:
+    name: chatbot-msk
+    description: ''
+    author: sumitpaul@prophecy.io
+    mode: stream
+    artefactID: ''
+    language: python
+    createdAt: '2023-10-04 16:09:18'
+    datasets:
+      inputs:
+      - datasets/content_vectorized
+      - datasets/get_queries_msk
       outputs:
       - datasets/bot_message
     subgraphs: []
@@ -84,19 +100,6 @@ datasets:
         description: ''
         author: sumitpaul@prophecy.io
         createdAt: '2023-10-03 11:36:38'
-  datasets/get_queries:
-    name: get_queries
-    description: ''
-    author: sumitpaul@prophecy.io
-    createdAt: '2023-10-03 13:50:09'
-    mode: stream
-    physicalDatasets:
-      sumit-dev-dbx:
-        fabricId: 42
-        datasetType: File
-        description: ''
-        author: sumitpaul@prophecy.io
-        createdAt: '2023-10-03 13:50:09'
   datasets/bot_message:
     name: bot_message
     description: ''
@@ -110,6 +113,19 @@ datasets:
         description: ''
         author: sumitpaul@prophecy.io
         createdAt: '2023-10-03 13:52:46'
+  datasets/get_queries_msk:
+    name: get_queries_msk
+    description: ''
+    author: sumitpaul@prophecy.io
+    createdAt: '2023-10-04 15:50:54'
+    mode: stream
+    physicalDatasets:
+      sumit-dev-dbx:
+        fabricId: 42
+        datasetType: File
+        description: ''
+        author: sumitpaul@prophecy.io
+        createdAt: '2023-10-04 15:50:54'
 templates: {}
 jobs: {}
 gemContainer:

@@ -1,8 +1,0 @@
-version: 1
-configurations:
-- default
-dependencies:
-- type: workflow
-  id: 8Gc6e
-  name: Prophecy Spark AI (Python)
-  enabled: true

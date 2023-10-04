@@ -20,7 +20,7 @@ def getQueries_msk(spark: SparkSession) -> DataFrame:
         "group.id": "",
     }
     consumer_options["subscribe"] = "prophecy-gen-ai"
-    consumer_options["startingOffsets"] = ""
+    consumer_options["startingOffsets"] = "latest"
     consumer_options["includeHeaders"] = False
 
     return (spark.readStream\

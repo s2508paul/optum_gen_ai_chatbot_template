@@ -44,22 +44,6 @@ pipelines:
       - datasets/bot_message
     subgraphs: []
     dependencies: {}
-  pipelines/chatbot-msk:
-    name: chatbot-msk
-    description: ''
-    author: sumitpaul@prophecy.io
-    mode: stream
-    artefactID: ''
-    language: python
-    createdAt: '2023-10-04 16:09:18'
-    datasets:
-      inputs:
-      - datasets/content_vectorized
-      - datasets/get_queries_msk
-      outputs:
-      - datasets/bot_message
-    subgraphs: []
-    dependencies: {}
 datasets:
   datasets/content_vectorized:
     name: content_vectorized

@@ -9,7 +9,7 @@ from chatbotlive.udfs.UDFs import *
 def bot_message(spark: SparkSession, in0: DataFrame):
     in0.writeStream\
         .format("delta")\
-        .option("checkpointLocation", "dbfs:/data_engg/datasets/bot5")\
+        .option("checkpointLocation", "dbfs:/data_engg/datasets/bot_answers")\
         .queryName("StreamingTarget_1_7vfVj539dWoKmuy_ZnuRz$$u8khMSATMH7m6BhoqRnpd")\
         .outputMode("complete")\
-        .toTable("spark_catalog.default.bot5")
+        .toTable("spark_catalog.default.bot_answers")

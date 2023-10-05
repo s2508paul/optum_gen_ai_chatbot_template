@@ -9,3 +9,8 @@ gen_ai
 
 gen-ai fixes
 
+
+
+*** Release notes for version: 1.3 ***
+
+msk support 

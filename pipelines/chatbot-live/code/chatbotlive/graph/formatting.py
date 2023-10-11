@@ -6,5 +6,5 @@ from prophecy.libs import typed_lit
 from chatbotlive.config.ConfigStore import *
 from chatbotlive.udfs.UDFs import *
 
-def farmatting(spark: SparkSession, in0: DataFrame) -> DataFrame:
+def formatting(spark: SparkSession, in0: DataFrame) -> DataFrame:
     return in0.select(col("text"), col("ts"), from_unixtime(col("ts")).cast(TimestampType()).alias("create_time"))

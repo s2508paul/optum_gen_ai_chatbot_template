@@ -209,14 +209,7 @@ class OpenSearchFormat(DatasetSpec):
             OpensearchDB(host,region,usr,secrets,service).register_udfs(spark)
 
             df_upserted = in0 \
-                .withColumn("_row_num",row_number().over(Window.partitionBy().orderBy(col(self.props.vector_id_column_name)))) \
-                .withColumn("_group_num", ceil(col("_row_num") / 20)) \
-                .withColumn("_id_vector", struct(lit(self.props.index_name).alias("_index"),col(self.props.vector_id_column_name).alias(self.props.vector_id_column_name),col(self.props.vector_content_column_name).alias(self.props.vector_content_column_name))) \
-                .withColumn("_id_vectors",to_json(col("_id_vector")))\
-                .groupBy(col("_group_num")) \
-                .agg(collect_list(col("_id_vectors")).alias("id_vectors")) \
-                .withColumn("upserted", expr("opensearch_upsert(id_vectors)")) \
-                .select(col("*"), col("upserted.*"))
+                .withColumn('upserted',expr(f"opensearch_upsert(\"{self.props.index_name}\",\"{self.props.vector_content_column_name}\",embedd, \"{self.props.vector_content_column_name}\", id)"))
             
             if self.props.status:
                 status_table = f"{self.props.status_catalog}.{self.props.status_database}.{self.props.status_table}" if self.props.status_is_uc else f"{self.props.status_database}.{self.props.status_table}"
@@ -226,12 +219,3 @@ class OpenSearchFormat(DatasetSpec):
                     df_upserted.write.format("delta").mode("overwrite").saveAsTable(status_table)
             else:
                 df_upserted.count()
-
-
-
-
-                
-            
-
-
-

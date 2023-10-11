@@ -34,6 +34,7 @@ class OpenSearchLookup(ComponentSpec):
         top_k: Optional[int] = 3
 
     def dialog(self) -> Dialog:
+        
         def iff(property_name: str, value, then: Atom) -> Condition:
             value_expr = BooleanExpr(value) if isinstance(value, bool) else StringExpr(str(value))
             return Condition().ifEqual(PropExpr(f"component.properties.{property_name}"), value_expr).then(then)
@@ -50,8 +51,8 @@ class OpenSearchLookup(ComponentSpec):
 
 
         credential_manual = ColumnsLayout(gap="1rem") \
-            .addElement(TextBox("AWS Key").bindPlaceholder("").bindProperty("credential_manual_api_key") \
-            .addElement(TextBox("AWS Secrets").bindPlaceholder("").bindProperty("credential_manual_api_secrets")
+            .addElement(TextBox("AWS Key").bindPlaceholder("").bindProperty("credential_manual_api_key")) \
+            .addElement(TextBox("AWS Secrets").bindPlaceholder("").bindProperty("credential_manual_api_secrets"))
         
         credential_db_or_manual = Condition() \
             .ifEqual(PropExpr("component.properties.credential_type"), StringExpr("databricks")) \
@@ -150,6 +151,6 @@ class OpenSearchLookup(ComponentSpec):
             return in0 \
                 .withColumn("_vector", col(self.props.vector_column_name)) \
                 .withColumn("_response",expr(f"opensearch_query(\"{self.props.index_name}\", \"{self.props.vector_column_name}\", _vector, {self.props.top_k})")) \
-                .withColumn("pinecone_matches", col("_response.matches")) \
-                .withColumn("pinecone_error", col("_response.error")) \
+                .withColumn("opensearch_matches", col("_response.matches")) \
+                .withColumn("opensearch_error", col("_response.error")) \
                 .drop("_vector", "_response")

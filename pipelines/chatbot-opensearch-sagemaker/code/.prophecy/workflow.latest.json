@@ -1,0 +1,2493 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1"
+    },
+    "id" : "1",
+    "uri" : "pipelines/chatbot-opensearch-sagemaker",
+    "language" : "python",
+    "fabricId" : "42",
+    "frontEndLanguage" : "sql",
+    "mode" : "stream",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "sumitpaulprophecyioteam.optumgenaichatbottemplate.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.streaming.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ {
+      "type" : "pypi",
+      "id" : "0d4Y6",
+      "name" : "opensearchpy",
+      "enabled" : false,
+      "package" : "opensearch-py"
+    } ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "289",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "291",
+      "projectName" : "ProphecyStreamingPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "290",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "chatbotopensearchsagemaker",
+    "configurationVersion" : "v1"
+  },
+  "connections" : [ {
+    "id" : "uKqtK8tbFO9uVPVueVs_o",
+    "source" : "0Au1n1rc93bQnavHWu8FH$$FQgXN29miTpgD-DJwKZbb",
+    "sourcePort" : "nRvOFcZ-uheLVXYhH-kvT$$kOmMWNjk44ocgYCbeD4Xs",
+    "target" : "V-EnuQ3erLe0KhG1AH2is$$3KbNbs7tNfDZyhki3AVmQ",
+    "targetPort" : "eU8yXRwvM0wAMyEEzm-95$$87lCPjpqm2Stz4cD3i1iO"
+  }, {
+    "id" : "hEjHCcPDZ73Ks3ffLD9N-",
+    "source" : "ObkmEvd3unOwavR3H899R$$aKvPSd9D7tamfjr4fjiYB",
+    "sourcePort" : "M4ZsL60IMOLRaXOiq4Xf4$$BBPRNiRrRkBqgiuke5SHR",
+    "target" : "FtwvIbY6NtkCIMfDbfV-T$$j43gl4SYzyrYzBaKoWnnY",
+    "targetPort" : "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D"
+  }, {
+    "id" : "S9jz4shrs-pf4y1gv6vYc",
+    "source" : "e4jpRg8cLPUWrINL_HUZt$$zTipQzlB6GBaLotPryge-",
+    "sourcePort" : "KQz06jY8AzvLCfIyHCpKF$$KH_7dCxsmvrRTYQvmG0KJ",
+    "target" : "0Au1n1rc93bQnavHWu8FH$$FQgXN29miTpgD-DJwKZbb",
+    "targetPort" : "eAdmnSRtgPnqAxeWqbqyV$$aKdv393LQblxf7tbs5tY6"
+  }, {
+    "id" : "Ir1Ub3So1Eu4p-g9YVJeD$$XxqkWFGYcUaI6uWa7oaRE",
+    "source" : "FtwvIbY6NtkCIMfDbfV-T$$j43gl4SYzyrYzBaKoWnnY",
+    "sourcePort" : "yvED7dp3Gis62VWr-hIZj$$ox0VuNbf06WXIpOhhvQn5",
+    "target" : "7YaXJlNyanLhwaDCDJ1zT$$PysBaot86CYLBz7bgGtuA",
+    "targetPort" : "4x2xy8gO5sEJ9t8astEYc$$wt1ocFVtXBdt-cG8E5fsT"
+  }, {
+    "id" : "DdLvFf7mRV7DlNlKD_qUG$$Ivdci961LdnC9YAFhsDCp",
+    "source" : "SBU0JkDz6gi57TbGVQGXG$$6Sav0KMPv0_mLmDyKXr0J",
+    "sourcePort" : "uO1tKVkIEFK6443_yCBIr$$zn_JGueSil90LqIBp8fzO",
+    "target" : "ObkmEvd3unOwavR3H899R$$aKvPSd9D7tamfjr4fjiYB",
+    "targetPort" : "ooVr8RTrAiTtFXAHYSno_$$gxldli3rXw-zgNZRwa-MI"
+  }, {
+    "id" : "Vq2fVReG19vEs63IDgMAl",
+    "source" : "-6Vpfx0gnXXwq98byDZfa$$JDGVuM5i38rjigMB9T2Sk",
+    "sourcePort" : "i7IfOVd-PhA5JCSRt1RBm$$dhZ8zHrVjDrY3nTA1ZmrS",
+    "target" : "SBU0JkDz6gi57TbGVQGXG$$6Sav0KMPv0_mLmDyKXr0J",
+    "targetPort" : "Jmk1BGEmoJXNYy_h0uuo6$$uOu0V1NPmXtHD3f3rbYVB"
+  }, {
+    "id" : "N-ZRqgSPw09f1LGa8Ucsb",
+    "source" : "qD_DL12zv8byiKjzKPNim$$7F8yKldV0V2od5bdKUk6j",
+    "sourcePort" : "N2bXwG4RWm4lsekGAUmyr$$wvCj5_Juch_Zahxddp27v",
+    "target" : "SBU0JkDz6gi57TbGVQGXG$$6Sav0KMPv0_mLmDyKXr0J",
+    "targetPort" : "jolLHWiVpkXCSoQuZiAek$$OgsPrLdF8p9ch00f3gJzh"
+  }, {
+    "id" : "zZNbHV6PbjpU7oyeXL6Lx$$dP3u59cq3v4vDqowZWp9v",
+    "source" : "iVRrshQ2a37FwtUpZ7zR5$$hgyniJjhayuF3q3rcKTSE",
+    "sourcePort" : "_G7WQB1-WUMsNIGtOWCw6$$NAdQN76yFkXdU8k8NFZTF",
+    "target" : "-qgmT2pV_023b84WIhRQp$$YOetBy6th6Tp3Z46okao6",
+    "targetPort" : "5scM-GNFADzekppgB4pKZ$$gXvMkwtJ0qHrv8lCXt_Gs"
+  }, {
+    "id" : "XVaS9_47yLB1yPFU-8I1B$$i_K1apR-bjNHsW7CBTDio",
+    "source" : "7YaXJlNyanLhwaDCDJ1zT$$PysBaot86CYLBz7bgGtuA",
+    "sourcePort" : "EI6ejugowh4dB07TppxO6$$hfEQPy1ccx5yS6-x0emWN",
+    "target" : "1w5R8Oqu_5ZlN4WJ8TmAk$$Q18VFDlvYrrCU8xghSj8f",
+    "targetPort" : "y2W6Mf13BPccR9OUBu3fb$$MmliCUK9n-9p5swM5krs7"
+  }, {
+    "id" : "nzI4Wu_1V1KZgZgx-Ld64",
+    "source" : "1w5R8Oqu_5ZlN4WJ8TmAk$$Q18VFDlvYrrCU8xghSj8f",
+    "sourcePort" : "t_ztcMG9roTBHtT3Ku2Qr$$x-MRelyfyPONbi8itt3oa",
+    "target" : "iVRrshQ2a37FwtUpZ7zR5$$hgyniJjhayuF3q3rcKTSE",
+    "targetPort" : "xAFKJ0pLHZJ3vp9ZJFijL$$Z5G_CdL0TNAimHcrJeUiR"
+  }, {
+    "id" : "XrzcjlEp2BgCaq1pLBchB$$q6kTBrw778ZcWtzG3qjIZ",
+    "source" : "Es9mbR--ls8py6AeJuyc0$$StdEl05LZI3EcDpHDhq0k",
+    "sourcePort" : "KAXa6NicBREAfCoelBqPE$$jTBgGP7mepEh0OX41CkIj",
+    "target" : "-6Vpfx0gnXXwq98byDZfa$$JDGVuM5i38rjigMB9T2Sk",
+    "targetPort" : "dg4HrKjHQuTYmcxbVnfiU$$ZEzKeU9uue8izEUcKVaMH"
+  }, {
+    "id" : "BQE3t9aEhroweisx2wBvI",
+    "source" : "O3ocFm1u4bZd-Pu1XwkcG$$_eMxxZX0aBK0tICJ1vb3z",
+    "sourcePort" : "7tHgpYT-ijEA31gZzCDKE$$5JuuiJCpmFhEbs7UnQp-j",
+    "target" : "Es9mbR--ls8py6AeJuyc0$$StdEl05LZI3EcDpHDhq0k",
+    "targetPort" : "aOYX41bOK-f-2tPRumg7b$$gqAt1vCUGNRcsvGFv1Gab"
+  }, {
+    "id" : "L_iUjbgDl9ynvjoQxsLtZ$$Uz4v6lakEfOyxpi5Erhw4",
+    "source" : "ruEHNO3t7Qr01UM_W3Xue$$8zXAB7bLwAXWNjV8Q1QNH",
+    "sourcePort" : "84qZX9gJqbM3PAsRe5Qql$$hNcQQ08R2YdUyyxwHq8Js",
+    "target" : "O3ocFm1u4bZd-Pu1XwkcG$$_eMxxZX0aBK0tICJ1vb3z",
+    "targetPort" : "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA"
+  }, {
+    "id" : "L5G-KeHfJAoYNiTDEMpap$$H4IzqbktPRhG5Ny9Kv0oG",
+    "source" : "V-EnuQ3erLe0KhG1AH2is$$3KbNbs7tNfDZyhki3AVmQ",
+    "sourcePort" : "wsaGOrINdOSzYmKXG48u6$$PCANZnyovYM_xYIweR27p",
+    "target" : "ruEHNO3t7Qr01UM_W3Xue$$8zXAB7bLwAXWNjV8Q1QNH",
+    "targetPort" : "Pf4qbrKZtH80hQyKN-iKx$$E6zK-g59R6tYuxdtEf-ej"
+  } ],
+  "processes" : {
+    "0Au1n1rc93bQnavHWu8FH$$FQgXN29miTpgD-DJwKZbb" : {
+      "id" : "0Au1n1rc93bQnavHWu8FH$$FQgXN29miTpgD-DJwKZbb",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "extract_fields",
+        "slug" : "extract_fields",
+        "x" : -880,
+        "y" : -240,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "eAdmnSRtgPnqAxeWqbqyV$$aKdv393LQblxf7tbs5tY6",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "key",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "value",
+              "type" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "msg",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "topic",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "partition",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "offset",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "timestamp",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "timestampType",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : true
+        } ],
+        "outputs" : [ {
+          "id" : "nRvOFcZ-uheLVXYhH-kvT$$kOmMWNjk44ocgYCbeD4Xs",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "text",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "value.msg"
+          },
+          "description" : ""
+        }, {
+          "target" : "ts",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(unix_timestamp(timestamp) as string)"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "eAdmnSRtgPnqAxeWqbqyV$$aKdv393LQblxf7tbs5tY6##timestamp", "eAdmnSRtgPnqAxeWqbqyV$$aKdv393LQblxf7tbs5tY6##value.msg", "eAdmnSRtgPnqAxeWqbqyV$$aKdv393LQblxf7tbs5tY6##value" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "e4jpRg8cLPUWrINL_HUZt$$zTipQzlB6GBaLotPryge-" : {
+      "id" : "e4jpRg8cLPUWrINL_HUZt$$zTipQzlB6GBaLotPryge-",
+      "component" : "StreamingSource",
+      "metadata" : {
+        "label" : "getQueries_msk",
+        "slug" : "getQueries_msk",
+        "x" : -1060,
+        "y" : -240,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "KQz06jY8AzvLCfIyHCpKF$$KH_7dCxsmvrRTYQvmG0KJ",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/get_queries_msk"
+      }
+    },
+    "V-EnuQ3erLe0KhG1AH2is$$3KbNbs7tNfDZyhki3AVmQ" : {
+      "id" : "V-EnuQ3erLe0KhG1AH2is$$3KbNbs7tNfDZyhki3AVmQ",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "formatting",
+        "slug" : "formatting",
+        "x" : -700,
+        "y" : -240,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "eU8yXRwvM0wAMyEEzm-95$$87lCPjpqm2Stz4cD3i1iO",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : true
+        } ],
+        "outputs" : [ {
+          "id" : "wsaGOrINdOSzYmKXG48u6$$PCANZnyovYM_xYIweR27p",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "text",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "text"
+          },
+          "description" : ""
+        }, {
+          "target" : "ts",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "ts"
+          },
+          "description" : ""
+        }, {
+          "target" : "create_time",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "CAST(from_unixtime(ts) AS TIMESTAMP)"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "eU8yXRwvM0wAMyEEzm-95$$87lCPjpqm2Stz4cD3i1iO##ts", "eU8yXRwvM0wAMyEEzm-95$$87lCPjpqm2Stz4cD3i1iO##text" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "-6Vpfx0gnXXwq98byDZfa$$JDGVuM5i38rjigMB9T2Sk" : {
+      "id" : "-6Vpfx0gnXXwq98byDZfa$$JDGVuM5i38rjigMB9T2Sk",
+      "component" : "FlattenSchema",
+      "metadata" : {
+        "label" : "explode_matches",
+        "slug" : "explode_matches",
+        "x" : -100,
+        "y" : -240,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "dg4HrKjHQuTYmcxbVnfiU$$ZEzKeU9uue8izEUcKVaMH",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "create_time",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "optum-embeddings",
+              "type" : {
+                "type" : "array",
+                "elementType" : "float",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bedrock_error",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "opensearch_matches",
+              "type" : {
+                "type" : "array",
+                "elementType" : {
+                  "type" : "struct",
+                  "fields" : [ {
+                    "name" : "id",
+                    "type" : "string",
+                    "nullable" : false,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "score",
+                    "type" : "float",
+                    "nullable" : false,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  } ]
+                },
+                "containsNull" : false
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "opensearch_error",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "i7IfOVd-PhA5JCSRt1RBm$$dhZ8zHrVjDrY3nTA1ZmrS",
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "opensearch_matches",
+              "type" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "id",
+                  "type" : "string",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "score",
+                  "type" : "float",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "create_time",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "explodedColsNewName" : [ {
+          "originalColToExplode" : "opensearch_matches",
+          "updatedColToExplode" : "opensearch_matches",
+          "colNameAfterExplode" : "opensearch_matches"
+        } ],
+        "fsExpressions" : [ {
+          "exploded" : "✓",
+          "flattenedExpression" : "opensearch_matches",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "opensearch_matches"
+          },
+          "targetTokens" : [ "opensearch_matches" ],
+          "target" : "opensearch_matches"
+        }, {
+          "exploded" : "",
+          "flattenedExpression" : "text",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "text"
+          },
+          "targetTokens" : [ "text" ],
+          "target" : "text"
+        }, {
+          "exploded" : "",
+          "flattenedExpression" : "ts",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "ts"
+          },
+          "targetTokens" : [ "ts" ],
+          "target" : "ts"
+        }, {
+          "exploded" : "",
+          "flattenedExpression" : "create_time",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "create_time"
+          },
+          "targetTokens" : [ "create_time" ],
+          "target" : "create_time"
+        } ],
+        "columnsSelector" : [ "dg4HrKjHQuTYmcxbVnfiU$$ZEzKeU9uue8izEUcKVaMH##opensearch_matches", "dg4HrKjHQuTYmcxbVnfiU$$ZEzKeU9uue8izEUcKVaMH##create_time", "dg4HrKjHQuTYmcxbVnfiU$$ZEzKeU9uue8izEUcKVaMH##ts", "dg4HrKjHQuTYmcxbVnfiU$$ZEzKeU9uue8izEUcKVaMH##text" ],
+        "explodeColumns" : [ ],
+        "delimiter" : "-"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/FlattenSchema",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "ObkmEvd3unOwavR3H899R$$aKvPSd9D7tamfjr4fjiYB" : {
+      "id" : "ObkmEvd3unOwavR3H899R$$aKvPSd9D7tamfjr4fjiYB",
+      "component" : "Watermark",
+      "metadata" : {
+        "label" : "with_watermark",
+        "slug" : "with_watermark",
+        "x" : 320,
+        "y" : -80,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ooVr8RTrAiTtFXAHYSno_$$gxldli3rXw-zgNZRwa-MI",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "opensearch_matches",
+              "type" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "id",
+                  "type" : "string",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "score",
+                  "type" : "float",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "create_time",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "embedding",
+              "type" : {
+                "type" : "array",
+                "elementType" : "float",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "url",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "content_chunk",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "M4ZsL60IMOLRaXOiq4Xf4$$BBPRNiRrRkBqgiuke5SHR",
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "opensearch_matches",
+              "type" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "id",
+                  "type" : "string",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "score",
+                  "type" : "float",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "create_time",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "embedding",
+              "type" : {
+                "type" : "array",
+                "elementType" : "float",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "url",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "content_chunk",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "watermarks" : [ {
+          "isStreamingDF" : false,
+          "portId" : "ooVr8RTrAiTtFXAHYSno_$$gxldli3rXw-zgNZRwa-MI",
+          "disableTextBox" : true,
+          "portSlug" : "in0",
+          "expression" : "create_time",
+          "watermarkValue" : "1 second"
+        } ],
+        "isWatermarkingEnabled" : true
+      },
+      "componentInfo" : {
+        "gemId" : "gems/Watermark",
+        "projectName" : "optum_gen_ai_chatbot_template"
+      }
+    },
+    "qD_DL12zv8byiKjzKPNim$$7F8yKldV0V2od5bdKUk6j" : {
+      "id" : "qD_DL12zv8byiKjzKPNim$$7F8yKldV0V2od5bdKUk6j",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "content_vectorized",
+        "slug" : "content_vectorized",
+        "x" : -180,
+        "y" : 20,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "N2bXwG4RWm4lsekGAUmyr$$wvCj5_Juch_Zahxddp27v",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/content_vectorized"
+      }
+    },
+    "iVRrshQ2a37FwtUpZ7zR5$$hgyniJjhayuF3q3rcKTSE" : {
+      "id" : "iVRrshQ2a37FwtUpZ7zR5$$hgyniJjhayuF3q3rcKTSE",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "prepare_payload",
+        "slug" : "prepare_payload",
+        "x" : 1020,
+        "y" : -80,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "xAFKJ0pLHZJ3vp9ZJFijL$$Z5G_CdL0TNAimHcrJeUiR",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "create_time",
+              "type" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "start",
+                  "type" : "timestamp",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "end",
+                  "type" : "timestamp",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "content_chunk",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "input",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "sagemaker_answer",
+              "type" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "choices",
+                  "type" : {
+                    "type" : "array",
+                    "elementType" : "string",
+                    "containsNull" : true
+                  },
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "error",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "_G7WQB1-WUMsNIGtOWCw6$$NAdQN76yFkXdU8k8NFZTF",
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "answer",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "create_time",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "create_time.start"
+          },
+          "description" : ""
+        }, {
+          "target" : "input",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "input"
+          },
+          "description" : ""
+        }, {
+          "target" : "answer",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "sagemaker_answer.choices[0]"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "xAFKJ0pLHZJ3vp9ZJFijL$$Z5G_CdL0TNAimHcrJeUiR##create_time.start", "xAFKJ0pLHZJ3vp9ZJFijL$$Z5G_CdL0TNAimHcrJeUiR##sagemaker_answer", "xAFKJ0pLHZJ3vp9ZJFijL$$Z5G_CdL0TNAimHcrJeUiR##sagemaker_answer.choices", "xAFKJ0pLHZJ3vp9ZJFijL$$Z5G_CdL0TNAimHcrJeUiR##input", "xAFKJ0pLHZJ3vp9ZJFijL$$Z5G_CdL0TNAimHcrJeUiR##create_time" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "1w5R8Oqu_5ZlN4WJ8TmAk$$Q18VFDlvYrrCU8xghSj8f" : {
+      "id" : "1w5R8Oqu_5ZlN4WJ8TmAk$$Q18VFDlvYrrCU8xghSj8f",
+      "component" : "SageMakerEndpoint",
+      "metadata" : {
+        "label" : "SageMakerEndpoint_1",
+        "slug" : "SageMakerEndpoint_1",
+        "x" : 860,
+        "y" : -80,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "y2W6Mf13BPccR9OUBu3fb$$MmliCUK9n-9p5swM5krs7",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "create_time",
+              "type" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "start",
+                  "type" : "timestamp",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "end",
+                  "type" : "timestamp",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "content_chunk",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "input",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "t_ztcMG9roTBHtT3Ku2Qr$$x-MRelyfyPONbi8itt3oa",
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "create_time",
+              "type" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "start",
+                  "type" : "timestamp",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "end",
+                  "type" : "timestamp",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "content_chunk",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "input",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "sagemaker_answer",
+              "type" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "choices",
+                  "type" : {
+                    "type" : "array",
+                    "elementType" : "string",
+                    "containsNull" : true
+                  },
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "error",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
+      },
+      "properties" : {
+        "model_max_new_tokens" : 512,
+        "aws_region" : "eu-west-1",
+        "credential_manual_secret" : "",
+        "qa_query_column_name" : "input",
+        "credential_manual_key" : "",
+        "model_top_p" : "0.9",
+        "credential_type" : "databricks",
+        "order_by_column" : null,
+        "credential_db_scope" : "aws_main",
+        "model_temperature" : "0.6",
+        "credential_db_secret" : "secret_value",
+        "operation" : "answer_question",
+        "embed_text_column_name" : null,
+        "qa_context_column_name" : "content_chunk",
+        "credential_db_key" : "secret_key",
+        "model_endpoint_name" : "meta-textgeneration-llama-2-7b-f-2023-10-09-19-36-35-366",
+        "limit" : "10",
+        "qa_template" : "Answer the question based on the context below.\nContext:\n```\n{context}\n```\nQuestion: \n```\n{query}\n```\nAnswer:\n",
+        "group_data" : true
+      },
+      "componentInfo" : {
+        "gemId" : "gems/SageMakerEndpoint",
+        "projectName" : "optum_gen_ai_chatbot_template"
+      }
+    },
+    "7YaXJlNyanLhwaDCDJ1zT$$PysBaot86CYLBz7bgGtuA" : {
+      "id" : "7YaXJlNyanLhwaDCDJ1zT$$PysBaot86CYLBz7bgGtuA",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "collect_results",
+        "slug" : "collect_results",
+        "x" : 700,
+        "y" : -80,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "4x2xy8gO5sEJ9t8astEYc$$wt1ocFVtXBdt-cG8E5fsT",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "opensearch_matches",
+              "type" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "id",
+                  "type" : "string",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "score",
+                  "type" : "float",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "create_time",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "embedding",
+              "type" : {
+                "type" : "array",
+                "elementType" : "float",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "content_chunk",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "url",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "EI6ejugowh4dB07TppxO6$$hfEQPy1ccx5yS6-x0emWN",
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "create_time",
+              "type" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "start",
+                  "type" : "timestamp",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "end",
+                  "type" : "timestamp",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "content_chunk",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "input",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "allIns" : false,
+        "doPivot" : false,
+        "aggregate" : [ {
+          "target" : "content_chunk",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "array_join(collect_list(content_chunk), '; ')"
+          },
+          "description" : "",
+          "_row_id" : "c_4"
+        }, {
+          "target" : "input",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "first(text)"
+          },
+          "description" : "",
+          "_row_id" : "c_5"
+        } ],
+        "allowSelection" : true,
+        "pivotColumn" : null,
+        "pivotValues" : [ ],
+        "activeTab" : "groupBy",
+        "columnsSelector" : [ ],
+        "groupBy" : [ {
+          "target" : "create_time",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "window(create_time, '1 second')"
+          },
+          "description" : "",
+          "_row_id" : "c_8"
+        }, {
+          "target" : "ts",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "ts"
+          },
+          "description" : "",
+          "_row_id" : "c_18"
+        } ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Aggregate",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "FtwvIbY6NtkCIMfDbfV-T$$j43gl4SYzyrYzBaKoWnnY" : {
+      "id" : "FtwvIbY6NtkCIMfDbfV-T$$j43gl4SYzyrYzBaKoWnnY",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "formatting_timestamp",
+        "slug" : "formatting_timestamp",
+        "x" : 520,
+        "y" : -80,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "opensearch_matches",
+              "type" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "id",
+                  "type" : "string",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "score",
+                  "type" : "float",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "create_time",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "embedding",
+              "type" : {
+                "type" : "array",
+                "elementType" : "float",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "url",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "content_chunk",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "yvED7dp3Gis62VWr-hIZj$$ox0VuNbf06WXIpOhhvQn5",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "opensearch_matches",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "opensearch_matches"
+          },
+          "description" : ""
+        }, {
+          "target" : "text",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "text"
+          },
+          "description" : ""
+        }, {
+          "target" : "ts",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "ts"
+          },
+          "description" : ""
+        }, {
+          "target" : "create_time",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "cast(date_format(create_time,\"yyyy-MM-dd HH:mm:ss\") as timestamp)"
+          },
+          "description" : ""
+        }, {
+          "target" : "id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "id"
+          },
+          "description" : ""
+        }, {
+          "target" : "embedding",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "embedding"
+          },
+          "description" : ""
+        }, {
+          "target" : "content_chunk",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "content_chunk"
+          },
+          "description" : ""
+        }, {
+          "target" : "url",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "url"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##opensearch_matches", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##url", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##text", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##ts", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##content_chunk", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##id", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##create_time", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##embedding" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "-qgmT2pV_023b84WIhRQp$$YOetBy6th6Tp3Z46okao6" : {
+      "id" : "-qgmT2pV_023b84WIhRQp$$YOetBy6th6Tp3Z46okao6",
+      "component" : "StreamingTarget",
+      "metadata" : {
+        "label" : "bot_message",
+        "slug" : "bot_message",
+        "x" : 1200,
+        "y" : -80,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "5scM-GNFADzekppgB4pKZ$$gXvMkwtJ0qHrv8lCXt_Gs",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "answer",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/bot_message"
+      }
+    },
+    "Es9mbR--ls8py6AeJuyc0$$StdEl05LZI3EcDpHDhq0k" : {
+      "id" : "Es9mbR--ls8py6AeJuyc0$$StdEl05LZI3EcDpHDhq0k",
+      "component" : "OpenSearchLookup",
+      "metadata" : {
+        "label" : "OpenSearchLookup",
+        "slug" : "OpenSearchLookup",
+        "x" : -260,
+        "y" : -240,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "aOYX41bOK-f-2tPRumg7b$$gqAt1vCUGNRcsvGFv1Gab",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "create_time",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "optum-embeddings",
+              "type" : {
+                "type" : "array",
+                "elementType" : "float",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bedrock_error",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "KAXa6NicBREAfCoelBqPE$$jTBgGP7mepEh0OX41CkIj",
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "create_time",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "optum-embeddings",
+              "type" : {
+                "type" : "array",
+                "elementType" : "float",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bedrock_error",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "opensearch_matches",
+              "type" : {
+                "type" : "array",
+                "elementType" : {
+                  "type" : "struct",
+                  "fields" : [ {
+                    "name" : "id",
+                    "type" : "string",
+                    "nullable" : false,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "score",
+                    "type" : "float",
+                    "nullable" : false,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  } ]
+                },
+                "containsNull" : false
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "opensearch_error",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
+      },
+      "properties" : {
+        "credential_manual_api_secrets" : "",
+        "credential_db_secrets" : "secret",
+        "index_name" : "optum-gen-ai-index",
+        "host" : "vrq94ns7ekrnmygy1lx6.eu-west-1.aoss.amazonaws.com",
+        "credential_type" : "databricks",
+        "credential_db_scope" : "opensearch_serverless",
+        "service" : "aoss",
+        "credential_db_key" : "access_key",
+        "region" : "eu-west-1",
+        "vector_column_name" : "optum-embeddings",
+        "top_k" : 3,
+        "credential_manual_api_key" : ""
+      },
+      "componentInfo" : {
+        "gemId" : "gems/OpenSearchLookup",
+        "projectName" : "optum_gen_ai_chatbot_template"
+      }
+    },
+    "ruEHNO3t7Qr01UM_W3Xue$$8zXAB7bLwAXWNjV8Q1QNH" : {
+      "id" : "ruEHNO3t7Qr01UM_W3Xue$$8zXAB7bLwAXWNjV8Q1QNH",
+      "component" : "Bedrock",
+      "metadata" : {
+        "label" : "Bedrock",
+        "slug" : "Bedrock",
+        "x" : -560,
+        "y" : -240,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Pf4qbrKZtH80hQyKN-iKx$$E6zK-g59R6tYuxdtEf-ej",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "create_time",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : true
+        } ],
+        "outputs" : [ {
+          "id" : "84qZX9gJqbM3PAsRe5Qql$$hNcQQ08R2YdUyyxwHq8Js",
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "create_time",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bedrock_embedding",
+              "type" : {
+                "type" : "array",
+                "elementType" : "float",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bedrock_error",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
+      },
+      "properties" : {
+        "aws_region" : "us-east-1",
+        "credential_manual_secret" : "",
+        "credential_manual_key" : "",
+        "credential_type" : "databricks",
+        "credential_db_scope" : "aws_main",
+        "credential_db_secret" : "secret_value",
+        "operation" : "embed_texts",
+        "embed_text_column_name" : "text",
+        "credential_db_key" : "secret_key"
+      },
+      "componentInfo" : {
+        "gemId" : "gems/Bedrock",
+        "projectName" : "optum_gen_ai_chatbot_template"
+      }
+    },
+    "SBU0JkDz6gi57TbGVQGXG$$6Sav0KMPv0_mLmDyKXr0J" : {
+      "id" : "SBU0JkDz6gi57TbGVQGXG$$6Sav0KMPv0_mLmDyKXr0J",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "with_original_content",
+        "slug" : "with_original_content",
+        "x" : 120,
+        "y" : -80,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Jmk1BGEmoJXNYy_h0uuo6$$uOu0V1NPmXtHD3f3rbYVB",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "opensearch_matches",
+              "type" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "id",
+                  "type" : "string",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "score",
+                  "type" : "float",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "create_time",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "jolLHWiVpkXCSoQuZiAek$$OgsPrLdF8p9ch00f3gJzh",
+          "slug" : "in1",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "embedding",
+              "type" : {
+                "type" : "array",
+                "elementType" : "float",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "url",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "content_chunk",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "uO1tKVkIEFK6443_yCBIr$$zn_JGueSil90LqIBp8fzO",
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "opensearch_matches",
+              "type" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "id",
+                  "type" : "string",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "score",
+                  "type" : "float",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "create_time",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "embedding",
+              "type" : {
+                "type" : "array",
+                "elementType" : "float",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "url",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "content_chunk",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.opensearch_matches.id = in1.id"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ ],
+        "hints" : [ {
+          "id" : "Jmk1BGEmoJXNYy_h0uuo6$$uOu0V1NPmXtHD3f3rbYVB",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "jolLHWiVpkXCSoQuZiAek$$OgsPrLdF8p9ch00f3gJzh",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "allIn1" : null,
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "Jmk1BGEmoJXNYy_h0uuo6$$uOu0V1NPmXtHD3f3rbYVB##opensearch_matches.id", "jolLHWiVpkXCSoQuZiAek$$OgsPrLdF8p9ch00f3gJzh##id", "Jmk1BGEmoJXNYy_h0uuo6$$uOu0V1NPmXtHD3f3rbYVB##opensearch_matches" ],
+        "allIn0" : null,
+        "whereClause" : null,
+        "headAlias" : "in0"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Join",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "O3ocFm1u4bZd-Pu1XwkcG$$_eMxxZX0aBK0tICJ1vb3z" : {
+      "id" : "O3ocFm1u4bZd-Pu1XwkcG$$_eMxxZX0aBK0tICJ1vb3z",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat",
+        "slug" : "Reformat",
+        "x" : -420,
+        "y" : -240,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "create_time",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bedrock_embedding",
+              "type" : {
+                "type" : "array",
+                "elementType" : "float",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bedrock_error",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "7tHgpYT-ijEA31gZzCDKE$$5JuuiJCpmFhEbs7UnQp-j",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "text",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "text"
+          },
+          "description" : ""
+        }, {
+          "target" : "ts",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "ts"
+          },
+          "description" : ""
+        }, {
+          "target" : "create_time",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "create_time"
+          },
+          "description" : ""
+        }, {
+          "target" : "optum-embeddings",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "bedrock_embedding"
+          },
+          "description" : ""
+        }, {
+          "target" : "bedrock_error",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "bedrock_error"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA##create_time", "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA##ts", "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA##bedrock_embedding", "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA##text", "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA##bedrock_error" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}

@@ -70,12 +70,6 @@
     "configurationVersion" : "v1"
   },
   "connections" : [ {
-    "id" : "oSxpBv6bIWtC6rjTPTyYC",
-    "source" : "_KdtjqsdtVyYt4s6BIm32$$8NnlZUm_levzwhriYGkXE",
-    "sourcePort" : "3_ccbhUuXFC7fZ-rGS8Gk$$CSZmD6DtJWGIdgrNx0tiL",
-    "target" : "Hidw4971wESZyDtfDlDwX$$e4FhM829PSDI7grozaqYq",
-    "targetPort" : "XnBMS7K3MTSb4cVbiyMxE$$Ob2ZmclISIDD4ehJ7RLv-"
-  }, {
     "id" : "Sg3XbekRnzO4wsYDSueGt",
     "source" : "Hidw4971wESZyDtfDlDwX$$e4FhM829PSDI7grozaqYq",
     "sourcePort" : "-wVpOmGaI_jzyjoyorVjK$$h4hn8WP3Nbom-jtz5MmTi",
@@ -112,12 +106,6 @@
     "target" : "RMgdS9Oi-lHDvPyf-kAaJ$$BChQWNxCiGd0OC1-b1McD",
     "targetPort" : "CksdzV6MKISJIeRoaJkoE$$YZynkAbfM-E4xMm5bS-9P"
   }, {
-    "id" : "--Xr-Xr3M2Ptn4I_9SP20",
-    "source" : "RMgdS9Oi-lHDvPyf-kAaJ$$BChQWNxCiGd0OC1-b1McD",
-    "sourcePort" : "PC0Qxt7gno5-_Ug-C1bMa$$YJtGzXtSw1Tz1rCzz94oY",
-    "target" : "_KdtjqsdtVyYt4s6BIm32$$8NnlZUm_levzwhriYGkXE",
-    "targetPort" : "Z0-pAqJy3MVdzE4mzCrO1$$FsYsVWW0OzNJGIPxht9mV"
-  }, {
     "id" : "6bmQrbkemljsCChTn4_JG",
     "source" : "0NtFOudFZAjlvBLJ5aOtB$$VtqXcK8QIjd7xAcyB05-r",
     "sourcePort" : "c56VRoYSFa2Lzhrcx9ZsZ$$i9r4dtnQ1Fd0owfY2hfsv",
@@ -141,6 +129,30 @@
     "sourcePort" : "lk5XmmvV0L5Yw0lJP_Wd5$$5Qt0hcHS_AG8-28UhvMbn",
     "target" : "Gn0qWpeC5ZvkTYBxB-_-n$$4AxT_7DNbM9JSt7Dh8_4y",
     "targetPort" : "F3XNk8IzReFhx3s_WVymH$$KLNuCOLlQccyuaW-38BvM"
+  }, {
+    "id" : "SwG4hA5-jvuTpnHUD3jul",
+    "source" : "RMgdS9Oi-lHDvPyf-kAaJ$$BChQWNxCiGd0OC1-b1McD",
+    "sourcePort" : "PC0Qxt7gno5-_Ug-C1bMa$$YJtGzXtSw1Tz1rCzz94oY",
+    "target" : "PKsRwZMA7NcYQUY-R0F0l$$JOOZlbLPmy6Jil8yAKA4v",
+    "targetPort" : "WQj6w1N-qvqBqYp4t7pFO$$ejdcd38ZFViSAVeBBvOcK"
+  }, {
+    "id" : "HZMwSxEYYP1Kqd_YzDa-a",
+    "source" : "RMgdS9Oi-lHDvPyf-kAaJ$$BChQWNxCiGd0OC1-b1McD",
+    "sourcePort" : "PC0Qxt7gno5-_Ug-C1bMa$$YJtGzXtSw1Tz1rCzz94oY",
+    "target" : "_KdtjqsdtVyYt4s6BIm32$$8NnlZUm_levzwhriYGkXE",
+    "targetPort" : "Z0-pAqJy3MVdzE4mzCrO1$$FsYsVWW0OzNJGIPxht9mV"
+  }, {
+    "id" : "bjQtr0ahBQBDsZ0ATNXwZ$$yHtZ_nDY2YHVGasYB2H5M",
+    "source" : "PKsRwZMA7NcYQUY-R0F0l$$JOOZlbLPmy6Jil8yAKA4v",
+    "sourcePort" : "CYxCovYdtN3z0QHoMdczN$$ofEh1Z5JqhkHtOYzURtDK",
+    "target" : "Tc-aDTacnwAHfC9r-qHb2$$sB6CNKE8eOKCrMFjIC-ZO",
+    "targetPort" : "EV6rMUdUU3tlq89pVr8Hg$$6gQOKnD8LP04zoj25UvkG"
+  }, {
+    "id" : "TX-0K38VWVYFe2Hkd5Hql$$_lpFJ030I_mVwItTzS8cY",
+    "source" : "_KdtjqsdtVyYt4s6BIm32$$8NnlZUm_levzwhriYGkXE",
+    "sourcePort" : "3_ccbhUuXFC7fZ-rGS8Gk$$CSZmD6DtJWGIdgrNx0tiL",
+    "target" : "Hidw4971wESZyDtfDlDwX$$e4FhM829PSDI7grozaqYq",
+    "targetPort" : "XnBMS7K3MTSb4cVbiyMxE$$Ob2ZmclISIDD4ehJ7RLv-"
   } ],
   "processes" : {
     "V0mp7SkYrr7Z9nX-wREjJ$$IbJuQCNNwajZ5wPPzLouY" : {
@@ -775,7 +787,7 @@
       "metadata" : {
         "label" : "vector_lookup",
         "slug" : "vector_lookup",
-        "x" : -1880,
+        "x" : -1840,
         "y" : -600,
         "phase" : 0,
         "cache" : false,
@@ -967,7 +979,7 @@
       "metadata" : {
         "label" : "explode_matches",
         "slug" : "explode_matches",
-        "x" : -1740,
+        "x" : -1700,
         "y" : -600,
         "phase" : 0,
         "cache" : false,
@@ -1189,7 +1201,7 @@
           "targetTokens" : [ "create_time" ],
           "target" : "create_time"
         } ],
-        "columnsSelector" : [ "XnBMS7K3MTSb4cVbiyMxE$$Ob2ZmclISIDD4ehJ7RLv-##pinecone_matches", "XnBMS7K3MTSb4cVbiyMxE$$Ob2ZmclISIDD4ehJ7RLv-##text", "XnBMS7K3MTSb4cVbiyMxE$$Ob2ZmclISIDD4ehJ7RLv-##create_time", "XnBMS7K3MTSb4cVbiyMxE$$Ob2ZmclISIDD4ehJ7RLv-##ts" ],
+        "columnsSelector" : [ "XnBMS7K3MTSb4cVbiyMxE$$Ob2ZmclISIDD4ehJ7RLv-##ts", "XnBMS7K3MTSb4cVbiyMxE$$Ob2ZmclISIDD4ehJ7RLv-##text", "XnBMS7K3MTSb4cVbiyMxE$$Ob2ZmclISIDD4ehJ7RLv-##pinecone_matches", "XnBMS7K3MTSb4cVbiyMxE$$Ob2ZmclISIDD4ehJ7RLv-##create_time" ],
         "explodeColumns" : [ ],
         "delimiter" : "-"
       },
@@ -1204,7 +1216,7 @@
       "metadata" : {
         "label" : "vectorize_question",
         "slug" : "vectorize_question",
-        "x" : -2040,
+        "x" : -2020,
         "y" : -600,
         "phase" : 0,
         "cache" : false,
@@ -1329,12 +1341,139 @@
         "projectName" : "optum_gen_ai_chatbot_template"
       }
     },
+    "PKsRwZMA7NcYQUY-R0F0l$$JOOZlbLPmy6Jil8yAKA4v" : {
+      "id" : "PKsRwZMA7NcYQUY-R0F0l$$JOOZlbLPmy6Jil8yAKA4v",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "slug" : "Reformat_1",
+        "x" : -1800,
+        "y" : -880,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "WQj6w1N-qvqBqYp4t7pFO$$ejdcd38ZFViSAVeBBvOcK",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "create_time",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "openai_embedding",
+              "type" : {
+                "type" : "array",
+                "elementType" : "float",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "openai_error",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "CYxCovYdtN3z0QHoMdczN$$ofEh1Z5JqhkHtOYzURtDK",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "text",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "text"
+          },
+          "description" : ""
+        }, {
+          "target" : "ts",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "ts"
+          },
+          "description" : ""
+        }, {
+          "target" : "create_time",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "create_time"
+          },
+          "description" : ""
+        }, {
+          "target" : "optum-embeddings",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "openai_embedding"
+          },
+          "description" : ""
+        }, {
+          "target" : "openai_error",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "openai_error"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "WQj6w1N-qvqBqYp4t7pFO$$ejdcd38ZFViSAVeBBvOcK##create_time", "WQj6w1N-qvqBqYp4t7pFO$$ejdcd38ZFViSAVeBBvOcK##openai_error", "WQj6w1N-qvqBqYp4t7pFO$$ejdcd38ZFViSAVeBBvOcK##text", "WQj6w1N-qvqBqYp4t7pFO$$ejdcd38ZFViSAVeBBvOcK##openai_embedding", "WQj6w1N-qvqBqYp4t7pFO$$ejdcd38ZFViSAVeBBvOcK##ts" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
     "5FUHhNfFQiEEAZqrgn7kz$$1__CINClXgNc8KC6TCs-W" : {
       "id" : "5FUHhNfFQiEEAZqrgn7kz$$1__CINClXgNc8KC6TCs-W",
       "component" : "Reformat",
       "metadata" : {
-        "label" : "farmatting",
-        "slug" : "farmatting",
+        "label" : "formatting",
+        "slug" : "formatting",
         "x" : -2180,
         "y" : -600,
         "phase" : 0,
@@ -1404,7 +1543,7 @@
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "F5HdWIpE-mtFKmMbQzp2o$$Ko6joCRpWGcDtF5EoqNHs##text", "F5HdWIpE-mtFKmMbQzp2o$$Ko6joCRpWGcDtF5EoqNHs##ts" ]
+        "columnsSelector" : [ "F5HdWIpE-mtFKmMbQzp2o$$Ko6joCRpWGcDtF5EoqNHs##ts", "F5HdWIpE-mtFKmMbQzp2o$$Ko6joCRpWGcDtF5EoqNHs##text" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
@@ -1611,6 +1750,202 @@
       },
       "componentInfo" : {
         "gemId" : "gems/OpenAI",
+        "projectName" : "optum_gen_ai_chatbot_template"
+      }
+    },
+    "Tc-aDTacnwAHfC9r-qHb2$$sB6CNKE8eOKCrMFjIC-ZO" : {
+      "id" : "Tc-aDTacnwAHfC9r-qHb2$$sB6CNKE8eOKCrMFjIC-ZO",
+      "component" : "OpenSearchLookup",
+      "metadata" : {
+        "label" : "OpenSearchLookup_1",
+        "slug" : "OpenSearchLookup_1",
+        "x" : -1560,
+        "y" : -880,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EV6rMUdUU3tlq89pVr8Hg$$6gQOKnD8LP04zoj25UvkG",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "create_time",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "optum-embeddings",
+              "type" : {
+                "type" : "array",
+                "elementType" : "float",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "openai_error",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "UiV5ZPDe_r686lVsPmwrw$$c9A5X60eYLZzrdAR_0yWk",
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "create_time",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "optum-embeddings",
+              "type" : {
+                "type" : "array",
+                "elementType" : "float",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "openai_error",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "opensearch_matches",
+              "type" : {
+                "type" : "array",
+                "elementType" : {
+                  "type" : "struct",
+                  "fields" : [ {
+                    "name" : "id",
+                    "type" : "string",
+                    "nullable" : false,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "score",
+                    "type" : "float",
+                    "nullable" : false,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  } ]
+                },
+                "containsNull" : false
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "opensearch_error",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
+      },
+      "properties" : {
+        "credential_manual_api_secrets" : "",
+        "credential_db_secrets" : "secret",
+        "index_name" : "optum-gen-ai-index",
+        "host" : "vrq94ns7ekrnmygy1lx6.eu-west-1.aoss.amazonaws.com",
+        "credential_type" : "databricks",
+        "credential_db_scope" : "opensearch_serverless",
+        "service" : "aoss",
+        "credential_db_key" : "access_key",
+        "region" : "eu-west-1",
+        "vector_column_name" : "optum-embeddings",
+        "top_k" : 3,
+        "credential_manual_api_key" : ""
+      },
+      "componentInfo" : {
+        "gemId" : "gems/OpenSearchLookup",
         "projectName" : "optum_gen_ai_chatbot_template"
       }
     },
@@ -2035,8 +2370,8 @@
       "metadata" : {
         "label" : "bot_message",
         "slug" : "bot_message",
-        "x" : -2300,
-        "y" : -380,
+        "x" : -1300,
+        "y" : -880,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,

@@ -19,30 +19,20 @@ def opensearch_target(spark: SparkSession, in0: DataFrame):
         )\
         .register_udfs(spark)
 
-    if spark.catalog.tableExists("hive_metastore.default.sumitpOpensearch"):
-        in0\
-            .withColumn("_row_num", row_number().over(Window.partitionBy().orderBy(col("id"))))\
-            .withColumn("_group_num", ceil(col("_row_num") / 20))\
-            .withColumn("_id_vector", struct(lit("optum-index-metadata-dbx").alias("_index"), col("id"), col("embedding")))\
-            .withColumn("_id_vectors", to_json(col("_id_vector")))\
-            .groupBy(col("_group_num"))\
-            .agg(collect_list(col("_id_vectors")).alias("id_vectors"))\
-            .withColumn("upserted", expr("opensearch_upsert(id_vectors)"))\
-            .select(col("*"), col("upserted.*"))\
+    if spark.catalog.tableExists("hive_metastore.default.opensearch_load_status1"):
+        in0.withColumn(
+            'upserted',
+            expr("opensearch_upsert(\"optum-gen-ai-index-insert\",\"embedd\",embedd, \"embedd\", id)")
+        )\
             .write\
             .format("delta")\
-            .insertInto("hive_metastore.default.sumitpOpensearch")
+            .insertInto("hive_metastore.default.opensearch_load_status1")
     else:
-        in0\
-            .withColumn("_row_num", row_number().over(Window.partitionBy().orderBy(col("id"))))\
-            .withColumn("_group_num", ceil(col("_row_num") / 20))\
-            .withColumn("_id_vector", struct(lit("optum-index-metadata-dbx").alias("_index"), col("id"), col("embedding")))\
-            .withColumn("_id_vectors", to_json(col("_id_vector")))\
-            .groupBy(col("_group_num"))\
-            .agg(collect_list(col("_id_vectors")).alias("id_vectors"))\
-            .withColumn("upserted", expr("opensearch_upsert(id_vectors)"))\
-            .select(col("*"), col("upserted.*"))\
+        in0.withColumn(
+            'upserted',
+            expr("opensearch_upsert(\"optum-gen-ai-index-insert\",\"embedd\",embedd, \"embedd\", id)")
+        )\
             .write\
             .format("delta")\
             .mode("overwrite")\
-            .saveAsTable("hive_metastore.default.sumitpOpensearch")
+            .saveAsTable("hive_metastore.default.opensearch_load_status1")

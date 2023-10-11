@@ -45,6 +45,22 @@ pipelines:
       - datasets/bot_message
     subgraphs: []
     dependencies: {}
+  pipelines/chatbot-opensearch-sagemaker:
+    name: chatbot-opensearch-sagemaker
+    description: ''
+    author: sumitpaul@prophecy.io
+    mode: stream
+    artefactID: ''
+    language: python
+    createdAt: '2023-10-11 11:53:25'
+    datasets:
+      inputs:
+      - datasets/content_vectorized
+      - datasets/get_queries_msk
+      outputs:
+      - datasets/bot_message
+    subgraphs: []
+    dependencies: {}
 datasets:
   datasets/content_vectorized:
     name: content_vectorized
@@ -124,6 +140,19 @@ datasets:
         description: ''
         author: sumitpaul@prophecy.io
         createdAt: '2023-10-10 15:26:00'
+  datasets/bot_msg_pinecone:
+    name: bot_msg_pinecone
+    description: ''
+    author: sumitpaul@prophecy.io
+    createdAt: '2023-10-11 07:40:23'
+    mode: stream
+    physicalDatasets:
+      sumit-dev-dbx:
+        fabricId: 42
+        datasetType: Database
+        description: ''
+        author: sumitpaul@prophecy.io
+        createdAt: '2023-10-11 07:40:23'
 templates: {}
 jobs: {}
 gemContainer:
@@ -181,16 +210,6 @@ gemContainer:
       files:
       - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/Watermark.py
       createdAt: '2023-10-03 10:38:21'
-    gems/OpenSearch:
-      name: OpenSearch
-      category: Source/Target
-      subCategory: Warehouse
-      description: null
-      author: sumitpaul@prophecy.io
-      mode: batch
-      files:
-      - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/OpenSearch.py
-      createdAt: '2023-10-10 12:09:21'
     gems/OpenSearchLookup:
       name: OpenSearchLookup
       category: Machine Learning
@@ -201,6 +220,36 @@ gemContainer:
       files:
       - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/OpenSearchLookup.py
       createdAt: '2023-10-11 00:04:35'
+    gems/SageMakerEndpoint:
+      name: SageMakerEndpoint
+      category: Machine Learning
+      subCategory: ''
+      description: null
+      author: sumitpaul@prophecy.io
+      mode: batch
+      files:
+      - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/SageMakerEndpoint.py
+      createdAt: '2023-10-11 13:13:17'
+    gems/Bedrock:
+      name: Bedrock
+      category: Machine Learning
+      subCategory: ''
+      description: null
+      author: sumitpaul@prophecy.io
+      mode: batch
+      files:
+      - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/Bedrock.py
+      createdAt: '2023-10-11 13:15:40'
+    gems/OpenSearch:
+      name: OpenSearch
+      category: Source/Target
+      subCategory: Warehouse
+      description: null
+      author: sumitpaul@prophecy.io
+      mode: batch
+      files:
+      - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/OpenSearch.py
+      createdAt: '2023-10-11 15:59:35'
 functions:
   author: null
   createdAt: '2023-10-03 01:38:26'
@@ -236,7 +285,7 @@ projectDependencies:
     version: 0.0.4
     isDefault: true
     author: null
-    createdAt: '2023-10-09 12:57:59'
+    createdAt: '2023-10-11 10:05:17'
   '290':
     projectUID: 290
     projectName: ProphecyWarehousePython
@@ -244,5 +293,5 @@ projectDependencies:
     version: 0.0.2
     isDefault: true
     author: null
-    createdAt: '2023-10-09 12:57:59'
+    createdAt: '2023-10-11 10:05:17'
 pipelineConfigurations: {}

@@ -9,7 +9,7 @@ schema:
       description: ''
       mappings: []
       tags: []
-  - name: embedding
+  - name: embedd
     type:
       type: array
       elementType: float

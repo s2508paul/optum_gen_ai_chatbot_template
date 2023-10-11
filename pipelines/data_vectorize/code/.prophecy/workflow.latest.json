@@ -100,9 +100,15 @@
     "target" : "kJxdJDL1SZP1cuKZ_X7Nw$$0NpdwI1pFJF_WrSut7M8M",
     "targetPort" : "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3"
   }, {
-    "id" : "qp89GEsVsKI8wrTXFdKhL",
+    "id" : "PpllNP1hNULfMI_cQVxiQ",
     "source" : "Lcyw-8Zu-OgU_AoWaBYNd$$blOL_yTf7jA3BilqMDaLp",
     "sourcePort" : "pwrn_bjOkryDj4FqnnWVZ$$KrCEEo9CIMR024P45fziY",
+    "target" : "GhlsPMrgCy1Y9CI7RWPfF$$o53cooaoiq-kDMXBTkMSj",
+    "targetPort" : "bYLVROdQ4_AI2eJMlhNIr$$BElBOim6YYer3NVtEkTFE"
+  }, {
+    "id" : "B63qsSwlGDrJiktlGndLa",
+    "source" : "GhlsPMrgCy1Y9CI7RWPfF$$o53cooaoiq-kDMXBTkMSj",
+    "sourcePort" : "PscKAGeOd4qztAtebqDZx$$VQHYrj95wxBXCIlBcJ0DA",
     "target" : "6BUjSyd3rcyqA_bQbRbqR$$TAD-bDRnenkE730zjh2ku",
     "targetPort" : "MJGKw78bWfgdX8uy_60gE$$FVM8PT3NfFLlUqalQgt__"
   } ],
@@ -284,7 +290,7 @@
       "metadata" : {
         "label" : "vector_read_catalog",
         "slug" : "vector_read_catalog",
-        "x" : -2080,
+        "x" : -2220,
         "y" : -280,
         "phase" : 0,
         "cache" : false,
@@ -416,8 +422,8 @@
       "metadata" : {
         "label" : "opensearch-target",
         "slug" : "opensearch_target",
-        "x" : -1940,
-        "y" : -140,
+        "x" : -1840,
+        "y" : -120,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -426,6 +432,78 @@
       "ports" : {
         "inputs" : [ {
           "id" : "MJGKw78bWfgdX8uy_60gE$$FVM8PT3NfFLlUqalQgt__",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "embedd",
+              "type" : {
+                "type" : "array",
+                "elementType" : "float",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "url",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "content_chunk",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/opensearch-target"
+      }
+    },
+    "GhlsPMrgCy1Y9CI7RWPfF$$o53cooaoiq-kDMXBTkMSj" : {
+      "id" : "GhlsPMrgCy1Y9CI7RWPfF$$o53cooaoiq-kDMXBTkMSj",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "formatting",
+        "slug" : "formatting",
+        "x" : -2020,
+        "y" : -120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "bYLVROdQ4_AI2eJMlhNIr$$BElBOim6YYer3NVtEkTFE",
           "slug" : "in0",
           "schema" : {
             "type" : "struct",
@@ -473,13 +551,52 @@
           },
           "isStreaming" : false
         } ],
-        "outputs" : [ ],
+        "outputs" : [ {
+          "id" : "PscKAGeOd4qztAtebqDZx$$VQHYrj95wxBXCIlBcJ0DA",
+          "slug" : "out"
+        } ],
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
       },
       "properties" : {
-        "datasetId" : "datasets/opensearch-target"
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "id"
+          },
+          "description" : ""
+        }, {
+          "target" : "embedd",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "embedding"
+          },
+          "description" : ""
+        }, {
+          "target" : "url",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "url"
+          },
+          "description" : ""
+        }, {
+          "target" : "content_chunk",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "content_chunk"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "bYLVROdQ4_AI2eJMlhNIr$$BElBOim6YYer3NVtEkTFE##content_chunk", "bYLVROdQ4_AI2eJMlhNIr$$BElBOim6YYer3NVtEkTFE##id", "bYLVROdQ4_AI2eJMlhNIr$$BElBOim6YYer3NVtEkTFE##url", "bYLVROdQ4_AI2eJMlhNIr$$BElBOim6YYer3NVtEkTFE##embedding" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
       }
     },
     "uAhCx9HmSlYkkepepM7lL$$hk9j-PMn1OWUR39WF781T" : {

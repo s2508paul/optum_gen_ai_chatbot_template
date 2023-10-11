@@ -12,6 +12,7 @@ def pipeline(spark: SparkSession) -> None:
     df_vectorize = vectorize(spark, df_web_scrape)
     df_vector_read_catalog = vector_read_catalog(spark)
     df_clean = clean(spark, df_vectorize)
+    opensearch_target(spark, df_vector_read_catalog)
     df_rename = rename(spark, df_clean)
     write_vector_data(spark, df_rename)
     vector_db(spark, df_vector_read_catalog)

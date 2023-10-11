@@ -40,10 +40,10 @@
     "buildSystem" : "maven",
     "externalDependencies" : [ {
       "type" : "pypi",
-      "id" : "8Gc6e",
-      "name" : "Prophecy Spark AI (Python)",
+      "id" : "0d4Y6",
+      "name" : "opensearchpy",
       "enabled" : true,
-      "package" : "prophecy-spark-ai==0.1.8"
+      "package" : "opensearch-py"
     } ],
     "dependentProjectExternalDependencies" : [ {
       "projectUID" : "289",
@@ -99,6 +99,12 @@
     "sourcePort" : "lEK3GElp2G5xXpD6EIINd$$mZYhVgu_ubW61-LLfpab8",
     "target" : "kJxdJDL1SZP1cuKZ_X7Nw$$0NpdwI1pFJF_WrSut7M8M",
     "targetPort" : "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3"
+  }, {
+    "id" : "qp89GEsVsKI8wrTXFdKhL",
+    "source" : "Lcyw-8Zu-OgU_AoWaBYNd$$blOL_yTf7jA3BilqMDaLp",
+    "sourcePort" : "pwrn_bjOkryDj4FqnnWVZ$$KrCEEo9CIMR024P45fziY",
+    "target" : "6BUjSyd3rcyqA_bQbRbqR$$TAD-bDRnenkE730zjh2ku",
+    "targetPort" : "MJGKw78bWfgdX8uy_60gE$$FVM8PT3NfFLlUqalQgt__"
   } ],
   "processes" : {
     "efPlaVVj6Sfhh9fqzeIIh$$V9442wSRFMT2A_GVV_tkO" : {
@@ -402,6 +408,78 @@
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Filter",
         "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "6BUjSyd3rcyqA_bQbRbqR$$TAD-bDRnenkE730zjh2ku" : {
+      "id" : "6BUjSyd3rcyqA_bQbRbqR$$TAD-bDRnenkE730zjh2ku",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "opensearch-target",
+        "slug" : "opensearch_target",
+        "x" : -1940,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "MJGKw78bWfgdX8uy_60gE$$FVM8PT3NfFLlUqalQgt__",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "embedding",
+              "type" : {
+                "type" : "array",
+                "elementType" : "float",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "url",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "content_chunk",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/opensearch-target"
       }
     },
     "uAhCx9HmSlYkkepepM7lL$$hk9j-PMn1OWUR39WF781T" : {

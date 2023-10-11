@@ -3,6 +3,6 @@ configurations:
 - default
 dependencies:
 - type: workflow
-  id: 8Gc6e
-  name: Prophecy Spark AI (Python)
+  id: 0d4Y6
+  name: opensearchpy
   enabled: true

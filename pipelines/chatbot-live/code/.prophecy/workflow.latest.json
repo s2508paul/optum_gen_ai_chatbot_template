@@ -40,10 +40,10 @@
     "buildSystem" : "maven",
     "externalDependencies" : [ {
       "type" : "pypi",
-      "id" : "8Gc6e",
-      "name" : "Prophecy Spark AI (Python)",
-      "enabled" : true,
-      "package" : "prophecy-spark-ai==0.1.8"
+      "id" : "0d4Y6",
+      "name" : "opensearchpy",
+      "enabled" : false,
+      "package" : "opensearch-py"
     } ],
     "dependentProjectExternalDependencies" : [ {
       "projectUID" : "289",
@@ -141,12 +141,6 @@
     "sourcePort" : "lk5XmmvV0L5Yw0lJP_Wd5$$5Qt0hcHS_AG8-28UhvMbn",
     "target" : "Gn0qWpeC5ZvkTYBxB-_-n$$4AxT_7DNbM9JSt7Dh8_4y",
     "targetPort" : "F3XNk8IzReFhx3s_WVymH$$KLNuCOLlQccyuaW-38BvM"
-  }, {
-    "id" : "L2y2yzpeedp6OVSrwZsRf$$hs5n-Rb-wxgWgWo30i9mU",
-    "source" : "rYsN3KmoKxQK2AgikipMB$$F9cYhSS-phqp_HvpQCppz",
-    "sourcePort" : "j3Pc7oWL3iRE70Ckk8SGX$$lucpTDdeTPmTtsWHa-MQ1",
-    "target" : "7vfVj539dWoKmuy_ZnuRz$$u8khMSATMH7m6BhoqRnpd",
-    "targetPort" : "a6f3rm5M01gl0D-I6bHaO$$QApINWzEAMaatP6rQEaIs"
   } ],
   "processes" : {
     "V0mp7SkYrr7Z9nX-wREjJ$$IbJuQCNNwajZ5wPPzLouY" : {
@@ -2041,8 +2035,8 @@
       "metadata" : {
         "label" : "bot_message",
         "slug" : "bot_message",
-        "x" : -600,
-        "y" : -440,
+        "x" : -2300,
+        "y" : -380,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -2051,21 +2045,7 @@
       "ports" : {
         "inputs" : [ {
           "id" : "a6f3rm5M01gl0D-I6bHaO$$QApINWzEAMaatP6rQEaIs",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "answer",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
+          "slug" : "in0"
         } ],
         "outputs" : [ ],
         "selectedInputFields" : [ ],
@@ -2348,5 +2328,22 @@
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  }
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.7vfVj539dWoKmuy_ZnuRz$$u8khMSATMH7m6BhoqRnpd",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Please connect input port in0",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
 }

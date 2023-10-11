@@ -25,6 +25,7 @@ pipelines:
       - datasets/web_scrape
       outputs:
       - datasets/content_vectorized
+      - datasets/opensearch-target
       - datasets/web_vectors
     subgraphs: []
     dependencies: {}
@@ -110,6 +111,19 @@ datasets:
         description: ''
         author: sumitpaul@prophecy.io
         createdAt: '2023-10-04 15:50:54'
+  datasets/opensearch-target:
+    name: opensearch-target
+    description: ''
+    author: sumitpaul@prophecy.io
+    createdAt: '2023-10-10 15:26:00'
+    mode: batch
+    physicalDatasets:
+      sumit-dev-dbx:
+        fabricId: 42
+        datasetType: Warehouse
+        description: ''
+        author: sumitpaul@prophecy.io
+        createdAt: '2023-10-10 15:26:00'
 templates: {}
 jobs: {}
 gemContainer:
@@ -145,6 +159,7 @@ gemContainer:
       mode: batch
       files:
       - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/PineconeLookup.py
+      - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/OpenSearchLookup.py
       createdAt: '2023-10-03 10:34:45'
     gems/TextProcessing:
       name: TextProcessing
@@ -166,6 +181,26 @@ gemContainer:
       files:
       - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/Watermark.py
       createdAt: '2023-10-03 10:38:21'
+    gems/OpenSearch:
+      name: OpenSearch
+      category: Source/Target
+      subCategory: Warehouse
+      description: null
+      author: sumitpaul@prophecy.io
+      mode: batch
+      files:
+      - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/OpenSearch.py
+      createdAt: '2023-10-10 12:09:21'
+    gems/OpenSearchLookup:
+      name: OpenSearchLookup
+      category: Machine Learning
+      subCategory: ''
+      description: null
+      author: sumitpaul@prophecy.io
+      mode: batch
+      files:
+      - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/OpenSearchLookup.py
+      createdAt: '2023-10-11 00:04:35'
 functions:
   author: null
   createdAt: '2023-10-03 01:38:26'
@@ -181,10 +216,10 @@ sqlUnreferencedSources: {}
 sqlPipeline: null
 dependencies:
 - type: pypi
-  id: 8Gc6e
-  name: Prophecy Spark AI (Python)
+  id: 0d4Y6
+  name: opensearchpy
   enabled: false
-  package: prophecy-spark-ai==0.1.8
+  package: opensearch-py
 projectDependencies:
   '291':
     projectUID: 291

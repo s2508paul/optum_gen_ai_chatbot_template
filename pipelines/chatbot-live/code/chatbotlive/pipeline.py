@@ -21,7 +21,7 @@ def pipeline(spark: SparkSession) -> None:
     df_collect_results = collect_results(spark, df_formatting_timestamp)
     df_answer_question = answer_question(spark, df_collect_results)
     df_prepare_payload = prepare_payload(spark, df_answer_question)
-    bot_message(spark, df_prepare_payload)
+    bot_message(spark)
 
 def main():
     spark = SparkSession.builder\

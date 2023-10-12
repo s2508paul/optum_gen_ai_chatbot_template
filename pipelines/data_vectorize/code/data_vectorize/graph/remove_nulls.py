@@ -6,5 +6,5 @@ from prophecy.libs import typed_lit
 from data_vectorize.config.ConfigStore import *
 from data_vectorize.udfs.UDFs import *
 
-def formatting(spark: SparkSession, in0: DataFrame) -> DataFrame:
-    return in0.select(col("id"), col("embedding").alias("embedd"), col("url"), col("content_chunk"))
+def remove_nulls(spark: SparkSession, in0: DataFrame) -> DataFrame:
+    return in0.filter(col("bedrock_error").isNull())

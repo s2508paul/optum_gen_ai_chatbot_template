@@ -38,6 +38,9 @@ class OpenSearchFormat(DatasetSpec):
         vector_id_column_name: Optional[str] = ""
         vector_content_column_name: Optional[str] = ""
         
+        vector_id_prop: Optional[str] = ""
+        vector_embdd_prop: Optional[str] = ""
+
         status: bool = True
         status_is_uc: Optional[bool] = None
         status_catalog: Optional[str] = None
@@ -83,26 +86,45 @@ class OpenSearchFormat(DatasetSpec):
                 .bindPlaceholder("") \
                 .bindProperty("host")
 
-            index_selector = TextBox("Index name") \
-                .bindProperty("index_name")
+            
 
             aws_region = TextBox("Aws Region") \
                 .bindPlaceholder("us-east-1") \
                 .bindProperty("region")
 
-            aws_service = TextBox("Service") \
+            aws_service = TextBox("Aws Service") \
                 .bindPlaceholder("aoss/es") \
                 .bindProperty("service")
 
             location_selector = ColumnsLayout(gap="1rem") \
                 .addElement(host) \
-                .addElement(index_selector)\
                 .addElement(aws_region)\
                 .addElement(aws_service)
 
             location_section = StackLayout() \
                 .addElement(TitleElement("Location")) \
                 .addElement(location_selector)
+
+
+            index_selector = TextBox("Index Name") \
+                .bindProperty("index_name")
+            
+            vector_id_property = TextBox("Vector Id Column") \
+                .bindPlaceholder("id") \
+                .bindProperty("vector_id_prop")
+            
+            vector_embdd_property = TextBox("Vector Embedding Column") \
+                .bindPlaceholder("embedding") \
+                .bindProperty("vector_embdd_prop")
+
+            properties_selector = ColumnsLayout(gap="1rem") \
+                .addElement(index_selector) \
+                .addElement(vector_id_property)\
+                .addElement(vector_embdd_property)
+            
+            property_selection = StackLayout() \
+                .addElement(TitleElement("Property")) \
+                .addElement(properties_selector)
 
             # Status writing
             status_selector = CatalogTableDB("") \
@@ -122,6 +144,7 @@ class OpenSearchFormat(DatasetSpec):
             location = StackLayout() \
                 .addElement(credential) \
                 .addElement(location_section) \
+                .addElement(property_selection) \
                 .addElement(status)
 
             location.padding = "1rem"
@@ -209,7 +232,9 @@ class OpenSearchFormat(DatasetSpec):
             OpensearchDB(host,region,usr,secrets,service).register_udfs(spark)
 
             df_upserted = in0 \
-                .withColumn('upserted',expr(f"opensearch_upsert(\"{self.props.index_name}\",\"{self.props.vector_content_column_name}\",embedd, \"{self.props.vector_content_column_name}\", id)"))
+                .withColumn("vector_embedd", col(self.props.vector_content_column_name)) \
+                .withColumn("vector_id", col(self.props.vector_id_column_name)) \
+                .withColumn('upserted',expr(f"opensearch_upsert(\"{self.props.index_name}\",\"{self.props.vector_embdd_prop}\", vector_embedd, \"{self.props.vector_id_prop}\", vector_id)")) 
             
             if self.props.status:
                 status_table = f"{self.props.status_catalog}.{self.props.status_database}.{self.props.status_table}" if self.props.status_is_uc else f"{self.props.status_database}.{self.props.status_table}"

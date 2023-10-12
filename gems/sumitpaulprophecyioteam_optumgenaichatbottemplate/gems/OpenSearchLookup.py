@@ -29,7 +29,8 @@ class OpenSearchLookup(ComponentSpec):
         region: Optional[str] = "us-west-1"
         service: Optional[str] = "aoss"
         index_name: Optional[str] = ""
-
+        
+        vector_id_column_name: Optional[str] = ""
         vector_column_name: Optional[str] = ""
         top_k: Optional[int] = 3
 
@@ -46,13 +47,13 @@ class OpenSearchLookup(ComponentSpec):
         
         credential_db = ColumnsLayout(gap="1rem") \
             .addElement(TextBox("Databricks Scope").bindProperty("credential_db_scope")) \
-            .addElement(TextBox("AWS Key").bindProperty("credential_db_key")) \
-            .addElement(TextBox("AWS Secrets").bindProperty("credential_db_secrets"))
+            .addElement(TextBox("Databricks Key").bindProperty("credential_db_key")) \
+            .addElement(TextBox("Databricks Secrets").bindProperty("credential_db_secrets"))
 
 
         credential_manual = ColumnsLayout(gap="1rem") \
-            .addElement(TextBox("AWS Key").bindPlaceholder("").bindProperty("credential_manual_api_key")) \
-            .addElement(TextBox("AWS Secrets").bindPlaceholder("").bindProperty("credential_manual_api_secrets"))
+            .addElement(TextBox("Aws Key").bindPlaceholder("").bindProperty("credential_manual_api_key")) \
+            .addElement(TextBox("Aws Secrets").bindPlaceholder("").bindProperty("credential_manual_api_secrets"))
         
         credential_db_or_manual = Condition() \
             .ifEqual(PropExpr("component.properties.credential_type"), StringExpr("databricks")) \
@@ -66,11 +67,11 @@ class OpenSearchLookup(ComponentSpec):
             .bindPlaceholder("") \
             .bindProperty("host")
         
-        region_selector = TextBox("Region") \
+        region_selector = TextBox("Aws Region") \
             .bindPlaceholder("") \
             .bindProperty("region")
 
-        service_selector = TextBox("Service") \
+        service_selector = TextBox("Aws Service") \
             .bindPlaceholder("") \
             .bindProperty("service")
         
@@ -84,20 +85,25 @@ class OpenSearchLookup(ComponentSpec):
             .addElement(TitleElement("Location")) \
             .addElement(location)
 
-        index_name_selector = TextBox("Index name") \
+        index_name_selector = TextBox("Index Name") \
             .bindPlaceholder("") \
             .bindProperty("index_name")
 
-        vector_column_name_selector = SchemaColumnsDropdown("Vector column (array<float>)") \
+        vector_id_column_name_selector = TextBox("Vector Id Column") \
+            .bindPlaceholder("vector id column") \
+            .bindProperty("vector_id_column_name")
+
+        vector_column_name_selector = SchemaColumnsDropdown("Vector Embeddiing Column") \
             .bindSchema("component.ports.inputs[0].schema") \
             .bindProperty("vector_column_name") \
             .showErrorsFor("vector_column_name")
-
+        
         k_selector = NumberBox("Number of results") \
             .bindProperty("top_k")
 
         properties = ColumnsLayout(gap="1rem") \
             .addElement(index_name_selector) \
+            .addElement(vector_id_column_name_selector) \
             .addElement(vector_column_name_selector) \
             .addElement(k_selector)
 
@@ -150,7 +156,7 @@ class OpenSearchLookup(ComponentSpec):
 
             return in0 \
                 .withColumn("_vector", col(self.props.vector_column_name)) \
-                .withColumn("_response",expr(f"opensearch_query(\"{self.props.index_name}\", \"{self.props.vector_column_name}\", _vector, {self.props.top_k})")) \
+                .withColumn("_response",expr(f"opensearch_query(\"{self.props.index_name}\",\"{self.props.vector_id_column_name}\", \"{self.props.vector_column_name}\", _vector, {self.props.top_k})")) \
                 .withColumn("opensearch_matches", col("_response.matches")) \
                 .withColumn("opensearch_error", col("_response.error")) \
                 .drop("_vector", "_response")

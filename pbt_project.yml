@@ -22,11 +22,10 @@ pipelines:
     datasets:
       inputs:
       - datasets/content_vectorized
-      - datasets/web_scrape
+      - datasets/optum_pdf
       outputs:
       - datasets/content_vectorized
       - datasets/opensearch-target
-      - datasets/web_vectors
     subgraphs: []
     dependencies: {}
   pipelines/chatbot-live:
@@ -153,6 +152,19 @@ datasets:
         description: ''
         author: sumitpaul@prophecy.io
         createdAt: '2023-10-11 07:40:23'
+  datasets/optum_pdf:
+    name: optum_pdf
+    description: ''
+    author: sumitpaul@prophecy.io
+    createdAt: '2023-10-12 05:42:08'
+    mode: batch
+    physicalDatasets:
+      sumit-dev-dbx:
+        fabricId: 42
+        datasetType: File
+        description: ''
+        author: sumitpaul@prophecy.io
+        createdAt: '2023-10-12 05:42:08'
 templates: {}
 jobs: {}
 gemContainer:
@@ -190,16 +202,6 @@ gemContainer:
       - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/PineconeLookup.py
       - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/OpenSearchLookup.py
       createdAt: '2023-10-03 10:34:45'
-    gems/TextProcessing:
-      name: TextProcessing
-      category: Machine Learning
-      subCategory: ''
-      description: null
-      author: sumitpaul@prophecy.io
-      mode: batch
-      files:
-      - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/TextProcessing.py
-      createdAt: '2023-10-03 10:35:37'
     gems/Watermark:
       name: Watermark
       category: Transform
@@ -250,6 +252,26 @@ gemContainer:
       files:
       - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/OpenSearch.py
       createdAt: '2023-10-11 15:59:35'
+    gems/TextProcessing:
+      name: TextProcessing
+      category: Machine Learning
+      subCategory: ''
+      description: null
+      author: sumitpaul@prophecy.io
+      mode: batch
+      files:
+      - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/TextProcessing.py
+      createdAt: '2023-10-12 05:22:51'
+    gems/binary:
+      name: binary
+      category: Source/Target
+      subCategory: File
+      description: null
+      author: sumitpaul@prophecy.io
+      mode: batch
+      files:
+      - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/BinaryFormat.py
+      createdAt: '2023-10-12 05:40:52'
 functions:
   author: null
   createdAt: '2023-10-03 01:38:26'
@@ -269,6 +291,21 @@ dependencies:
   name: opensearchpy
   enabled: false
   package: opensearch-py
+- type: pypi
+  id: I7lDQ
+  name: boto3
+  enabled: false
+  package: boto3==1.28.62
+- type: pypi
+  id: nRwR4
+  name: pdf2image
+  enabled: false
+  package: pdf2image
+- type: pypi
+  id: pip5l
+  name: unstructured
+  enabled: false
+  package: unstructured==0.7.4
 projectDependencies:
   '291':
     projectUID: 291

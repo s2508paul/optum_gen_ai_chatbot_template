@@ -42,8 +42,26 @@
       "type" : "pypi",
       "id" : "0d4Y6",
       "name" : "opensearchpy",
-      "enabled" : false,
+      "enabled" : true,
       "package" : "opensearch-py"
+    }, {
+      "type" : "pypi",
+      "id" : "I7lDQ",
+      "name" : "boto3",
+      "enabled" : true,
+      "package" : "boto3==1.28.62"
+    }, {
+      "type" : "pypi",
+      "id" : "nRwR4",
+      "name" : "pdf2image",
+      "enabled" : true,
+      "package" : "pdf2image"
+    }, {
+      "type" : "pypi",
+      "id" : "pip5l",
+      "name" : "unstructured",
+      "enabled" : true,
+      "package" : "unstructured==0.7.4"
     } ],
     "dependentProjectExternalDependencies" : [ {
       "projectUID" : "289",
@@ -112,12 +130,6 @@
     "target" : "SBU0JkDz6gi57TbGVQGXG$$6Sav0KMPv0_mLmDyKXr0J",
     "targetPort" : "jolLHWiVpkXCSoQuZiAek$$OgsPrLdF8p9ch00f3gJzh"
   }, {
-    "id" : "zZNbHV6PbjpU7oyeXL6Lx$$dP3u59cq3v4vDqowZWp9v",
-    "source" : "iVRrshQ2a37FwtUpZ7zR5$$hgyniJjhayuF3q3rcKTSE",
-    "sourcePort" : "_G7WQB1-WUMsNIGtOWCw6$$NAdQN76yFkXdU8k8NFZTF",
-    "target" : "-qgmT2pV_023b84WIhRQp$$YOetBy6th6Tp3Z46okao6",
-    "targetPort" : "5scM-GNFADzekppgB4pKZ$$gXvMkwtJ0qHrv8lCXt_Gs"
-  }, {
     "id" : "XVaS9_47yLB1yPFU-8I1B$$i_K1apR-bjNHsW7CBTDio",
     "source" : "7YaXJlNyanLhwaDCDJ1zT$$PysBaot86CYLBz7bgGtuA",
     "sourcePort" : "EI6ejugowh4dB07TppxO6$$hfEQPy1ccx5yS6-x0emWN",
@@ -153,6 +165,12 @@
     "sourcePort" : "wsaGOrINdOSzYmKXG48u6$$PCANZnyovYM_xYIweR27p",
     "target" : "ruEHNO3t7Qr01UM_W3Xue$$8zXAB7bLwAXWNjV8Q1QNH",
     "targetPort" : "Pf4qbrKZtH80hQyKN-iKx$$E6zK-g59R6tYuxdtEf-ej"
+  }, {
+    "id" : "pQU-2q4TfmWeU7falwdFk$$v6yqpDnHAYYq54UDfF8O7",
+    "source" : "iVRrshQ2a37FwtUpZ7zR5$$hgyniJjhayuF3q3rcKTSE",
+    "sourcePort" : "_G7WQB1-WUMsNIGtOWCw6$$NAdQN76yFkXdU8k8NFZTF",
+    "target" : "-qgmT2pV_023b84WIhRQp$$YOetBy6th6Tp3Z46okao6",
+    "targetPort" : "5scM-GNFADzekppgB4pKZ$$gXvMkwtJ0qHrv8lCXt_Gs"
   } ],
   "processes" : {
     "0Au1n1rc93bQnavHWu8FH$$FQgXN29miTpgD-DJwKZbb" : {
@@ -443,7 +461,7 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "optum-embeddings",
+              "name" : "embeddings",
               "type" : {
                 "type" : "array",
                 "elementType" : "float",
@@ -732,15 +750,6 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "url",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
               "name" : "content_chunk",
               "type" : "string",
               "nullable" : true,
@@ -831,15 +840,6 @@
                 "elementType" : "float",
                 "containsNull" : true
               },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "url",
-              "type" : "string",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -1392,15 +1392,6 @@
                 "mappings" : [ ],
                 "tags" : [ ]
               }
-            }, {
-              "name" : "url",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
             } ]
           },
           "isStreaming" : false
@@ -1622,15 +1613,6 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "url",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
               "name" : "content_chunk",
               "type" : "string",
               "nullable" : true,
@@ -1702,17 +1684,10 @@
             "expression" : "content_chunk"
           },
           "description" : ""
-        }, {
-          "target" : "url",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "url"
-          },
-          "description" : ""
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##opensearch_matches", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##url", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##text", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##ts", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##content_chunk", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##id", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##create_time", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##embedding" ]
+        "columnsSelector" : [ "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##embedding", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##ts", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##create_time", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##content_chunk", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##id", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##opensearch_matches", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##text" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
@@ -1725,7 +1700,7 @@
       "metadata" : {
         "label" : "bot_message",
         "slug" : "bot_message",
-        "x" : 1200,
+        "x" : 1180,
         "y" : -80,
         "phase" : 0,
         "cache" : false,
@@ -1807,7 +1782,7 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "optum-embeddings",
+              "name" : "embeddings",
               "type" : {
                 "type" : "array",
                 "elementType" : "float",
@@ -1865,7 +1840,7 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "optum-embeddings",
+              "name" : "embeddings",
               "type" : {
                 "type" : "array",
                 "elementType" : "float",
@@ -1940,15 +1915,16 @@
       "properties" : {
         "credential_manual_api_secrets" : "",
         "credential_db_secrets" : "secret",
-        "index_name" : "optum-gen-ai-index",
+        "index_name" : "optum-gen-ai-pdf-index",
         "host" : "vrq94ns7ekrnmygy1lx6.eu-west-1.aoss.amazonaws.com",
+        "vector_id_column_name" : "vector_ids",
         "credential_type" : "databricks",
         "credential_db_scope" : "opensearch_serverless",
         "service" : "aoss",
         "credential_db_key" : "access_key",
         "region" : "eu-west-1",
-        "vector_column_name" : "optum-embeddings",
-        "top_k" : 3,
+        "vector_column_name" : "embeddings",
+        "top_k" : 5,
         "credential_manual_api_key" : ""
       },
       "componentInfo" : {
@@ -2090,7 +2066,7 @@
       "metadata" : {
         "label" : "with_original_content",
         "slug" : "with_original_content",
-        "x" : 120,
+        "x" : 100,
         "y" : -80,
         "phase" : 0,
         "cache" : false,
@@ -2171,7 +2147,7 @@
             "fields" : [ {
               "name" : "id",
               "type" : "string",
-              "nullable" : true,
+              "nullable" : false,
               "metadata" : {
                 "description" : "",
                 "mappings" : [ ],
@@ -2184,15 +2160,6 @@
                 "elementType" : "float",
                 "containsNull" : true
               },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "url",
-              "type" : "string",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -2290,15 +2257,6 @@
                 "elementType" : "float",
                 "containsNull" : true
               },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "url",
-              "type" : "string",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -2459,7 +2417,7 @@
           },
           "description" : ""
         }, {
-          "target" : "optum-embeddings",
+          "target" : "embeddings",
           "expression" : {
             "format" : "sql",
             "expression" : "bedrock_embedding"
@@ -2475,7 +2433,7 @@
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA##create_time", "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA##ts", "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA##bedrock_embedding", "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA##text", "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA##bedrock_error" ]
+        "columnsSelector" : [ "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA##bedrock_embedding", "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA##ts", "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA##text", "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA##bedrock_error", "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA##create_time" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",

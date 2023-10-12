@@ -4,7 +4,7 @@ schema:
   fields:
   - name: id
     type: string
-    nullable: true
+    nullable: false
     metadata:
       description: ''
       mappings: []
@@ -14,13 +14,6 @@ schema:
       type: array
       elementType: float
       containsNull: true
-    nullable: true
-    metadata:
-      description: ''
-      mappings: []
-      tags: []
-  - name: url
-    type: string
     nullable: true
     metadata:
       description: ''

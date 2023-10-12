@@ -44,6 +44,24 @@
       "name" : "opensearchpy",
       "enabled" : true,
       "package" : "opensearch-py"
+    }, {
+      "type" : "pypi",
+      "id" : "I7lDQ",
+      "name" : "boto3",
+      "enabled" : true,
+      "package" : "boto3==1.28.62"
+    }, {
+      "type" : "pypi",
+      "id" : "nRwR4",
+      "name" : "pdf2image",
+      "enabled" : true,
+      "package" : "pdf2image"
+    }, {
+      "type" : "pypi",
+      "id" : "pip5l",
+      "name" : "unstructured",
+      "enabled" : true,
+      "package" : "unstructured==0.7.4"
     } ],
     "dependentProjectExternalDependencies" : [ {
       "projectUID" : "289",
@@ -76,50 +94,68 @@
     "target" : "J3FUw-2wbH0BKudqwRp7H$$5KapH6zkIKHA5HJqzUwLE",
     "targetPort" : "YfFNtpQd-x6A9oJaMCu1z$$c4ZmiyRQcGLBHc2x2AUhB"
   }, {
-    "id" : "kqz0sRIDD7IvbKyEh2ea4",
-    "source" : "Lcyw-8Zu-OgU_AoWaBYNd$$blOL_yTf7jA3BilqMDaLp",
-    "sourcePort" : "pwrn_bjOkryDj4FqnnWVZ$$KrCEEo9CIMR024P45fziY",
-    "target" : "uAhCx9HmSlYkkepepM7lL$$hk9j-PMn1OWUR39WF781T",
-    "targetPort" : "70xUDfUQNiSwFM1OPg1cp$$6ouL_tl2gYSz6JUlMoKI4"
-  }, {
-    "id" : "ncrI1iFa-aphMRPyutmku$$B_hQXuYXCpsz_fvia1zD4",
-    "source" : "xBcTpzouYJ8yi3O0yS6OH$$CpSt0JREoCMeDUdIhCIVo",
-    "sourcePort" : "1PUBGXvbvafADOz6Vqgbp$$zwOLR1eKZcPQ5ls4RuLGS",
-    "target" : "efPlaVVj6Sfhh9fqzeIIh$$V9442wSRFMT2A_GVV_tkO",
-    "targetPort" : "yd9SpMexWMI0tWi5o-FLk$$A3miyrFrCkNXpDIMSqj49"
-  }, {
-    "id" : "iJiOCrrj6aWjFUsDRFtzC$$39HWPIoBhHQ84iXYZ7QWX",
-    "source" : "efPlaVVj6Sfhh9fqzeIIh$$V9442wSRFMT2A_GVV_tkO",
-    "sourcePort" : "Kp3JcDLC7F2vP2F8zDmig$$LSQnBqZQdd5gH6dIP5k_q",
-    "target" : "7msPqIFBZv4r5A0DqgQ0T$$AFwg25mc21IpcrT1EJvXZ",
-    "targetPort" : "p1ILkMeUB57SzPHZ-tmMk$$dnR6-QpxiIhD2fztYYxX8"
-  }, {
     "id" : "BLTT8zlwlnCqhqyQXc0Aa$$2u2tkUCSi9xAD6xOV0TZw",
     "source" : "7msPqIFBZv4r5A0DqgQ0T$$AFwg25mc21IpcrT1EJvXZ",
     "sourcePort" : "lEK3GElp2G5xXpD6EIINd$$mZYhVgu_ubW61-LLfpab8",
     "target" : "kJxdJDL1SZP1cuKZ_X7Nw$$0NpdwI1pFJF_WrSut7M8M",
     "targetPort" : "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3"
   }, {
-    "id" : "PpllNP1hNULfMI_cQVxiQ",
+    "id" : "W2K6G-4_BrFM5HUCBRN10",
+    "source" : "POZON0inUTHaVhbpFleUO$$RDKljCKl0a6w81eKTTrGv",
+    "sourcePort" : "EfuEc4UF3V0JjtU7dVpXm$$RyCqfANPIHz7r5dZb_wAw",
+    "target" : "cB3q0z-BzXgcpZeYZlJW3$$ak1GiYIiYIA6QwGCIc2rH",
+    "targetPort" : "nv3--v5_QHOknM8kRZOse$$-oWfaI7POwSDV2dAAFmWI"
+  }, {
+    "id" : "OvN3HguLNqGYIQSSfUyBO",
+    "source" : "LSfm0vNwY8qrBRuPviLpY$$hD7T06fPOjXQAWw4lPOrA",
+    "sourcePort" : "ZIcAgEQ5UTrwfjl8P2aZ_$$lU3Y50mlD1k0zoQ0JqeyK",
+    "target" : "7msPqIFBZv4r5A0DqgQ0T$$AFwg25mc21IpcrT1EJvXZ",
+    "targetPort" : "p1ILkMeUB57SzPHZ-tmMk$$dnR6-QpxiIhD2fztYYxX8"
+  }, {
+    "id" : "hSxis_f3_VNNlklJI0D1W",
+    "source" : "cB3q0z-BzXgcpZeYZlJW3$$ak1GiYIiYIA6QwGCIc2rH",
+    "sourcePort" : "19Tftolu_vjToNQgWh02h$$SPf6hU9_UiJCnK2E_fTl5",
+    "target" : "rM-RE_zaCJZzNm4CQVQzy$$NIcW6JWhrAi94lpDdbjNG",
+    "targetPort" : "TY2EN8E6rIGKDDjWo2iZc$$Jrr98a2hX9k5Kmq9-_tuF"
+  }, {
+    "id" : "UH7KrUQyhHuwpqXcedd_B",
+    "source" : "rM-RE_zaCJZzNm4CQVQzy$$NIcW6JWhrAi94lpDdbjNG",
+    "sourcePort" : "58Q_5VkebK6VNGcCXqtNJ$$Wak2Q9QgLpcSGiy4ldMpM",
+    "target" : "LnEmiquxy2pbCPDjPFZYb$$Gk41FGqCfJGcFpiPL9xw1",
+    "targetPort" : "JIHmaS9Yu15Obo-zXk76a$$AhZm78BMdSTjfGR0Y3SSJ"
+  }, {
+    "id" : "JeQ8KQkQMf_pPXIWCbWE7",
+    "source" : "LnEmiquxy2pbCPDjPFZYb$$Gk41FGqCfJGcFpiPL9xw1",
+    "sourcePort" : "3xeAWgHt_Pf9VN9uFv-mE$$QDhPAIqirmntswUdkaafC",
+    "target" : "GZ2OyX8Xj8nf2It3rFshL$$9w_yEOcVS4F56nSX_Wt7L",
+    "targetPort" : "T9gBuJQrwWWXxjNq_PzUF$$dpqUij3w4fIH7dDHraN2U"
+  }, {
+    "id" : "vsLtiHsyQgSGTSFEvV2M2$$_fY0or5FxJnEaIkqQWPWw",
+    "source" : "GZ2OyX8Xj8nf2It3rFshL$$9w_yEOcVS4F56nSX_Wt7L",
+    "sourcePort" : "4_C11OlnLazt28GPpe0iI$$OhE_oWiXfE0zPL6bVLEOa",
+    "target" : "9yEPWjdw1vcet0MZUPAGi$$uWKytw4Elt0aM7IGOuPvO",
+    "targetPort" : "3aUhtN30MZ9GFp2j3K6XH$$EwCizAE25zfvCI8rtLTnN"
+  }, {
+    "id" : "ZAQtR-0jhsZ8HYj5k5ugG$$79_yU07agnoid8EVF4LJ-",
+    "source" : "9yEPWjdw1vcet0MZUPAGi$$uWKytw4Elt0aM7IGOuPvO",
+    "sourcePort" : "SpSVZS_p70yFurNXx3DwR$$qYf4PY8Wf1cHpcEHymskR",
+    "target" : "LSfm0vNwY8qrBRuPviLpY$$hD7T06fPOjXQAWw4lPOrA",
+    "targetPort" : "WMj4eWFtIhSXt_HYtyT9S$$lUnVsvO2FoQpQ9uNU4sUg"
+  }, {
+    "id" : "__ZMrtciU5XulBgm_V0H-",
     "source" : "Lcyw-8Zu-OgU_AoWaBYNd$$blOL_yTf7jA3BilqMDaLp",
     "sourcePort" : "pwrn_bjOkryDj4FqnnWVZ$$KrCEEo9CIMR024P45fziY",
-    "target" : "GhlsPMrgCy1Y9CI7RWPfF$$o53cooaoiq-kDMXBTkMSj",
-    "targetPort" : "bYLVROdQ4_AI2eJMlhNIr$$BElBOim6YYer3NVtEkTFE"
-  }, {
-    "id" : "B63qsSwlGDrJiktlGndLa",
-    "source" : "GhlsPMrgCy1Y9CI7RWPfF$$o53cooaoiq-kDMXBTkMSj",
-    "sourcePort" : "PscKAGeOd4qztAtebqDZx$$VQHYrj95wxBXCIlBcJ0DA",
     "target" : "6BUjSyd3rcyqA_bQbRbqR$$TAD-bDRnenkE730zjh2ku",
     "targetPort" : "MJGKw78bWfgdX8uy_60gE$$FVM8PT3NfFLlUqalQgt__"
   } ],
   "processes" : {
-    "efPlaVVj6Sfhh9fqzeIIh$$V9442wSRFMT2A_GVV_tkO" : {
-      "id" : "efPlaVVj6Sfhh9fqzeIIh$$V9442wSRFMT2A_GVV_tkO",
-      "component" : "OpenAI",
+    "LSfm0vNwY8qrBRuPviLpY$$hD7T06fPOjXQAWw4lPOrA" : {
+      "id" : "LSfm0vNwY8qrBRuPviLpY$$hD7T06fPOjXQAWw4lPOrA",
+      "component" : "Bedrock",
       "metadata" : {
-        "label" : "vectorize",
-        "slug" : "vectorize",
-        "x" : -2040,
+        "label" : "bedrock_embeddings",
+        "slug" : "bedrock_embeddings",
+        "x" : -1820,
         "y" : -540,
         "phase" : 0,
         "cache" : false,
@@ -128,30 +164,21 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "yd9SpMexWMI0tWi5o-FLk$$A3miyrFrCkNXpDIMSqj49",
+          "id" : "WMj4eWFtIhSXt_HYtyT9S$$lUnVsvO2FoQpQ9uNU4sUg",
           "slug" : "in0",
           "schema" : {
             "type" : "struct",
             "fields" : [ {
               "name" : "id",
               "type" : "string",
-              "nullable" : true,
+              "nullable" : false,
               "metadata" : {
                 "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "url",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "content_chunk",
+              "name" : "result_chunks",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
@@ -164,35 +191,22 @@
           "isStreaming" : false
         } ],
         "outputs" : [ {
-          "id" : "Kp3JcDLC7F2vP2F8zDmig$$LSQnBqZQdd5gH6dIP5k_q",
+          "id" : "ZIcAgEQ5UTrwfjl8P2aZ_$$lU3Y50mlD1k0zoQ0JqeyK",
           "slug" : "out",
           "schema" : {
             "type" : "struct",
             "fields" : [ {
-              "name" : "openai_embedding",
-              "type" : {
-                "type" : "array",
-                "elementType" : "float",
-                "containsNull" : true
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "openai_error",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
               "name" : "id",
               "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_chunks",
+              "type" : "string",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -200,7 +214,7 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "embedding",
+              "name" : "bedrock_embedding",
               "type" : {
                 "type" : "array",
                 "elementType" : "float",
@@ -213,16 +227,7 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "url",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "content_chunk",
+              "name" : "bedrock_error",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
@@ -236,34 +241,315 @@
         } ],
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : true,
-        "autoUpdateOnRun" : false
+        "autoUpdateOnRun" : true
       },
       "properties" : {
-        "qa_query_column_name" : null,
+        "aws_region" : "us-east-1",
+        "credential_manual_secret" : "",
+        "credential_manual_key" : "",
         "credential_type" : "databricks",
-        "order_by_column" : "id",
-        "credential_db_scope" : "open_ai",
-        "credential_manual_token" : "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",
+        "credential_db_scope" : "aws_main",
+        "credential_db_secret" : "secret_value",
         "operation" : "embed_texts",
-        "embed_text_column_name" : "content_chunk",
-        "qa_context_column_name" : null,
-        "credential_db_key" : "api_key",
-        "limit" : "10",
-        "qa_template" : "Answer the question based on the context below.\nContext:\n```\n{context}\n```\nQuestion: \n```\n{query}\n```\nAnswer:\n",
-        "group_data" : true
+        "embed_text_column_name" : "result_chunks",
+        "credential_db_key" : "secret_key"
       },
       "componentInfo" : {
-        "gemId" : "gems/OpenAI",
+        "gemId" : "gems/Bedrock",
         "projectName" : "optum_gen_ai_chatbot_template"
       }
     },
-    "xBcTpzouYJ8yi3O0yS6OH$$CpSt0JREoCMeDUdIhCIVo" : {
-      "id" : "xBcTpzouYJ8yi3O0yS6OH$$CpSt0JREoCMeDUdIhCIVo",
+    "GZ2OyX8Xj8nf2It3rFshL$$9w_yEOcVS4F56nSX_Wt7L" : {
+      "id" : "GZ2OyX8Xj8nf2It3rFshL$$9w_yEOcVS4F56nSX_Wt7L",
+      "component" : "FlattenSchema",
+      "metadata" : {
+        "label" : "flatten_chunks",
+        "slug" : "flatten_chunks",
+        "x" : -2140,
+        "y" : -540,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "T9gBuJQrwWWXxjNq_PzUF$$dpqUij3w4fIH7dDHraN2U",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "path",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_chunks",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "4_C11OlnLazt28GPpe0iI$$OhE_oWiXfE0zPL6bVLEOa",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "explodedColsNewName" : [ {
+          "originalColToExplode" : "result_chunks",
+          "updatedColToExplode" : "result_chunks",
+          "colNameAfterExplode" : "result_chunks"
+        } ],
+        "fsExpressions" : [ {
+          "exploded" : "",
+          "flattenedExpression" : "path",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "path"
+          },
+          "targetTokens" : [ "path" ],
+          "target" : "path"
+        }, {
+          "exploded" : "✓",
+          "flattenedExpression" : "result_chunks",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "result_chunks"
+          },
+          "targetTokens" : [ "result_chunks" ],
+          "target" : "result_chunks"
+        } ],
+        "columnsSelector" : [ "T9gBuJQrwWWXxjNq_PzUF$$dpqUij3w4fIH7dDHraN2U##path", "T9gBuJQrwWWXxjNq_PzUF$$dpqUij3w4fIH7dDHraN2U##result_chunks" ],
+        "explodeColumns" : [ ],
+        "delimiter" : "-"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/FlattenSchema",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "rM-RE_zaCJZzNm4CQVQzy$$NIcW6JWhrAi94lpDdbjNG" : {
+      "id" : "rM-RE_zaCJZzNm4CQVQzy$$NIcW6JWhrAi94lpDdbjNG",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "explode",
+        "slug" : "explode",
+        "x" : -2460,
+        "y" : -540,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "TY2EN8E6rIGKDDjWo2iZc$$Jrr98a2hX9k5Kmq9-_tuF",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "path",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "modificationTime",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "length",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "content",
+              "type" : "binary",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_content",
+              "type" : {
+                "type" : "array",
+                "elementType" : {
+                  "type" : "struct",
+                  "fields" : [ {
+                    "name" : "element_id",
+                    "type" : "string",
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "coordinates",
+                    "type" : {
+                      "type" : "array",
+                      "elementType" : "float",
+                      "containsNull" : true
+                    },
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "text",
+                    "type" : "string",
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "type",
+                    "type" : "string",
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "metadata",
+                    "type" : {
+                      "type" : "struct",
+                      "fields" : [ {
+                        "name" : "filename",
+                        "type" : "string",
+                        "nullable" : true,
+                        "metadata" : {
+                          "description" : "",
+                          "mappings" : [ ],
+                          "tags" : [ ]
+                        }
+                      }, {
+                        "name" : "filetype",
+                        "type" : "string",
+                        "nullable" : true,
+                        "metadata" : {
+                          "description" : "",
+                          "mappings" : [ ],
+                          "tags" : [ ]
+                        }
+                      }, {
+                        "name" : "page_number",
+                        "type" : "integer",
+                        "nullable" : true,
+                        "metadata" : {
+                          "description" : "",
+                          "mappings" : [ ],
+                          "tags" : [ ]
+                        }
+                      } ]
+                    },
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  } ]
+                },
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "58Q_5VkebK6VNGcCXqtNJ$$Wak2Q9QgLpcSGiy4ldMpM",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "path",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "path"
+          },
+          "description" : ""
+        }, {
+          "target" : "text",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "concat_ws(', ', result_content.text)"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "TY2EN8E6rIGKDDjWo2iZc$$Jrr98a2hX9k5Kmq9-_tuF##path", "TY2EN8E6rIGKDDjWo2iZc$$Jrr98a2hX9k5Kmq9-_tuF##result_content", "TY2EN8E6rIGKDDjWo2iZc$$Jrr98a2hX9k5Kmq9-_tuF##result_content.text" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "POZON0inUTHaVhbpFleUO$$RDKljCKl0a6w81eKTTrGv" : {
+      "id" : "POZON0inUTHaVhbpFleUO$$RDKljCKl0a6w81eKTTrGv",
       "component" : "Source",
       "metadata" : {
-        "label" : "web_scrape",
-        "slug" : "web_scrape",
-        "x" : -2240,
+        "label" : "optum_pdf",
+        "slug" : "optum_pdf",
+        "x" : -2780,
         "y" : -540,
         "phase" : 0,
         "cache" : false,
@@ -273,7 +559,7 @@
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "1PUBGXvbvafADOz6Vqgbp$$zwOLR1eKZcPQ5ls4RuLGS",
+          "id" : "EfuEc4UF3V0JjtU7dVpXm$$RyCqfANPIHz7r5dZb_wAw",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
@@ -281,7 +567,82 @@
         "autoUpdateOnRun" : false
       },
       "properties" : {
-        "datasetId" : "datasets/web_scrape"
+        "datasetId" : "datasets/optum_pdf"
+      }
+    },
+    "9yEPWjdw1vcet0MZUPAGi$$uWKytw4Elt0aM7IGOuPvO" : {
+      "id" : "9yEPWjdw1vcet0MZUPAGi$$uWKytw4Elt0aM7IGOuPvO",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "get_ids",
+        "slug" : "get_ids",
+        "x" : -1980,
+        "y" : -540,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "3aUhtN30MZ9GFp2j3K6XH$$EwCizAE25zfvCI8rtLTnN",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "path",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_chunks",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "SpSVZS_p70yFurNXx3DwR$$qYf4PY8Wf1cHpcEHymskR",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "concat('text-', monotonically_increasing_id())"
+          },
+          "description" : ""
+        }, {
+          "target" : "result_chunks",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "result_chunks"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "3aUhtN30MZ9GFp2j3K6XH$$EwCizAE25zfvCI8rtLTnN##result_chunks" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
       }
     },
     "Lcyw-8Zu-OgU_AoWaBYNd$$blOL_yTf7jA3BilqMDaLp" : {
@@ -315,9 +676,9 @@
       "id" : "7msPqIFBZv4r5A0DqgQ0T$$AFwg25mc21IpcrT1EJvXZ",
       "component" : "Filter",
       "metadata" : {
-        "label" : "clean",
-        "slug" : "clean",
-        "x" : -1880,
+        "label" : "remove_nulls",
+        "slug" : "remove_nulls",
+        "x" : -1660,
         "y" : -540,
         "phase" : 0,
         "cache" : false,
@@ -331,30 +692,17 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
-              "name" : "openai_embedding",
-              "type" : {
-                "type" : "array",
-                "elementType" : "float",
-                "containsNull" : true
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "openai_error",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
               "name" : "id",
               "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_chunks",
+              "type" : "string",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -362,7 +710,7 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "embedding",
+              "name" : "bedrock_embedding",
               "type" : {
                 "type" : "array",
                 "elementType" : "float",
@@ -375,16 +723,7 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "url",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "content_chunk",
+              "name" : "bedrock_error",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
@@ -405,10 +744,10 @@
         "autoUpdateOnRun" : false
       },
       "properties" : {
-        "columnsSelector" : [ "p1ILkMeUB57SzPHZ-tmMk$$dnR6-QpxiIhD2fztYYxX8##openai_error" ],
+        "columnsSelector" : [ "p1ILkMeUB57SzPHZ-tmMk$$dnR6-QpxiIhD2fztYYxX8##bedrock_error" ],
         "condition" : {
           "format" : "sql",
-          "expression" : "openai_error is null"
+          "expression" : "bedrock_error is null"
         }
       },
       "componentInfo" : {
@@ -422,8 +761,8 @@
       "metadata" : {
         "label" : "opensearch-target",
         "slug" : "opensearch_target",
-        "x" : -1840,
-        "y" : -120,
+        "x" : -1920,
+        "y" : -280,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -438,28 +777,19 @@
             "fields" : [ {
               "name" : "id",
               "type" : "string",
-              "nullable" : true,
+              "nullable" : false,
               "metadata" : {
                 "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "embedd",
+              "name" : "embedding",
               "type" : {
                 "type" : "array",
                 "elementType" : "float",
                 "containsNull" : true
               },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "url",
-              "type" : "string",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -488,196 +818,13 @@
         "datasetId" : "datasets/opensearch-target"
       }
     },
-    "GhlsPMrgCy1Y9CI7RWPfF$$o53cooaoiq-kDMXBTkMSj" : {
-      "id" : "GhlsPMrgCy1Y9CI7RWPfF$$o53cooaoiq-kDMXBTkMSj",
-      "component" : "Reformat",
-      "metadata" : {
-        "label" : "formatting",
-        "slug" : "formatting",
-        "x" : -2020,
-        "y" : -120,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "bYLVROdQ4_AI2eJMlhNIr$$BElBOim6YYer3NVtEkTFE",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "id",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "embedding",
-              "type" : {
-                "type" : "array",
-                "elementType" : "float",
-                "containsNull" : true
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "url",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "content_chunk",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "PscKAGeOd4qztAtebqDZx$$VQHYrj95wxBXCIlBcJ0DA",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
-        "expressions" : [ {
-          "target" : "id",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "id"
-          },
-          "description" : ""
-        }, {
-          "target" : "embedd",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "embedding"
-          },
-          "description" : ""
-        }, {
-          "target" : "url",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "url"
-          },
-          "description" : ""
-        }, {
-          "target" : "content_chunk",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "content_chunk"
-          },
-          "description" : ""
-        } ],
-        "importString" : "",
-        "activeTab" : "expressions",
-        "columnsSelector" : [ "bYLVROdQ4_AI2eJMlhNIr$$BElBOim6YYer3NVtEkTFE##content_chunk", "bYLVROdQ4_AI2eJMlhNIr$$BElBOim6YYer3NVtEkTFE##id", "bYLVROdQ4_AI2eJMlhNIr$$BElBOim6YYer3NVtEkTFE##url", "bYLVROdQ4_AI2eJMlhNIr$$BElBOim6YYer3NVtEkTFE##embedding" ]
-      },
-      "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
-        "projectName" : "ProphecySparkBasicsPython"
-      }
-    },
-    "uAhCx9HmSlYkkepepM7lL$$hk9j-PMn1OWUR39WF781T" : {
-      "id" : "uAhCx9HmSlYkkepepM7lL$$hk9j-PMn1OWUR39WF781T",
-      "component" : "Target",
-      "metadata" : {
-        "label" : "vector_db",
-        "slug" : "vector_db",
-        "x" : -1840,
-        "y" : -280,
-        "phase" : 3,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "70xUDfUQNiSwFM1OPg1cp$$6ouL_tl2gYSz6JUlMoKI4",
-          "slug" : "web_silver_content_vectorized_1",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "id",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "embedding",
-              "type" : {
-                "type" : "array",
-                "elementType" : "float",
-                "containsNull" : true
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "url",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "content_chunk",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "datasetId" : "datasets/web_vectors"
-      }
-    },
     "J3FUw-2wbH0BKudqwRp7H$$5KapH6zkIKHA5HJqzUwLE" : {
       "id" : "J3FUw-2wbH0BKudqwRp7H$$5KapH6zkIKHA5HJqzUwLE",
       "component" : "Target",
       "metadata" : {
         "label" : "write_vector_data",
         "slug" : "write_vector_data",
-        "x" : -1500,
+        "x" : -1340,
         "y" : -540,
         "phase" : 0,
         "cache" : false,
@@ -693,7 +840,7 @@
             "fields" : [ {
               "name" : "id",
               "type" : "string",
-              "nullable" : true,
+              "nullable" : false,
               "metadata" : {
                 "description" : "",
                 "mappings" : [ ],
@@ -706,15 +853,6 @@
                 "elementType" : "float",
                 "containsNull" : true
               },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "url",
-              "type" : "string",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -743,13 +881,226 @@
         "datasetId" : "datasets/content_vectorized"
       }
     },
+    "cB3q0z-BzXgcpZeYZlJW3$$ak1GiYIiYIA6QwGCIc2rH" : {
+      "id" : "cB3q0z-BzXgcpZeYZlJW3$$ak1GiYIiYIA6QwGCIc2rH",
+      "component" : "TextProcessing",
+      "metadata" : {
+        "label" : "parse_pdf",
+        "slug" : "parse_pdf",
+        "x" : -2620,
+        "y" : -540,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "nv3--v5_QHOknM8kRZOse$$-oWfaI7POwSDV2dAAFmWI",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "path",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "modificationTime",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "length",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "content",
+              "type" : "binary",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "19Tftolu_vjToNQgWh02h$$SPf6hU9_UiJCnK2E_fTl5",
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "path",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "modificationTime",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "length",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "content",
+              "type" : "binary",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_content",
+              "type" : {
+                "type" : "array",
+                "elementType" : {
+                  "type" : "struct",
+                  "fields" : [ {
+                    "name" : "element_id",
+                    "type" : "string",
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "coordinates",
+                    "type" : {
+                      "type" : "array",
+                      "elementType" : "float",
+                      "containsNull" : true
+                    },
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "text",
+                    "type" : "string",
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "type",
+                    "type" : "string",
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "metadata",
+                    "type" : {
+                      "type" : "struct",
+                      "fields" : [ {
+                        "name" : "filename",
+                        "type" : "string",
+                        "nullable" : true,
+                        "metadata" : {
+                          "description" : "",
+                          "mappings" : [ ],
+                          "tags" : [ ]
+                        }
+                      }, {
+                        "name" : "filetype",
+                        "type" : "string",
+                        "nullable" : true,
+                        "metadata" : {
+                          "description" : "",
+                          "mappings" : [ ],
+                          "tags" : [ ]
+                        }
+                      }, {
+                        "name" : "page_number",
+                        "type" : "integer",
+                        "nullable" : true,
+                        "metadata" : {
+                          "description" : "",
+                          "mappings" : [ ],
+                          "tags" : [ ]
+                        }
+                      } ]
+                    },
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  } ]
+                },
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
+      },
+      "properties" : {
+        "operation" : "pdf_parse",
+        "column_name" : "content",
+        "split_chunk_size" : 1000
+      },
+      "componentInfo" : {
+        "gemId" : "gems/TextProcessing",
+        "projectName" : "optum_gen_ai_chatbot_template"
+      }
+    },
     "kJxdJDL1SZP1cuKZ_X7Nw$$0NpdwI1pFJF_WrSut7M8M" : {
       "id" : "kJxdJDL1SZP1cuKZ_X7Nw$$0NpdwI1pFJF_WrSut7M8M",
       "component" : "Reformat",
       "metadata" : {
         "label" : "rename",
         "slug" : "rename",
-        "x" : -1680,
+        "x" : -1500,
         "y" : -540,
         "phase" : 0,
         "cache" : false,
@@ -763,30 +1114,17 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
-              "name" : "openai_embedding",
-              "type" : {
-                "type" : "array",
-                "elementType" : "float",
-                "containsNull" : true
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "openai_error",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
               "name" : "id",
               "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_chunks",
+              "type" : "string",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -794,7 +1132,7 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "embedding",
+              "name" : "bedrock_embedding",
               "type" : {
                 "type" : "array",
                 "elementType" : "float",
@@ -807,16 +1145,7 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "url",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "content_chunk",
+              "name" : "bedrock_error",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
@@ -849,31 +1178,119 @@
           "target" : "embedding",
           "expression" : {
             "format" : "sql",
-            "expression" : "openai_embedding"
-          },
-          "description" : ""
-        }, {
-          "target" : "url",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "url"
+            "expression" : "bedrock_embedding"
           },
           "description" : ""
         }, {
           "target" : "content_chunk",
           "expression" : {
             "format" : "sql",
-            "expression" : "content_chunk"
+            "expression" : "result_chunks"
           },
           "description" : ""
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##id", "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##url", "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##content_chunk", "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##openai_embedding" ]
+        "columnsSelector" : [ "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##bedrock_embedding", "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##result_chunks", "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##id" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "LnEmiquxy2pbCPDjPFZYb$$Gk41FGqCfJGcFpiPL9xw1" : {
+      "id" : "LnEmiquxy2pbCPDjPFZYb$$Gk41FGqCfJGcFpiPL9xw1",
+      "component" : "TextProcessing",
+      "metadata" : {
+        "label" : "chunkify",
+        "slug" : "chunkify",
+        "x" : -2300,
+        "y" : -540,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "JIHmaS9Yu15Obo-zXk76a$$AhZm78BMdSTjfGR0Y3SSJ",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "path",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "3xeAWgHt_Pf9VN9uFv-mE$$QDhPAIqirmntswUdkaafC",
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "path",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_chunks",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
+      },
+      "properties" : {
+        "operation" : "text_split_into_chunks",
+        "column_name" : "text",
+        "split_chunk_size" : 100
+      },
+      "componentInfo" : {
+        "gemId" : "gems/TextProcessing",
+        "projectName" : "optum_gen_ai_chatbot_template"
       }
     }
   },

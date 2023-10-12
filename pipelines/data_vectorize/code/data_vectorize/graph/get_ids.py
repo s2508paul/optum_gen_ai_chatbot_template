@@ -6,9 +6,5 @@ from prophecy.libs import typed_lit
 from data_vectorize.config.ConfigStore import *
 from data_vectorize.udfs.UDFs import *
 
-def rename(spark: SparkSession, in0: DataFrame) -> DataFrame:
-    return in0.select(
-        col("id"), 
-        col("bedrock_embedding").alias("embedding"), 
-        col("result_chunks").alias("content_chunk")
-    )
+def get_ids(spark: SparkSession, in0: DataFrame) -> DataFrame:
+    return in0.select(concat(lit("text-"), monotonically_increasing_id()).alias("id"), col("result_chunks"))

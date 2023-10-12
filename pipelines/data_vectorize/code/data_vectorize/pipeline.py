@@ -8,15 +8,18 @@ from prophecy.utils import *
 from data_vectorize.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_web_scrape = web_scrape(spark)
-    df_vectorize = vectorize(spark, df_web_scrape)
+    df_optum_pdf = optum_pdf(spark)
+    df_parse_pdf = parse_pdf(spark, df_optum_pdf)
+    df_explode = explode(spark, df_parse_pdf)
+    df_chunkify = chunkify(spark, df_explode)
+    df_flatten_chunks = flatten_chunks(spark, df_chunkify)
+    df_get_ids = get_ids(spark, df_flatten_chunks)
+    df_bedrock_embeddings = bedrock_embeddings(spark, df_get_ids)
     df_vector_read_catalog = vector_read_catalog(spark)
-    df_clean = clean(spark, df_vectorize)
-    df_formatting = formatting(spark, df_vector_read_catalog)
-    opensearch_target(spark, df_formatting)
-    df_rename = rename(spark, df_clean)
+    df_remove_nulls = remove_nulls(spark, df_bedrock_embeddings)
+    opensearch_target(spark, df_vector_read_catalog)
+    df_rename = rename(spark, df_remove_nulls)
     write_vector_data(spark, df_rename)
-    vector_db(spark, df_vector_read_catalog)
 
 def main():
     spark = SparkSession.builder\

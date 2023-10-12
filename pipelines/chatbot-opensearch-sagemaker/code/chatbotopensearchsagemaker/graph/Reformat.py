@@ -11,6 +11,6 @@ def Reformat(spark: SparkSession, in0: DataFrame) -> DataFrame:
         col("text"), 
         col("ts"), 
         col("create_time"), 
-        col("bedrock_embedding").alias("optum-embeddings"), 
+        col("bedrock_embedding").alias("embeddings"), 
         col("bedrock_error")
     )

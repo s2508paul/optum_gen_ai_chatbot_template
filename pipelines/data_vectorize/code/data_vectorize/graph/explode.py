@@ -6,5 +6,5 @@ from prophecy.libs import typed_lit
 from data_vectorize.config.ConfigStore import *
 from data_vectorize.udfs.UDFs import *
 
-def clean(spark: SparkSession, in0: DataFrame) -> DataFrame:
-    return in0.filter(col("openai_error").isNull())
+def explode(spark: SparkSession, in0: DataFrame) -> DataFrame:
+    return in0.select(col("path"), concat_ws(", ", col("result_content.text")).alias("text"))

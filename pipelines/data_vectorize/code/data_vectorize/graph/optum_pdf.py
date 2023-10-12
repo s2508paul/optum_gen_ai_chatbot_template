@@ -6,12 +6,12 @@ from prophecy.libs import typed_lit
 from data_vectorize.config.ConfigStore import *
 from data_vectorize.udfs.UDFs import *
 
-def web_scrape(spark: SparkSession) -> DataFrame:
+def optum_pdf(spark: SparkSession) -> DataFrame:
     return spark.read\
-        .format("parquet")\
+        .format("binaryFile")\
         .schema(
           StructType([
-            StructField("id", StringType(), True), StructField("url", StringType(), True), StructField("content_chunk", StringType(), True)
+            StructField("path", StringType(), True), StructField("modificationTime", TimestampType(), True), StructField("length", LongType(), True), StructField("content", BinaryType(), True)
         ])
         )\
-        .load("s3://prophecy-demo-optum/web_scrape/")
+        .load("dbfs:/FileStore/data_engg/optum/pdf/")

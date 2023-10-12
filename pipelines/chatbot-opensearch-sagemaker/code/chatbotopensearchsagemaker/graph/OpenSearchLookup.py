@@ -20,8 +20,8 @@ def OpenSearchLookup(spark: SparkSession, in0: DataFrame) -> DataFrame:
         .register_udfs(spark)
 
     return in0\
-        .withColumn("_vector", col("optum-embeddings"))\
-        .withColumn("_response", expr("opensearch_query(\"optum-gen-ai-index\", \"optum-embeddings\", _vector, 3)"))\
+        .withColumn("_vector", col("embeddings"))\
+        .withColumn("_response", expr("opensearch_query(\"optum-gen-ai-pdf-index\",\"vector_ids\", \"embeddings\", _vector, 5)"))\
         .withColumn("opensearch_matches", col("_response.matches"))\
         .withColumn("opensearch_error", col("_response.error"))\
         .drop("_vector", "_response")

@@ -26,6 +26,7 @@ class TextProcessing(ComponentSpec):
             .addOption("Load url (web scrape)", "web_scrape") \
             .addOption("Load url (web scrape) and extract text", "web_scrape_text") \
             .addOption("Parse pdf and extract text", "pdf_parse") \
+            .addOption("Parse docx and extract text", "docx_parse") \
             .bindProperty("operation")
         operation_container = StackLayout(gap="1rem") \
             .addElement(TitleElement("Operation")) \
@@ -50,13 +51,20 @@ class TextProcessing(ComponentSpec):
             .bindSchema("component.ports.inputs[0].schema") \
             .bindProperty("column_name") \
             .showErrorsFor("column_name")
+        # Operation: Parse docx
+        docx_parse_container = SchemaColumnsDropdown("Column name (binary)") \
+            .bindSchema("component.ports.inputs[0].schema") \
+            .bindProperty("column_name") \
+            .showErrorsFor("column_name")
         # Main container
         main_container = StackLayout(padding="1rem", gap="3rem") \
             .addElement(operation_selector) \
             .addElement(iff("operation", "text_split_into_chunks", chunks_container)) \
             .addElement(iff("operation", "web_scrape", web_scrape_container)) \
             .addElement(iff("operation", "web_scrape_text", web_scrape_container)) \
-            .addElement(iff("operation", "pdf_parse", pdf_parse_container))
+            .addElement(iff("operation", "pdf_parse", pdf_parse_container)) \
+            .addElement(iff("operation", "docx_parse", docx_parse_container))
+
         return Dialog("OpenAI").addElement(
             ColumnsLayout(gap="1rem", height="100%")
             .addColumn(PortSchemaTabs().importSchema(), "2fr")
@@ -91,3 +99,7 @@ class TextProcessing(ComponentSpec):
                 from spark_ai.files.pdf import FilePDFUtils
                 FilePDFUtils().register_udfs(spark)
                 return in0.withColumn("result_content", expr(f"pdf_parse({self.props.column_name})"))
+            elif self.props.operation == "docx_parse":
+                from spark_ai.files.docx import FileDocxUtils
+                FileDocxUtils().register_udfs(spark)
+                return in0.withColumn("result_content", expr(f"docx_parse({self.props.column_name})"))

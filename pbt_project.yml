@@ -23,6 +23,7 @@ pipelines:
       inputs:
       - datasets/content_vectorized
       - datasets/optum_pdf
+      - datasets/parse_docx
       outputs:
       - datasets/content_vectorized
       - datasets/opensearch-target
@@ -165,6 +166,19 @@ datasets:
         description: ''
         author: sumitpaul@prophecy.io
         createdAt: '2023-10-12 05:42:08'
+  datasets/parse_docx:
+    name: parse_docx
+    description: ''
+    author: sumitpaul@prophecy.io
+    createdAt: '2023-10-13 09:36:36'
+    mode: batch
+    physicalDatasets:
+      sumit-dev-dbx:
+        fabricId: 42
+        datasetType: File
+        description: ''
+        author: sumitpaul@prophecy.io
+        createdAt: '2023-10-13 09:36:36'
 templates: {}
 jobs: {}
 gemContainer:
@@ -322,7 +336,7 @@ projectDependencies:
     version: 0.0.4
     isDefault: true
     author: null
-    createdAt: '2023-10-11 10:05:17'
+    createdAt: '2023-10-13 10:19:46'
   '290':
     projectUID: 290
     projectName: ProphecyWarehousePython
@@ -330,5 +344,5 @@ projectDependencies:
     version: 0.0.2
     isDefault: true
     author: null
-    createdAt: '2023-10-11 10:05:17'
+    createdAt: '2023-10-13 10:19:46'
 pipelineConfigurations: {}

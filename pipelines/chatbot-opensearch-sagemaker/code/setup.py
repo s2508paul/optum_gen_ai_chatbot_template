@@ -7,7 +7,7 @@ setup(
     package_data = {'prophecy_config_instances' : ['*.json', '*.py', '*.conf']},
     description = 'workflow',
     install_requires = [
-'opensearch-py', 'boto3==1.28.62', 'pdf2image', 'unstructured==0.7.4', 'prophecy-libs==1.6.2'],
+'opensearch-py', 'boto3==1.28.62', 'pdf2image', 'unstructured==0.7.4', 'prophecy-libs==1.6.7'],
     entry_points = {
 'console_scripts' : [
 'main = chatbotopensearchsagemaker.pipeline:main'], },

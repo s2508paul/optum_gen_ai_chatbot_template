@@ -19,24 +19,24 @@ def opensearch_target(spark: SparkSession, in0: DataFrame):
         )\
         .register_udfs(spark)
 
-    if spark.catalog.tableExists("hive_metastore.default.opensearch_load_status9"):
+    if spark.catalog.tableExists("hive_metastore.default.opensearch_load_status15"):
         in0\
             .withColumn("vector_embedd", col("embedding"))\
-            .withColumn("vector_id", col("id"))\
+            .withColumn("vector_id", col("content_chunk"))\
             .withColumn('upserted', expr(
-            "opensearch_upsert(\"optum-gen-ai-pdf-index\",\"embeddings\", vector_embedd, \"vector_ids\", vector_id)"
+            "opensearch_upsert(\"optum-gen-ai-index-txt\",\"embeddings\", vector_embedd, \"content_chunk\", vector_id)"
         ))\
             .write\
             .format("delta")\
-            .insertInto("hive_metastore.default.opensearch_load_status9")
+            .insertInto("hive_metastore.default.opensearch_load_status15")
     else:
         in0\
             .withColumn("vector_embedd", col("embedding"))\
-            .withColumn("vector_id", col("id"))\
+            .withColumn("vector_id", col("content_chunk"))\
             .withColumn('upserted', expr(
-            "opensearch_upsert(\"optum-gen-ai-pdf-index\",\"embeddings\", vector_embedd, \"vector_ids\", vector_id)"
+            "opensearch_upsert(\"optum-gen-ai-index-txt\",\"embeddings\", vector_embedd, \"content_chunk\", vector_id)"
         ))\
             .write\
             .format("delta")\
             .mode("overwrite")\
-            .saveAsTable("hive_metastore.default.opensearch_load_status9")
+            .saveAsTable("hive_metastore.default.opensearch_load_status15")

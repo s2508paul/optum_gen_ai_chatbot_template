@@ -61,6 +61,21 @@ pipelines:
       - datasets/bot_message
     subgraphs: []
     dependencies: {}
+  pipelines/optum-pdf-data-vectorize:
+    name: optum-pdf-data-vectorize
+    description: ''
+    author: sumitpaul@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2023-10-18 14:05:26'
+    datasets:
+      inputs:
+      - datasets/read_pdf
+      outputs:
+      - datasets/opensearch-target
+    subgraphs: []
+    dependencies: {}
 datasets:
   datasets/content_vectorized:
     name: content_vectorized
@@ -179,6 +194,19 @@ datasets:
         description: ''
         author: sumitpaul@prophecy.io
         createdAt: '2023-10-13 09:36:36'
+  datasets/read_pdf:
+    name: read_pdf
+    description: ''
+    author: sumitpaul@prophecy.io
+    createdAt: '2023-10-18 14:08:24'
+    mode: batch
+    physicalDatasets:
+      sumit-dev-dbx:
+        fabricId: 42
+        datasetType: File
+        description: ''
+        author: sumitpaul@prophecy.io
+        createdAt: '2023-10-18 14:08:24'
 templates: {}
 jobs: {}
 gemContainer:
@@ -256,16 +284,6 @@ gemContainer:
       files:
       - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/Bedrock.py
       createdAt: '2023-10-11 13:15:40'
-    gems/OpenSearch:
-      name: OpenSearch
-      category: Source/Target
-      subCategory: Warehouse
-      description: null
-      author: sumitpaul@prophecy.io
-      mode: batch
-      files:
-      - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/OpenSearch.py
-      createdAt: '2023-10-11 15:59:35'
     gems/TextProcessing:
       name: TextProcessing
       category: Machine Learning
@@ -286,6 +304,16 @@ gemContainer:
       files:
       - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/BinaryFormat.py
       createdAt: '2023-10-12 05:40:52'
+    gems/OpenSearch:
+      name: OpenSearch
+      category: Source/Target
+      subCategory: Warehouse
+      description: null
+      author: sumitpaul@prophecy.io
+      mode: batch
+      files:
+      - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/OpenSearch.py
+      createdAt: '2023-10-18 09:50:17'
 functions:
   author: null
   createdAt: '2023-10-03 01:38:26'
@@ -320,6 +348,11 @@ dependencies:
   name: unstructured
   enabled: false
   package: unstructured==0.7.4
+- type: pypi
+  id: Fql9s
+  name: prophecy_spark_ai
+  enabled: false
+  package: prophecy-spark-ai==0.1.11
 projectDependencies:
   '291':
     projectUID: 291

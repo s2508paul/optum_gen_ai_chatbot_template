@@ -109,7 +109,7 @@ class OpenSearchFormat(DatasetSpec):
             index_selector = TextBox("Index Name") \
                 .bindProperty("index_name")
             
-            vector_id_property = TextBox("Vector Id Column") \
+            vector_id_property = TextBox("Vector Text Column") \
                 .bindPlaceholder("id") \
                 .bindProperty("vector_id_prop")
             
@@ -154,7 +154,7 @@ class OpenSearchFormat(DatasetSpec):
             # PROPERTIES SECTION
             # -------------------
 
-            id_column_selector = SchemaColumnsDropdown("Vector id column (expected type: str)") \
+            id_column_selector = SchemaColumnsDropdown("Vector text column (expected type: str)") \
                 .bindSchema("component.ports.inputs[0].schema") \
                 .bindProperty("vector_id_column_name") \
                 .showErrorsFor("vector_id_column_name")

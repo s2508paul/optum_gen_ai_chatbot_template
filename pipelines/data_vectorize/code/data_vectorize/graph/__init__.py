@@ -1,3 +1,4 @@
+from .document_ids_1 import document_ids_1
 from .parse_pdf import parse_pdf
 from .explode_docx import explode_docx
 from .remove_nulls import remove_nulls
@@ -13,5 +14,6 @@ from .get_ids import get_ids
 from .parse_docx import parse_docx
 from .bedrock_embeddings import bedrock_embeddings
 from .opensearch_target import opensearch_target
+from .document_ids import document_ids
 from .explode import explode
 from .rename import rename

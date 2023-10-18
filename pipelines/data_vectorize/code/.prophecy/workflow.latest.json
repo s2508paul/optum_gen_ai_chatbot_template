@@ -62,6 +62,12 @@
       "name" : "unstructured",
       "enabled" : true,
       "package" : "unstructured==0.7.4"
+    }, {
+      "type" : "pypi",
+      "id" : "Fql9s",
+      "name" : "prophecy_spark_ai",
+      "enabled" : true,
+      "package" : "prophecy-spark-ai==0.1.11"
     } ],
     "dependentProjectExternalDependencies" : [ {
       "projectUID" : "289",
@@ -118,18 +124,6 @@
     "target" : "rM-RE_zaCJZzNm4CQVQzy$$NIcW6JWhrAi94lpDdbjNG",
     "targetPort" : "TY2EN8E6rIGKDDjWo2iZc$$Jrr98a2hX9k5Kmq9-_tuF"
   }, {
-    "id" : "UH7KrUQyhHuwpqXcedd_B",
-    "source" : "rM-RE_zaCJZzNm4CQVQzy$$NIcW6JWhrAi94lpDdbjNG",
-    "sourcePort" : "58Q_5VkebK6VNGcCXqtNJ$$Wak2Q9QgLpcSGiy4ldMpM",
-    "target" : "LnEmiquxy2pbCPDjPFZYb$$Gk41FGqCfJGcFpiPL9xw1",
-    "targetPort" : "JIHmaS9Yu15Obo-zXk76a$$AhZm78BMdSTjfGR0Y3SSJ"
-  }, {
-    "id" : "JeQ8KQkQMf_pPXIWCbWE7",
-    "source" : "LnEmiquxy2pbCPDjPFZYb$$Gk41FGqCfJGcFpiPL9xw1",
-    "sourcePort" : "3xeAWgHt_Pf9VN9uFv-mE$$QDhPAIqirmntswUdkaafC",
-    "target" : "GZ2OyX8Xj8nf2It3rFshL$$9w_yEOcVS4F56nSX_Wt7L",
-    "targetPort" : "T9gBuJQrwWWXxjNq_PzUF$$dpqUij3w4fIH7dDHraN2U"
-  }, {
     "id" : "vsLtiHsyQgSGTSFEvV2M2$$_fY0or5FxJnEaIkqQWPWw",
     "source" : "GZ2OyX8Xj8nf2It3rFshL$$9w_yEOcVS4F56nSX_Wt7L",
     "sourcePort" : "4_C11OlnLazt28GPpe0iI$$OhE_oWiXfE0zPL6bVLEOa",
@@ -160,17 +154,41 @@
     "target" : "TF5cE338Sk3tHEo1xNdlO$$EsQzff3e1MJQ-xxHknOPy",
     "targetPort" : "3E2y-qBaoHV43kAMjZKqu$$tFLPEaBGgjl2cf4FI_kZl"
   }, {
-    "id" : "_BUUwVO48UiaMwF9JGy_d$$-K2hEJubqX9eHRryPYcqM",
-    "source" : "TF5cE338Sk3tHEo1xNdlO$$EsQzff3e1MJQ-xxHknOPy",
-    "sourcePort" : "SNUa8pExQm-CE15vM1y2u$$Pr4H_UE-JACmAKQpkax3M",
-    "target" : "nvmFdUlc7l6mHCvFaOKsC$$P8DhnUyLKcH9meX7_6xDV",
-    "targetPort" : "Ubh8g9Vdc3Pl_Vyaa1HHq$$E5tyEx3BRNdPJZ6ZzmbN-"
-  }, {
     "id" : "QplOXs96jOlSyykJ3LdiM$$lvv7jj0syQ4S8gN_FRdH0",
     "source" : "nvmFdUlc7l6mHCvFaOKsC$$P8DhnUyLKcH9meX7_6xDV",
     "sourcePort" : "_Uji9YoCsgeGXRVEF6Pdp$$KZaKTCw5ioKSDteFAGtE-",
     "target" : "mdNDmsmeDOKpFavD9TCGk$$k0XGhD_ECbR4E8D22qgMP",
     "targetPort" : "qFxHoTzSI9YnDiEvQBuWR$$LjexbcsXwxeWYUc11TV8Y"
+  }, {
+    "id" : "n-7M3R1Zis-kQ8uSNjz-o",
+    "source" : "LnEmiquxy2pbCPDjPFZYb$$Gk41FGqCfJGcFpiPL9xw1",
+    "sourcePort" : "3xeAWgHt_Pf9VN9uFv-mE$$QDhPAIqirmntswUdkaafC",
+    "target" : "GZ2OyX8Xj8nf2It3rFshL$$9w_yEOcVS4F56nSX_Wt7L",
+    "targetPort" : "T9gBuJQrwWWXxjNq_PzUF$$dpqUij3w4fIH7dDHraN2U"
+  }, {
+    "id" : "QB_XZV-EQFoFOvGZRwFMN",
+    "source" : "rM-RE_zaCJZzNm4CQVQzy$$NIcW6JWhrAi94lpDdbjNG",
+    "sourcePort" : "58Q_5VkebK6VNGcCXqtNJ$$Wak2Q9QgLpcSGiy4ldMpM",
+    "target" : "NmMxiNofzPzXiSncNWe6t$$vY0nP5XGnnmVXiEJew1c3",
+    "targetPort" : "szvn6ziMVAveBHT7U8KqP$$AoLMKzL-3d0-kPwfiLSFY"
+  }, {
+    "id" : "0r8OhTXxOBlos6kdJRMuf",
+    "source" : "NmMxiNofzPzXiSncNWe6t$$vY0nP5XGnnmVXiEJew1c3",
+    "sourcePort" : "5l0px6YnrYtjLZ0Ps1h0J$$0X0wOtTPSCp-3GKeb_cDM",
+    "target" : "LnEmiquxy2pbCPDjPFZYb$$Gk41FGqCfJGcFpiPL9xw1",
+    "targetPort" : "JIHmaS9Yu15Obo-zXk76a$$AhZm78BMdSTjfGR0Y3SSJ"
+  }, {
+    "id" : "2EWl_w5TyJmEzrs5TrmX4$$Py68AIF4rMogEXGSmgNeu",
+    "source" : "7ojN7asGQi36J1SfoW7dj$$7i49qzW7EDrZaboMKTJjz",
+    "sourcePort" : "oNXR_-p7tDF55XYoy3vAR$$LdbY16Z-vSa0jULNs3U5f",
+    "target" : "nvmFdUlc7l6mHCvFaOKsC$$P8DhnUyLKcH9meX7_6xDV",
+    "targetPort" : "Ubh8g9Vdc3Pl_Vyaa1HHq$$E5tyEx3BRNdPJZ6ZzmbN-"
+  }, {
+    "id" : "znPw-mOFM60d2wdEtiHR8",
+    "source" : "TF5cE338Sk3tHEo1xNdlO$$EsQzff3e1MJQ-xxHknOPy",
+    "sourcePort" : "SNUa8pExQm-CE15vM1y2u$$Pr4H_UE-JACmAKQpkax3M",
+    "target" : "7ojN7asGQi36J1SfoW7dj$$7i49qzW7EDrZaboMKTJjz",
+    "targetPort" : "mhxAAyWv42db0l6urdw_C$$bXswOCunuT6YLefVBp66L"
   } ],
   "processes" : {
     "LSfm0vNwY8qrBRuPviLpY$$hD7T06fPOjXQAWw4lPOrA" : {
@@ -179,7 +197,7 @@
       "metadata" : {
         "label" : "bedrock_embeddings",
         "slug" : "bedrock_embeddings",
-        "x" : -1820,
+        "x" : -1620,
         "y" : -540,
         "phase" : 0,
         "cache" : false,
@@ -193,6 +211,15 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
+              "name" : "doc_id",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
               "name" : "id",
               "type" : "string",
               "nullable" : false,
@@ -220,6 +247,15 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
+              "name" : "doc_id",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
               "name" : "id",
               "type" : "string",
               "nullable" : false,
@@ -283,13 +319,95 @@
         "projectName" : "optum_gen_ai_chatbot_template"
       }
     },
+    "NmMxiNofzPzXiSncNWe6t$$vY0nP5XGnnmVXiEJew1c3" : {
+      "id" : "NmMxiNofzPzXiSncNWe6t$$vY0nP5XGnnmVXiEJew1c3",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "document_ids",
+        "slug" : "document_ids",
+        "x" : -2340,
+        "y" : -540,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "szvn6ziMVAveBHT7U8KqP$$AoLMKzL-3d0-kPwfiLSFY",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "path",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "5l0px6YnrYtjLZ0Ps1h0J$$0X0wOtTPSCp-3GKeb_cDM",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "doc_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "concat('doc-', monotonically_increasing_id())"
+          },
+          "description" : ""
+        }, {
+          "target" : "path",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "path"
+          },
+          "description" : ""
+        }, {
+          "target" : "text",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "text"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "szvn6ziMVAveBHT7U8KqP$$AoLMKzL-3d0-kPwfiLSFY##text", "szvn6ziMVAveBHT7U8KqP$$AoLMKzL-3d0-kPwfiLSFY##path" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
     "nvmFdUlc7l6mHCvFaOKsC$$P8DhnUyLKcH9meX7_6xDV" : {
       "id" : "nvmFdUlc7l6mHCvFaOKsC$$P8DhnUyLKcH9meX7_6xDV",
       "component" : "TextProcessing",
       "metadata" : {
         "label" : "chunkify_docx",
         "slug" : "chunkify_docx",
-        "x" : -2300,
+        "x" : -2160,
         "y" : -720,
         "phase" : 0,
         "cache" : false,
@@ -303,6 +421,15 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
+              "name" : "doc_id",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
               "name" : "path",
               "type" : "string",
               "nullable" : true,
@@ -330,6 +457,15 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
+              "name" : "doc_id",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
               "name" : "path",
               "type" : "string",
               "nullable" : true,
@@ -384,7 +520,7 @@
       "metadata" : {
         "label" : "flatten_chunks",
         "slug" : "flatten_chunks",
-        "x" : -2140,
+        "x" : -2000,
         "y" : -540,
         "phase" : 0,
         "cache" : false,
@@ -398,6 +534,15 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
+              "name" : "doc_id",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
               "name" : "path",
               "type" : "string",
               "nullable" : true,
@@ -448,6 +593,15 @@
         } ],
         "fsExpressions" : [ {
           "exploded" : "",
+          "flattenedExpression" : "doc_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "doc_id"
+          },
+          "targetTokens" : [ "doc_id" ],
+          "target" : "doc_id"
+        }, {
+          "exploded" : "",
           "flattenedExpression" : "path",
           "expression" : {
             "format" : "sql",
@@ -465,7 +619,7 @@
           "targetTokens" : [ "result_chunks" ],
           "target" : "result_chunks"
         } ],
-        "columnsSelector" : [ "T9gBuJQrwWWXxjNq_PzUF$$dpqUij3w4fIH7dDHraN2U##path", "T9gBuJQrwWWXxjNq_PzUF$$dpqUij3w4fIH7dDHraN2U##result_chunks" ],
+        "columnsSelector" : [ "T9gBuJQrwWWXxjNq_PzUF$$dpqUij3w4fIH7dDHraN2U##result_chunks", "T9gBuJQrwWWXxjNq_PzUF$$dpqUij3w4fIH7dDHraN2U##path", "T9gBuJQrwWWXxjNq_PzUF$$dpqUij3w4fIH7dDHraN2U##doc_id" ],
         "explodeColumns" : [ ],
         "delimiter" : "-"
       },
@@ -480,7 +634,7 @@
       "metadata" : {
         "label" : "explode",
         "slug" : "explode",
-        "x" : -2460,
+        "x" : -2480,
         "y" : -540,
         "phase" : 0,
         "cache" : false,
@@ -655,7 +809,89 @@
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "TY2EN8E6rIGKDDjWo2iZc$$Jrr98a2hX9k5Kmq9-_tuF##path", "TY2EN8E6rIGKDDjWo2iZc$$Jrr98a2hX9k5Kmq9-_tuF##result_content", "TY2EN8E6rIGKDDjWo2iZc$$Jrr98a2hX9k5Kmq9-_tuF##result_content.text" ]
+        "columnsSelector" : [ "TY2EN8E6rIGKDDjWo2iZc$$Jrr98a2hX9k5Kmq9-_tuF##result_content", "TY2EN8E6rIGKDDjWo2iZc$$Jrr98a2hX9k5Kmq9-_tuF##result_content.text", "TY2EN8E6rIGKDDjWo2iZc$$Jrr98a2hX9k5Kmq9-_tuF##path" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "7ojN7asGQi36J1SfoW7dj$$7i49qzW7EDrZaboMKTJjz" : {
+      "id" : "7ojN7asGQi36J1SfoW7dj$$7i49qzW7EDrZaboMKTJjz",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "document_ids_1",
+        "slug" : "document_ids_1",
+        "x" : -2300,
+        "y" : -720,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "mhxAAyWv42db0l6urdw_C$$bXswOCunuT6YLefVBp66L",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "path",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "oNXR_-p7tDF55XYoy3vAR$$LdbY16Z-vSa0jULNs3U5f",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "doc_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "concat('doc-', monotonically_increasing_id())"
+          },
+          "description" : ""
+        }, {
+          "target" : "path",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "path"
+          },
+          "description" : ""
+        }, {
+          "target" : "text",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "text"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
@@ -695,7 +931,7 @@
       "metadata" : {
         "label" : "get_ids",
         "slug" : "get_ids",
-        "x" : -1980,
+        "x" : -1800,
         "y" : -540,
         "phase" : 0,
         "cache" : false,
@@ -709,6 +945,15 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
+              "name" : "doc_id",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
               "name" : "path",
               "type" : "string",
               "nullable" : true,
@@ -741,6 +986,13 @@
       "properties" : {
         "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
         "expressions" : [ {
+          "target" : "doc_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "doc_id"
+          },
+          "description" : ""
+        }, {
           "target" : "id",
           "expression" : {
             "format" : "sql",
@@ -757,7 +1009,7 @@
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "3aUhtN30MZ9GFp2j3K6XH$$EwCizAE25zfvCI8rtLTnN##result_chunks" ]
+        "columnsSelector" : [ "3aUhtN30MZ9GFp2j3K6XH$$EwCizAE25zfvCI8rtLTnN##doc_id", "3aUhtN30MZ9GFp2j3K6XH$$EwCizAE25zfvCI8rtLTnN##result_chunks" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
@@ -770,8 +1022,8 @@
       "metadata" : {
         "label" : "vector_read_catalog",
         "slug" : "vector_read_catalog",
-        "x" : -2520,
-        "y" : -280,
+        "x" : -2620,
+        "y" : -320,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -972,7 +1224,7 @@
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "3E2y-qBaoHV43kAMjZKqu$$tFLPEaBGgjl2cf4FI_kZl##path", "3E2y-qBaoHV43kAMjZKqu$$tFLPEaBGgjl2cf4FI_kZl##result_content.text", "3E2y-qBaoHV43kAMjZKqu$$tFLPEaBGgjl2cf4FI_kZl##result_content" ]
+        "columnsSelector" : [ "3E2y-qBaoHV43kAMjZKqu$$tFLPEaBGgjl2cf4FI_kZl##result_content.text", "3E2y-qBaoHV43kAMjZKqu$$tFLPEaBGgjl2cf4FI_kZl##result_content", "3E2y-qBaoHV43kAMjZKqu$$tFLPEaBGgjl2cf4FI_kZl##path" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
@@ -985,7 +1237,7 @@
       "metadata" : {
         "label" : "remove_nulls",
         "slug" : "remove_nulls",
-        "x" : -1660,
+        "x" : -1460,
         "y" : -540,
         "phase" : 0,
         "cache" : false,
@@ -999,6 +1251,15 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
+              "name" : "doc_id",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
               "name" : "id",
               "type" : "string",
               "nullable" : false,
@@ -1281,8 +1542,8 @@
       "metadata" : {
         "label" : "opensearch-target",
         "slug" : "opensearch_target",
-        "x" : -2220,
-        "y" : -280,
+        "x" : -2340,
+        "y" : -320,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -1295,6 +1556,15 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
+              "name" : "doc_id",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
               "name" : "id",
               "type" : "string",
               "nullable" : false,
@@ -1344,7 +1614,7 @@
       "metadata" : {
         "label" : "flatten_docx",
         "slug" : "flatten_docx",
-        "x" : -2140,
+        "x" : -2000,
         "y" : -720,
         "phase" : 0,
         "cache" : false,
@@ -1358,6 +1628,15 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
+              "name" : "doc_id",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
               "name" : "path",
               "type" : "string",
               "nullable" : true,
@@ -1408,6 +1687,15 @@
         } ],
         "fsExpressions" : [ {
           "exploded" : "",
+          "flattenedExpression" : "doc_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "doc_id"
+          },
+          "targetTokens" : [ "doc_id" ],
+          "target" : "doc_id"
+        }, {
+          "exploded" : "",
           "flattenedExpression" : "path",
           "expression" : {
             "format" : "sql",
@@ -1425,7 +1713,7 @@
           "targetTokens" : [ "result_chunks" ],
           "target" : "result_chunks"
         } ],
-        "columnsSelector" : [ "qFxHoTzSI9YnDiEvQBuWR$$LjexbcsXwxeWYUc11TV8Y##result_chunks", "qFxHoTzSI9YnDiEvQBuWR$$LjexbcsXwxeWYUc11TV8Y##path" ],
+        "columnsSelector" : [ "qFxHoTzSI9YnDiEvQBuWR$$LjexbcsXwxeWYUc11TV8Y##doc_id", "qFxHoTzSI9YnDiEvQBuWR$$LjexbcsXwxeWYUc11TV8Y##result_chunks", "qFxHoTzSI9YnDiEvQBuWR$$LjexbcsXwxeWYUc11TV8Y##path" ],
         "explodeColumns" : [ ],
         "delimiter" : "-"
       },
@@ -1440,7 +1728,7 @@
       "metadata" : {
         "label" : "write_vector_data",
         "slug" : "write_vector_data",
-        "x" : -1340,
+        "x" : -1180,
         "y" : -540,
         "phase" : 0,
         "cache" : false,
@@ -1454,6 +1742,15 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
+              "name" : "doc_id",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
               "name" : "id",
               "type" : "string",
               "nullable" : false,
@@ -1716,7 +2013,7 @@
       "metadata" : {
         "label" : "rename",
         "slug" : "rename",
-        "x" : -1500,
+        "x" : -1320,
         "y" : -540,
         "phase" : 0,
         "cache" : false,
@@ -1730,6 +2027,15 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
+              "name" : "doc_id",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
               "name" : "id",
               "type" : "string",
               "nullable" : false,
@@ -1784,6 +2090,13 @@
       "properties" : {
         "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
         "expressions" : [ {
+          "target" : "doc_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "doc_id"
+          },
+          "description" : ""
+        }, {
           "target" : "id",
           "expression" : {
             "format" : "sql",
@@ -1807,7 +2120,7 @@
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##bedrock_embedding", "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##result_chunks", "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##id" ]
+        "columnsSelector" : [ "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##id", "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##result_chunks", "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##bedrock_embedding", "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##doc_id" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
@@ -1820,7 +2133,7 @@
       "metadata" : {
         "label" : "chunkify",
         "slug" : "chunkify",
-        "x" : -2300,
+        "x" : -2180,
         "y" : -540,
         "phase" : 0,
         "cache" : false,
@@ -1834,6 +2147,15 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
+              "name" : "doc_id",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
               "name" : "path",
               "type" : "string",
               "nullable" : true,
@@ -1861,6 +2183,15 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
+              "name" : "doc_id",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
               "name" : "path",
               "type" : "string",
               "nullable" : true,
@@ -1902,7 +2233,7 @@
       "properties" : {
         "operation" : "text_split_into_chunks",
         "column_name" : "text",
-        "split_chunk_size" : 100
+        "split_chunk_size" : 10
       },
       "componentInfo" : {
         "gemId" : "gems/TextProcessing",

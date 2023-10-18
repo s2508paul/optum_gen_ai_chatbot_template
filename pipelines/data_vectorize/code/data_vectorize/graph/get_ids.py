@@ -7,4 +7,8 @@ from data_vectorize.config.ConfigStore import *
 from data_vectorize.udfs.UDFs import *
 
 def get_ids(spark: SparkSession, in0: DataFrame) -> DataFrame:
-    return in0.select(concat(lit("text-"), monotonically_increasing_id()).alias("id"), col("result_chunks"))
+    return in0.select(
+        col("doc_id"), 
+        concat(lit("text-"), monotonically_increasing_id()).alias("id"), 
+        col("result_chunks")
+    )

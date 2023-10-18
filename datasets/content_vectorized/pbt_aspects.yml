@@ -2,6 +2,13 @@ version: 1
 schema:
   type: struct
   fields:
+  - name: doc_id
+    type: string
+    nullable: false
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
   - name: id
     type: string
     nullable: false

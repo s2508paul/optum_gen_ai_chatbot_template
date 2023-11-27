@@ -7,4 +7,4 @@ from chatbotlive.config.ConfigStore import *
 from chatbotlive.udfs.UDFs import *
 
 def content_vectorized(spark: SparkSession) -> DataFrame:
-    return spark.read.table("`spark_catalog`.`default`.`text_vectorized`")
+    return spark.read.table("`spark_catalog`.`default`.`pdf_bedrock_vectorized_text`")

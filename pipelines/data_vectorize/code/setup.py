@@ -7,7 +7,7 @@ setup(
     package_data = {'prophecy_config_instances' : ['*.json', '*.py', '*.conf']},
     description = 'workflow',
     install_requires = ['prophecy-spark-ai==0.1.11', 'pdf2image', 'opensearch-py', 'boto3==1.28.62', 'unstructured==0.7.4',
-     'prophecy-libs==1.6.7'],
+     'prophecy-libs==1.7.0'],
     entry_points = {
 'console_scripts' : [
 'main = data_vectorize.pipeline:main'], },

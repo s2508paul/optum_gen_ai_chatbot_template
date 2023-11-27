@@ -7,6 +7,11 @@ from prophecy.cb.server.base.ComponentBuilderBase import ComponentCode, Diagnost
 from prophecy.cb.server.base.DatasetBuilderBase import DatasetSpec, DatasetProperties, Component
 from prophecy.cb.ui.uispec import *
 
+from prophecy.cb.server.base.datatypes import SString
+
+class Transformation(ABC):
+    pass
+
 
 class OpenSearchFormat(DatasetSpec):
     name: str = "OpenSearch"
@@ -18,7 +23,21 @@ class OpenSearchFormat(DatasetSpec):
         return True
 
     @dataclass(frozen=True)
+    class MetadataColumn(Transformation):
+        columnName: SString = SString("")
+        columnMapping: SString = SString("")
+
+    @dataclass(frozen=True)
+    class EmbeddingColumn(Transformation):
+        columnName: SString = SString("")
+        columnMapping: SString = SString("")
+
+
+    @dataclass(frozen=True)
     class OpenSearchProperties(DatasetProperties):
+        
+        transformations: List[Transformation] = field(default_factory=list)
+
         schema: Optional[StructType] = None
         description: Optional[str] = ""
 
@@ -49,6 +68,11 @@ class OpenSearchFormat(DatasetSpec):
 
         path: str = ""
         uri: Optional[str] = None
+
+    def onButtonClick(self, state: Component[OpenSearchProperties]):
+        _transformations = state.properties.transformations
+        _transformations.append(self.MetadataColumn())
+        return state.bindProperties(replace(state.properties, transformations=_transformations))
 
     def sourceDialog(self) -> DatasetDialog:
         return DatasetDialog("OpenSearch")
@@ -86,8 +110,6 @@ class OpenSearchFormat(DatasetSpec):
                 .bindPlaceholder("") \
                 .bindProperty("host")
 
-            
-
             aws_region = TextBox("Aws Region") \
                 .bindPlaceholder("us-east-1") \
                 .bindProperty("region")
@@ -96,8 +118,13 @@ class OpenSearchFormat(DatasetSpec):
                 .bindPlaceholder("aoss/es") \
                 .bindProperty("service")
 
+            index_selector = TextBox("Index Name") \
+                .bindPlaceholder("index name") \
+                .bindProperty("index_name")
+
             location_selector = ColumnsLayout(gap="1rem") \
                 .addElement(host) \
+                .addElement(index_selector) \
                 .addElement(aws_region)\
                 .addElement(aws_service)
 
@@ -106,25 +133,80 @@ class OpenSearchFormat(DatasetSpec):
                 .addElement(location_selector)
 
 
-            index_selector = TextBox("Index Name") \
-                .bindProperty("index_name")
             
-            vector_id_property = TextBox("Vector Text Column") \
-                .bindPlaceholder("id") \
-                .bindProperty("vector_id_prop")
             
-            vector_embdd_property = TextBox("Vector Embedding Column") \
-                .bindPlaceholder("embedding") \
-                .bindProperty("vector_embdd_prop")
+            ##additional metadata 
+            selectBox = (SelectBox("Operation")
+                     .addOption("Add Metadata Column", "MetadataColumn")
+                     .addOption("Add Embedding Column", "EmbeddingColumn")
+                     .bindProperty("record.kind"))
+            
+            add_metadata = Condition() \
+            .ifEqual(PropExpr("record.kind"), StringExpr("MetadataColumn")) \
+            .then(
+                ColumnsLayout(("1rem"), alignY=("end"))
+                    .addColumn(
+                        ColumnsLayout(("1rem"))
+                            .addColumn(selectBox, "0.3fr")
+                            .addColumn(
+                                TextBox("Metadata Column Name") \
+                                .bindPlaceholder("index column name") \
+                                .bindProperty("record.MetadataColumn.columnName")
+                            )
+                            .addColumn(
+                                SchemaColumnsDropdown("Metadata Column Mapping") \
+                                .bindSchema("component.ports.inputs[0].schema") \
+                                .bindProperty("record.MetadataColumn.columnMapping") 
+                            ),
+                            "1fr",
+                            overflow=("visible")
+                    )
+                    .addColumn(ListItemDelete("delete"), width="content")
+            )
 
-            properties_selector = ColumnsLayout(gap="1rem") \
-                .addElement(index_selector) \
-                .addElement(vector_id_property)\
-                .addElement(vector_embdd_property)
+            add_embedding = Condition() \
+            .ifEqual(PropExpr("record.kind"), StringExpr("EmbeddingColumn")) \
+            .then(
+                ColumnsLayout(("1rem"), alignY=("end"))
+                    .addColumn(
+                        ColumnsLayout(("1rem"))
+                            .addColumn(selectBox, "0.3fr")
+                            .addColumn(
+                                TextBox("Embedding Column Name") \
+                                .bindPlaceholder("index column name") \
+                                .bindProperty("record.EmbeddingColumn.columnName")
+                            )
+                            .addColumn(
+                                SchemaColumnsDropdown("Embedding Column Mapping") \
+                                .bindSchema("component.ports.inputs[0].schema") \
+                                .bindProperty("record.EmbeddingColumn.columnMapping")
+                            ),
+                            "1fr",
+                            overflow=("visible")
+                    )
+                    .addColumn(ListItemDelete("delete"), width="content")
+            )
+
             
-            property_selection = StackLayout() \
-                .addElement(TitleElement("Property")) \
-                .addElement(properties_selector)
+
+            transformations = StackLayout(gap=("1rem"), height=("100bh")) \
+            .addElement(TitleElement("Transformations")) \
+            .addElement(
+                    OrderedList("Transformations")
+                        .bindProperty("transformations")
+                        .setEmptyContainerText("Add Transformations")
+                        .addElement(
+                            add_embedding
+                        )
+                        .addElement(
+                            add_metadata
+                        )
+                        
+                ) \
+            .addElement(SimpleButtonLayout("Add Transformation", self.onButtonClick))
+
+            
+
 
             # Status writing
             status_selector = CatalogTableDB("") \
@@ -144,7 +226,7 @@ class OpenSearchFormat(DatasetSpec):
             location = StackLayout() \
                 .addElement(credential) \
                 .addElement(location_section) \
-                .addElement(property_selection) \
+                .addElement(transformations) \
                 .addElement(status)
 
             location.padding = "1rem"
@@ -154,19 +236,6 @@ class OpenSearchFormat(DatasetSpec):
             # PROPERTIES SECTION
             # -------------------
 
-            id_column_selector = SchemaColumnsDropdown("Vector text column (expected type: str)") \
-                .bindSchema("component.ports.inputs[0].schema") \
-                .bindProperty("vector_id_column_name") \
-                .showErrorsFor("vector_id_column_name")
-
-            content_column_selector = SchemaColumnsDropdown("Vector content column (expected type: array<float>)") \
-                .bindSchema("component.ports.inputs[0].schema") \
-                .bindProperty("vector_content_column_name") \
-                .showErrorsFor("vector_content_column_name")
-
-            # columns_selector = ColumnsLayout(gap="1rem", height="80px") \
-            #     .addElement(id_column_selector) \
-            #     .addElement(content_column_selector)
 
             return DatasetDialog("OpenSearch") \
                 .addSection("LOCATION", location) \
@@ -185,8 +254,7 @@ class OpenSearchFormat(DatasetSpec):
                                     "description",
                                     True
                                 )
-                                .addField(id_column_selector, "vector_id_column_name", True)
-                                .addField(content_column_selector, "vector_content_column_name", True)
+                                
                             )
                         )
                     ),
@@ -230,12 +298,20 @@ class OpenSearchFormat(DatasetSpec):
             service = self.props.service
 
             OpensearchDB(host,region,usr,secrets,service).register_udfs(spark)
-
-            df_upserted = in0 \
-                .withColumn("vector_embedd", col(self.props.vector_content_column_name)) \
-                .withColumn("vector_id", col(self.props.vector_id_column_name)) \
-                .withColumn('upserted',expr(f"opensearch_upsert(\"{self.props.index_name}\",\"{self.props.vector_embdd_prop}\", vector_embedd, \"{self.props.vector_id_prop}\", vector_id)")) 
             
+            select_expr_lst=[]
+            for transformation in self.props.transformations:
+                select_expr_lst.append(col(transformation.columnMapping.value).alias(f"{transformation.columnName.value}"))
+            
+            df1 = in0.select(*select_expr_lst) \
+                .withColumn('_index',lit(self.props.index_name))
+
+            df_upserted = df1 \
+                .withColumn('jsn_data',to_json(struct(df1.columns))) \
+                .withColumn('upserted',expr("opensearch_upsert(jsn_data)"))        
+                
+                
+
             if self.props.status:
                 status_table = f"{self.props.status_catalog}.{self.props.status_database}.{self.props.status_table}" if self.props.status_is_uc else f"{self.props.status_database}.{self.props.status_table}"
                 if spark.catalog.tableExists(status_table):

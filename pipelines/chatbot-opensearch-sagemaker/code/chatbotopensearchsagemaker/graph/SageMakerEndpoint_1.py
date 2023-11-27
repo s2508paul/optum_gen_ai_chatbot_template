@@ -27,7 +27,7 @@ def SageMakerEndpoint_1(spark: SparkSession, in0: DataFrame) -> DataFrame:
           )
         )\
         .withColumn("_endpoint", lit("meta-textgeneration-llama-2-7b-f-2023-10-09-19-36-35-366"))\
-        .withColumn("_parameters", expr("named_struct('max_new_tokens', 512, 'top_p', 0.9, 'temperature', 0.6)"))\
+        .withColumn("_parameters", expr("""named_struct('max_new_tokens', 512, 'top_p', 0.9, 'temperature', 0.6)"""))\
         .withColumn("_attributes", lit("accept_eula=true"))\
         .withColumn(
           "sagemaker_answer",

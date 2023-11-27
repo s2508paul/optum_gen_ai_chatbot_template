@@ -62,6 +62,12 @@
       "name" : "unstructured",
       "enabled" : true,
       "package" : "unstructured==0.7.4"
+    }, {
+      "type" : "pypi",
+      "id" : "Fql9s",
+      "name" : "prophecy_spark_ai",
+      "enabled" : false,
+      "package" : "prophecy-spark-ai==0.1.11"
     } ],
     "dependentProjectExternalDependencies" : [ {
       "projectUID" : "289",
@@ -301,7 +307,7 @@
         "columnsSelector" : [ "eAdmnSRtgPnqAxeWqbqyV$$aKdv393LQblxf7tbs5tY6##timestamp", "eAdmnSRtgPnqAxeWqbqyV$$aKdv393LQblxf7tbs5tY6##value.msg", "eAdmnSRtgPnqAxeWqbqyV$$aKdv393LQblxf7tbs5tY6##value" ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.5&projectSubscriptionProjectId=289&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -410,7 +416,7 @@
         "columnsSelector" : [ "eU8yXRwvM0wAMyEEzm-95$$87lCPjpqm2Stz4cD3i1iO##ts", "eU8yXRwvM0wAMyEEzm-95$$87lCPjpqm2Stz4cD3i1iO##text" ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.5&projectSubscriptionProjectId=289&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -647,7 +653,7 @@
         "delimiter" : "-"
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/FlattenSchema",
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.5&projectSubscriptionProjectId=289&path=gems/FlattenSchema",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -1071,7 +1077,7 @@
         "columnsSelector" : [ "xAFKJ0pLHZJ3vp9ZJFijL$$Z5G_CdL0TNAimHcrJeUiR##create_time.start", "xAFKJ0pLHZJ3vp9ZJFijL$$Z5G_CdL0TNAimHcrJeUiR##sagemaker_answer", "xAFKJ0pLHZJ3vp9ZJFijL$$Z5G_CdL0TNAimHcrJeUiR##sagemaker_answer.choices", "xAFKJ0pLHZJ3vp9ZJFijL$$Z5G_CdL0TNAimHcrJeUiR##input", "xAFKJ0pLHZJ3vp9ZJFijL$$Z5G_CdL0TNAimHcrJeUiR##create_time" ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.5&projectSubscriptionProjectId=289&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -1510,7 +1516,7 @@
         } ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Aggregate",
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.5&projectSubscriptionProjectId=289&path=gems/Aggregate",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -1690,7 +1696,7 @@
         "columnsSelector" : [ "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##embedding", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##ts", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##create_time", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##content_chunk", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##id", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##opensearch_matches", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##text" ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.5&projectSubscriptionProjectId=289&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -2318,7 +2324,7 @@
         "headAlias" : "in0"
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Join",
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.5&projectSubscriptionProjectId=289&path=gems/Join",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -2445,7 +2451,7 @@
         "columnsSelector" : [ "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA##bedrock_embedding", "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA##ts", "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA##text", "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA##bedrock_error", "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA##create_time" ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.5&projectSubscriptionProjectId=289&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
       }
     }

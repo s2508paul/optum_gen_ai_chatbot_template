@@ -6,7 +6,7 @@ from prophecy.cb.server.base.datatypes import SInt
 from prophecy.cb.ui.uispec import *
 
 
-class OpenAISpec(ComponentSpec):
+class OpenAISpec(ComponentSpec): 
     name: str = "OpenAI"
     category: str = "Machine Learning"
     gemDescription: str = "Request OpenAI to generate a vector embedding or request OpenAI to answer a question with an optional context."

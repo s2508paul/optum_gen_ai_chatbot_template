@@ -44,6 +44,30 @@
       "name" : "opensearchpy",
       "enabled" : false,
       "package" : "opensearch-py"
+    }, {
+      "type" : "pypi",
+      "id" : "I7lDQ",
+      "name" : "boto3",
+      "enabled" : false,
+      "package" : "boto3==1.28.62"
+    }, {
+      "type" : "pypi",
+      "id" : "nRwR4",
+      "name" : "pdf2image",
+      "enabled" : false,
+      "package" : "pdf2image"
+    }, {
+      "type" : "pypi",
+      "id" : "pip5l",
+      "name" : "unstructured",
+      "enabled" : false,
+      "package" : "unstructured==0.7.4"
+    }, {
+      "type" : "pypi",
+      "id" : "Fql9s",
+      "name" : "prophecy_spark_ai",
+      "enabled" : false,
+      "package" : "prophecy-spark-ai==0.1.11"
     } ],
     "dependentProjectExternalDependencies" : [ {
       "projectUID" : "289",
@@ -347,7 +371,7 @@
         "columnsSelector" : [ "J1Iqc5b_uLMTQvMrBgZ2O$$qegMaWVBAucT9S2f2S10A##url", "J1Iqc5b_uLMTQvMrBgZ2O$$qegMaWVBAucT9S2f2S10A##create_time", "J1Iqc5b_uLMTQvMrBgZ2O$$qegMaWVBAucT9S2f2S10A##id", "J1Iqc5b_uLMTQvMrBgZ2O$$qegMaWVBAucT9S2f2S10A##text", "J1Iqc5b_uLMTQvMrBgZ2O$$qegMaWVBAucT9S2f2S10A##pinecone_matches", "J1Iqc5b_uLMTQvMrBgZ2O$$qegMaWVBAucT9S2f2S10A##ts", "J1Iqc5b_uLMTQvMrBgZ2O$$qegMaWVBAucT9S2f2S10A##embedding", "J1Iqc5b_uLMTQvMrBgZ2O$$qegMaWVBAucT9S2f2S10A##content_chunk" ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.5&projectSubscriptionProjectId=289&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -463,9 +487,18 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
+              "name" : "doc_id",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
               "name" : "id",
               "type" : "string",
-              "nullable" : true,
+              "nullable" : false,
               "metadata" : {
                 "description" : "",
                 "mappings" : [ ],
@@ -478,15 +511,6 @@
                 "elementType" : "float",
                 "containsNull" : true
               },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "url",
-              "type" : "string",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -645,7 +669,7 @@
         "headAlias" : "in0"
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Join",
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.5&projectSubscriptionProjectId=289&path=gems/Join",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -777,7 +801,7 @@
         "columnsSelector" : [ "F3XNk8IzReFhx3s_WVymH$$KLNuCOLlQccyuaW-38BvM##timestamp", "F3XNk8IzReFhx3s_WVymH$$KLNuCOLlQccyuaW-38BvM##value.msg", "F3XNk8IzReFhx3s_WVymH$$KLNuCOLlQccyuaW-38BvM##value" ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.5&projectSubscriptionProjectId=289&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -1206,7 +1230,7 @@
         "delimiter" : "-"
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/FlattenSchema",
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.5&projectSubscriptionProjectId=289&path=gems/FlattenSchema",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -1464,7 +1488,7 @@
         "columnsSelector" : [ "WQj6w1N-qvqBqYp4t7pFO$$ejdcd38ZFViSAVeBBvOcK##create_time", "WQj6w1N-qvqBqYp4t7pFO$$ejdcd38ZFViSAVeBBvOcK##openai_error", "WQj6w1N-qvqBqYp4t7pFO$$ejdcd38ZFViSAVeBBvOcK##text", "WQj6w1N-qvqBqYp4t7pFO$$ejdcd38ZFViSAVeBBvOcK##openai_embedding", "WQj6w1N-qvqBqYp4t7pFO$$ejdcd38ZFViSAVeBBvOcK##ts" ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.5&projectSubscriptionProjectId=289&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -1546,7 +1570,7 @@
         "columnsSelector" : [ "F5HdWIpE-mtFKmMbQzp2o$$Ko6joCRpWGcDtF5EoqNHs##ts", "F5HdWIpE-mtFKmMbQzp2o$$Ko6joCRpWGcDtF5EoqNHs##text" ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.5&projectSubscriptionProjectId=289&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -2114,7 +2138,7 @@
         "columnsSelector" : [ "CRQBVjQemL-Qaxco-yDPv$$vqqipp9QF4cnzp6PGw7ty##openai_answer", "CRQBVjQemL-Qaxco-yDPv$$vqqipp9QF4cnzp6PGw7ty##create_time", "CRQBVjQemL-Qaxco-yDPv$$vqqipp9QF4cnzp6PGw7ty##create_time.start", "CRQBVjQemL-Qaxco-yDPv$$vqqipp9QF4cnzp6PGw7ty##input", "CRQBVjQemL-Qaxco-yDPv$$vqqipp9QF4cnzp6PGw7ty##openai_answer.choices" ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Reformat",
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.5&projectSubscriptionProjectId=289&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -2625,7 +2649,7 @@
         } ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=289&path=gems/Aggregate",
+        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.5&projectSubscriptionProjectId=289&path=gems/Aggregate",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },

@@ -29,7 +29,7 @@ class Bedrock(ComponentSpec):
         aws_region: Optional[str] = "us-east-1"
 
     def dialog(self) -> Dialog:
-        def iff(property_name: str, value, then: Atom) -> Condition:
+        def iff(property_name: str, value, then: Atom) -> Condition: 
             value_expr = BooleanExpr(value) if isinstance(value, bool) else StringExpr(str(value))
             return Condition().ifEqual(PropExpr(f"component.properties.{property_name}"), value_expr).then(then)
             
@@ -54,7 +54,7 @@ class Bedrock(ComponentSpec):
             .addOption("Compute text embeddings", "embed_texts") \
             .bindProperty("operation")
 
-        # Text embedding properties
+        # Text embedding properties 
         embed_text_column_selector = SchemaColumnsDropdown("Text column") \
             .bindSchema("component.ports.inputs[0].schema") \
             .bindProperty("embed_text_column_name") \

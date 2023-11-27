@@ -37,7 +37,7 @@ class PineconeFormatSpec(DatasetSpec):
         status_database: str = ""
         status_table: str = ""
 
-    def sourceDialog(self) -> DatasetDialog:
+    def sourceDialog(self) -> DatasetDialog: 
         return DatasetDialog("pinecone")
 
     def targetDialog(self) -> DatasetDialog:

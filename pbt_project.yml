@@ -71,9 +71,10 @@ pipelines:
     createdAt: '2023-10-18 14:05:26'
     datasets:
       inputs:
+      - datasets/content_vectorized
       - datasets/read_pdf
       outputs:
-      - datasets/opensearch-target
+      - datasets/new_opensearch_sink
     subgraphs: []
     dependencies: {}
 datasets:
@@ -207,11 +208,24 @@ datasets:
         description: ''
         author: sumitpaul@prophecy.io
         createdAt: '2023-10-18 14:08:24'
+  datasets/new_opensearch_sink:
+    name: new_opensearch_sink
+    description: ''
+    author: sumitpaul@prophecy.io
+    createdAt: '2023-11-20 17:48:37'
+    mode: batch
+    physicalDatasets:
+      sumit-dev-dbx:
+        fabricId: 42
+        datasetType: Warehouse
+        description: ''
+        author: sumitpaul@prophecy.io
+        createdAt: '2023-11-20 17:48:37'
 templates: {}
 jobs: {}
 gemContainer:
   languageVersion: '3.10'
-  gemLibsVersion: 1.3.2.0
+  gemLibsVersion: 1.3.4.0
   gems:
     gems/OpenAI:
       name: OpenAI
@@ -222,6 +236,7 @@ gemContainer:
       mode: batch
       files:
       - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/OpenAISpec.py
+      dependencies: null
       createdAt: '2023-10-03 10:32:26'
     gems/pinecone:
       name: pinecone
@@ -232,6 +247,7 @@ gemContainer:
       mode: batch
       files:
       - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/PineconeFormatSpec.py
+      dependencies: null
       createdAt: '2023-10-03 10:33:49'
     gems/PineconeLookup:
       name: PineconeLookup
@@ -243,6 +259,7 @@ gemContainer:
       files:
       - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/PineconeLookup.py
       - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/OpenSearchLookup.py
+      dependencies: null
       createdAt: '2023-10-03 10:34:45'
     gems/Watermark:
       name: Watermark
@@ -253,6 +270,7 @@ gemContainer:
       mode: batch
       files:
       - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/Watermark.py
+      dependencies: null
       createdAt: '2023-10-03 10:38:21'
     gems/OpenSearchLookup:
       name: OpenSearchLookup
@@ -263,6 +281,7 @@ gemContainer:
       mode: batch
       files:
       - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/OpenSearchLookup.py
+      dependencies: null
       createdAt: '2023-10-11 00:04:35'
     gems/SageMakerEndpoint:
       name: SageMakerEndpoint
@@ -273,17 +292,8 @@ gemContainer:
       mode: batch
       files:
       - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/SageMakerEndpoint.py
+      dependencies: null
       createdAt: '2023-10-11 13:13:17'
-    gems/Bedrock:
-      name: Bedrock
-      category: Machine Learning
-      subCategory: ''
-      description: null
-      author: sumitpaul@prophecy.io
-      mode: batch
-      files:
-      - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/Bedrock.py
-      createdAt: '2023-10-11 13:15:40'
     gems/TextProcessing:
       name: TextProcessing
       category: Machine Learning
@@ -293,6 +303,7 @@ gemContainer:
       mode: batch
       files:
       - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/TextProcessing.py
+      dependencies: null
       createdAt: '2023-10-12 05:22:51'
     gems/binary:
       name: binary
@@ -303,7 +314,19 @@ gemContainer:
       mode: batch
       files:
       - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/BinaryFormat.py
+      dependencies: null
       createdAt: '2023-10-12 05:40:52'
+    gems/Bedrock:
+      name: Bedrock
+      category: Machine Learning
+      subCategory: ''
+      description: null
+      author: sumitpaul@prophecy.io
+      mode: batch
+      files:
+      - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/Bedrock.py
+      dependencies: null
+      createdAt: '2023-11-02 11:44:35'
     gems/OpenSearch:
       name: OpenSearch
       category: Source/Target
@@ -313,13 +336,16 @@ gemContainer:
       mode: batch
       files:
       - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/OpenSearch.py
-      createdAt: '2023-10-18 09:50:17'
+      dependencies: null
+      createdAt: '2023-11-22 06:59:58'
+  dependencies: null
 functions:
   author: null
   createdAt: '2023-10-03 01:38:26'
   udfs: {}
   udafs: {}
   expressions: {}
+  airflowFunctions: {}
 subgraphs: {}
 sqlModels: {}
 sqlMacros: {}
@@ -366,10 +392,10 @@ projectDependencies:
     projectUID: 289
     projectName: ProphecySparkBasicsPython
     repositoryPath: gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=
-    version: 0.0.4
+    version: 0.0.5
     isDefault: true
     author: null
-    createdAt: '2023-10-13 10:19:46'
+    createdAt: '2023-11-23 04:57:42'
   '290':
     projectUID: 290
     projectName: ProphecyWarehousePython
@@ -377,5 +403,5 @@ projectDependencies:
     version: 0.0.2
     isDefault: true
     author: null
-    createdAt: '2023-10-13 10:19:46'
+    createdAt: '2023-11-23 04:57:42'
 pipelineConfigurations: {}

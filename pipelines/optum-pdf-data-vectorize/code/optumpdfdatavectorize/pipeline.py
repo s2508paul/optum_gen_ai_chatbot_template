@@ -8,6 +8,9 @@ from prophecy.utils import *
 from optumpdfdatavectorize.graph import *
 
 def pipeline(spark: SparkSession) -> None:
+    df_content_vectorized = content_vectorized(spark)
+    df_Filter_1 = Filter_1(spark, df_content_vectorized)
+    new_opensearch_sink(spark, df_Filter_1)
     df_read_pdf = read_pdf(spark)
     df_parse_pdf = parse_pdf(spark, df_read_pdf)
     df_explode = explode(spark, df_parse_pdf)
@@ -18,7 +21,6 @@ def pipeline(spark: SparkSession) -> None:
     df_bedrock_embeddings = bedrock_embeddings(spark, df_get_ids)
     df_remove_nulls = remove_nulls(spark, df_bedrock_embeddings)
     df_rename = rename(spark, df_remove_nulls)
-    opensearch_target(spark, df_rename)
 
 def main():
     spark = SparkSession.builder\

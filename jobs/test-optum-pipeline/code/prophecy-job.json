@@ -1,0 +1,93 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "42",
+    "jobId" : "jobs/test-optum-pipeline",
+    "name" : "test-optum-pipeline",
+    "schedule" : "0 3 4 * * ? *",
+    "scheduleTimeZone" : "UTC",
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "enabled" : true,
+    "defaultClusterSize" : "sumitp",
+    "alerting" : {
+      "emails" : "sumitpaul@prophecy.io",
+      "onStart" : true,
+      "onSuccess" : true,
+      "onFailure" : true
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "type" : "Inherited",
+      "retries" : 0,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      }
+    },
+    "availableFabrics" : [ {
+      "id" : "42",
+      "name" : "sumit-dev-dbx",
+      "clusterSizes" : {
+        "default" : "sumitp",
+        "availableClusterSizes" : [ "sumitp" ]
+      },
+      "pylibsResolutionMode" : {
+        "DBFS" : {
+          "path" : "dbfs:/Users/abhinav/prophecy_libs-1.6.2-py3-none-any.whl"
+        }
+      },
+      "scalalibsResolutionMode" : {
+        "DBFS" : {
+          "path" : "dbfs:/Users/abhinav/prophecy-libs-assembly-3.3.0-7.1.15.jar"
+        }
+      }
+    } ]
+  },
+  "processes" : {
+    "yRe7uYUbapl7Fh5pSm4Oh" : {
+      "id" : "yRe7uYUbapl7Fh5pSm4Oh",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "optum-pdf-data-vectorize",
+        "slug" : "optum-pdf-data-vectorize",
+        "x" : 100,
+        "y" : 100
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "in",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "out",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/optum-pdf-data-vectorize",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : {
+            "optum_gen_ai_chatbot_template" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        }
+      }
+    }
+  },
+  "connections" : [ ]
+}

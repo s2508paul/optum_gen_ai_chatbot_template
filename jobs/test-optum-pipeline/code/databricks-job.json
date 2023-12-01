@@ -1,0 +1,110 @@
+{
+  "fabric_id" : "42",
+  "components" : [ {
+    "PipelineComponent" : {
+      "path" : "dbfs:/FileStore/prophecy/artifacts/dev/cp/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/optum_pdf_data_vectorize-1.0-py3-none-any.whl",
+      "nodeName" : "optum-pdf-data-vectorize",
+      "id" : "yRe7uYUbapl7Fh5pSm4Oh",
+      "language" : "python",
+      "pipelineId" : "pipelines/optum-pdf-data-vectorize"
+    }
+  } ],
+  "request" : {
+    "format" : "MULTI_TASK",
+    "name" : "test-optum-pipeline",
+    "job_clusters" : [ {
+      "job_cluster_key" : "test-optum-pipeline_default_sumitp",
+      "new_cluster" : {
+        "ssh_public_keys" : [ ],
+        "spark_version" : "12.2.x-scala2.12",
+        "node_type_id" : "i3.xlarge",
+        "num_workers" : 0,
+        "custom_tags" : {
+          "ResourceClass" : "SingleNode"
+        },
+        "enable_elastic_disk" : false,
+        "init_scripts" : [ ],
+        "spark_conf" : {
+          "spark.master" : "local[*, 4]",
+          "spark.databricks.cluster.profile" : "singleNode",
+          "spark.prophecy.metadata.fabric.id" : "42",
+          "spark.prophecy.metadata.job.uri" : "__PROJECT_ID_PLACEHOLDER__/jobs/test-optum-pipeline",
+          "spark.prophecy.metadata.is.interactive.run" : "false",
+          "spark.prophecy.project.id" : "__PROJECT_ID_PLACEHOLDER__",
+          "spark.prophecy.metadata.user.id" : 30,
+          "spark.prophecy.tasks" : "{\"optum-pdf-data-vectorize\":\"pipelines/optum-pdf-data-vectorize\"}",
+          "spark.prophecy.metadata.job.branch" : "__PROJECT_RELEASE_VERSION_PLACEHOLDER__",
+          "spark.prophecy.metadata.url" : "__PROPHECY_URL_PLACEHOLDER__",
+          "spark.prophecy.execution.metrics.disabled" : true,
+          "spark.prophecy.execution.service.url" : "wss://gembuilder.dev.cloud.prophecy.io/execution/eventws"
+        },
+        "spark_env_vars" : {
+          "PYSPARK_PYTHON" : "/databricks/python3/bin/python3"
+        },
+        "runtime_engine" : "STANDARD",
+        "aws_attributes" : {
+          "first_on_demand" : 1,
+          "availability" : "SPOT_WITH_FALLBACK",
+          "zone_id" : "auto",
+          "spot_bid_price_percent" : 100,
+          "ebs_volume_count" : 0
+        },
+        "data_security_mode" : "SINGLE_USER"
+      }
+    } ],
+    "email_notifications" : {
+      "on_start" : [ "sumitpaul@prophecy.io" ],
+      "on_success" : [ "sumitpaul@prophecy.io" ],
+      "on_failure" : [ "sumitpaul@prophecy.io" ]
+    },
+    "tasks" : [ {
+      "task_key" : "optum-pdf-data-vectorize",
+      "job_cluster_key" : "test-optum-pipeline_default_sumitp",
+      "python_wheel_task" : {
+        "package_name" : "optum_pdf_data_vectorize",
+        "entry_point" : "main",
+        "parameters" : [ "-i", "default", "-O", "{}" ]
+      },
+      "libraries" : [ {
+        "jar" : "dbfs:/Users/abhinav/prophecy-libs-assembly-3.3.0-7.1.15.jar"
+      }, {
+        "whl" : "dbfs:/Users/abhinav/prophecy_libs-1.6.2-py3-none-any.whl"
+      }, {
+        "whl" : "dbfs:/FileStore/prophecy/artifacts/dev/cp/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/optum_pdf_data_vectorize-1.0-py3-none-any.whl"
+      }, {
+        "pypi" : {
+          "package" : "opensearch-py"
+        }
+      }, {
+        "pypi" : {
+          "package" : "boto3==1.28.62"
+        }
+      }, {
+        "pypi" : {
+          "package" : "pdf2image"
+        }
+      }, {
+        "pypi" : {
+          "package" : "unstructured==0.7.4"
+        }
+      }, {
+        "pypi" : {
+          "package" : "prophecy-spark-ai==0.1.11"
+        }
+      } ],
+      "email_notifications" : { },
+      "max_retries" : 0
+    } ],
+    "max_concurrent_runs" : 1,
+    "schedule" : {
+      "quartz_cron_expression" : "0 3 4 * * ? *",
+      "timezone_id" : "UTC",
+      "pause_status" : "UNPAUSED"
+    }
+  },
+  "cluster_mode" : {
+    "clusterMode" : "Single"
+  },
+  "secret_scope" : "prophecy_jobs_69",
+  "sorted_processes" : [ "yRe7uYUbapl7Fh5pSm4Oh" ]
+}

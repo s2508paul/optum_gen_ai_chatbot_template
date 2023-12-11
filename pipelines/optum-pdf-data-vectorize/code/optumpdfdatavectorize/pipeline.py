@@ -18,7 +18,6 @@ def pipeline(spark: SparkSession) -> None:
     df_bedrock_embeddings = bedrock_embeddings(spark, df_get_ids)
     df_remove_nulls = remove_nulls(spark, df_bedrock_embeddings)
     df_rename = rename(spark, df_remove_nulls)
-    df_Filter_1 = Filter_1(spark, df_rename)
 
 def main():
     spark = SparkSession.builder\

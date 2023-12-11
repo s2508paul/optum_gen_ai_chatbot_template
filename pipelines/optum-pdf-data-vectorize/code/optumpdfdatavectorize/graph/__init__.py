@@ -1,4 +1,3 @@
-from .Filter_1 import Filter_1
 from .document_ids import document_ids
 from .get_ids import get_ids
 from .explode import explode

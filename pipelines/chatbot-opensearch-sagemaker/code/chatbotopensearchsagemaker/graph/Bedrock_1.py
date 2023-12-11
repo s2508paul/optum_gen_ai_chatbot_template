@@ -6,19 +6,19 @@ from prophecy.libs import typed_lit
 from chatbotopensearchsagemaker.config.ConfigStore import *
 from chatbotopensearchsagemaker.udfs.UDFs import *
 
-def Bedrock(spark: SparkSession, in0: DataFrame) -> DataFrame:
+def Bedrock_1(spark: SparkSession, in0: DataFrame) -> DataFrame:
     from spark_ai.llms.bedrock import BedrockLLM
     from pyspark.sql.types import StringType
     from pyspark.dbutils import DBUtils
     (BedrockLLM(
-          aws_access_key_id = DBUtils(spark).secrets.get(scope = "aws_main", key = "secret_key"),
-          aws_secret_access_key = DBUtils(spark).secrets.get(scope = "aws_main", key = "secret_value"),
+          aws_access_key_id = DBUtils(spark).secrets.get(scope = "aws", key = "key"),
+          aws_secret_access_key = DBUtils(spark).secrets.get(scope = "aws", key = "secret"),
           region_name = "us-east-1"
         )\
         .register_udfs(spark = spark))
 
     return in0\
-        .withColumn("_texts", array(col("text")))\
+        .withColumn("_texts", array(col(None)))\
         .withColumn("_embedded", expr("bedrock_embed_texts(_texts)"))\
         .withColumn("bedrock_embedding", expr("_embedded.embeddings[0]"))\
         .withColumn("bedrock_error", col("_embedded.error"))\

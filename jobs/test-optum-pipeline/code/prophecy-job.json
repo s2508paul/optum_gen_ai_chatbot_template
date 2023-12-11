@@ -29,21 +29,69 @@
       }
     },
     "availableFabrics" : [ {
-      "id" : "42",
-      "name" : "sumit-dev-dbx",
+      "id" : "6321",
+      "name" : "testfabric",
       "clusterSizes" : {
-        "default" : "sumitp",
-        "availableClusterSizes" : [ "sumitp" ]
+        "default" : "Small",
+        "availableClusterSizes" : [ "Small" ]
       },
       "pylibsResolutionMode" : {
-        "DBFS" : {
-          "path" : "dbfs:/Users/abhinav/prophecy_libs-1.6.2-py3-none-any.whl"
-        }
+        "PublicCentral" : { }
       },
       "scalalibsResolutionMode" : {
-        "DBFS" : {
-          "path" : "dbfs:/Users/abhinav/prophecy-libs-assembly-3.3.0-7.1.15.jar"
-        }
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "647",
+      "name" : "dev",
+      "clusterSizes" : {
+        "default" : "Small",
+        "availableClusterSizes" : [ "Small" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "6834",
+      "name" : "lab-samples-dbx",
+      "clusterSizes" : {
+        "default" : "sumit-lab-samples",
+        "availableClusterSizes" : [ "sumit-lab-samples" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "4856",
+      "name" : "ProphecyInfogainFabric",
+      "clusterSizes" : {
+        "default" : "DefaultClusterSize",
+        "availableClusterSizes" : [ "DefaultClusterSize" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "3572",
+      "name" : "sumit-dev-dbx",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
       }
     } ]
   },

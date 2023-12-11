@@ -18,7 +18,3 @@ dependencies:
   id: pip5l
   name: unstructured
   enabled: true
-- type: workflow
-  id: Fql9s
-  name: prophecy_spark_ai
-  enabled: true

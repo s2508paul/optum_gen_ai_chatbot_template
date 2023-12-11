@@ -11,8 +11,8 @@ def bedrock_embeddings(spark: SparkSession, in0: DataFrame) -> DataFrame:
     from pyspark.sql.types import StringType
     from pyspark.dbutils import DBUtils
     (BedrockLLM(
-          aws_access_key_id = DBUtils(spark).secrets.get(scope = "aws_main", key = "secret_key"),
-          aws_secret_access_key = DBUtils(spark).secrets.get(scope = "aws_main", key = "secret_value"),
+          aws_access_key_id = DBUtils(spark).secrets.get(scope = "opensearch_serverless", key = "access_key"),
+          aws_secret_access_key = DBUtils(spark).secrets.get(scope = "opensearch_serverless", key = "secret"),
           region_name = "us-east-1"
         )\
         .register_udfs(spark = spark))

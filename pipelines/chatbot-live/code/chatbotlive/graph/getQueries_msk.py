@@ -29,4 +29,6 @@ def getQueries_msk(spark: SparkSession) -> DataFrame:
         .load()\
         .withColumn("value", col("value").cast("string"))\
         .withColumn("key", col("key").cast("string")))\
-        .withColumn("value", from_json(col("value"), schema_of_json("{\n\t\"msg\" : \"hi\"\n}")))
+        .withColumn("value", from_json(col("value"), schema_of_json("""{
+\t\"msg\" : \"hi\"
+}""")))

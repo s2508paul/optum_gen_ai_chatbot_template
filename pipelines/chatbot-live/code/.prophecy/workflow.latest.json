@@ -6,14 +6,14 @@
     "id" : "1",
     "uri" : "pipelines/chatbot-live",
     "language" : "python",
-    "fabricId" : "42",
+    "fabricId" : "3572",
     "frontEndLanguage" : "sql",
     "mode" : "stream",
     "udfs" : {
       "language" : "python",
       "udfs" : [ ],
       "functionPackageName" : "sumitpaulprophecyioteam.optumgenaichatbottemplate.functions",
-      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.streaming.functions", "prophecy.warehouse.functions" ]
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions", "sumitpaulprophecyioteam.prophecysparkmachinelearningpython.functions", "prophecy.streaming.functions" ]
     },
     "udafs" : {
       "language" : "python",
@@ -70,16 +70,20 @@
       "package" : "prophecy-spark-ai==0.1.11"
     } ],
     "dependentProjectExternalDependencies" : [ {
-      "projectUID" : "289",
+      "projectUID" : "12654",
       "projectName" : "ProphecySparkBasicsPython",
       "externalDependencies" : [ ]
     }, {
-      "projectUID" : "291",
-      "projectName" : "ProphecyStreamingPython",
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
       "externalDependencies" : [ ]
     }, {
-      "projectUID" : "290",
-      "projectName" : "ProphecyWarehousePython",
+      "projectUID" : "16491",
+      "projectName" : "ProphecySparkMachineLearningPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12656",
+      "projectName" : "ProphecyStreamingPython",
       "externalDependencies" : [ ]
     } ],
     "isImported" : false,
@@ -100,18 +104,6 @@
     "target" : "cNcwJplAMgspOB5AA-gx2$$XNNfn8Hp5t1ZzkDu_nolk",
     "targetPort" : "ivnXJsLlU18Wf_pLLzvsL$$TGK2pvYlHAiCRJCLiKAe4"
   }, {
-    "id" : "3724FozTlvx0aX9Pj9qpd",
-    "source" : "cNcwJplAMgspOB5AA-gx2$$XNNfn8Hp5t1ZzkDu_nolk",
-    "sourcePort" : "3PKbAq0S-592yGvoL4uXA$$rpbrUCzBYfx8OtTvO9cwz",
-    "target" : "0NtFOudFZAjlvBLJ5aOtB$$VtqXcK8QIjd7xAcyB05-r",
-    "targetPort" : "Q2HzymJpxj2Piu7xv0Lpj$$j8EdQMtm_S3XNj9Cf1F9o"
-  }, {
-    "id" : "rAO21bJxrqbDdWyUX3oou",
-    "source" : "wHPSehZ8vYgTXll6eKR37$$HM_VU970ys_8nwrSfoahf",
-    "sourcePort" : "BfCfH2yxaqJS2bZHE8Bmk$$e70jvmFohTK59nGeRCB8D",
-    "target" : "rYsN3KmoKxQK2AgikipMB$$F9cYhSS-phqp_HvpQCppz",
-    "targetPort" : "CRQBVjQemL-Qaxco-yDPv$$vqqipp9QF4cnzp6PGw7ty"
-  }, {
     "id" : "WnOpAD6zeEBXnZYFISQ5L$$FBr9J1hP52S3zPLsBqGn7",
     "source" : "cVKGmv1Rm05zgg4fwo13Y$$qobJXW2aSxAN5QSP42CHq",
     "sourcePort" : "uLTWOFYXeIBIfURmq1A-B$$XLNtwa3oIUOZ6JfDxUYcQ",
@@ -124,29 +116,11 @@
     "target" : "5FUHhNfFQiEEAZqrgn7kz$$1__CINClXgNc8KC6TCs-W",
     "targetPort" : "F5HdWIpE-mtFKmMbQzp2o$$Ko6joCRpWGcDtF5EoqNHs"
   }, {
-    "id" : "URYMdFujJrYU-dkxncKZ8",
-    "source" : "5FUHhNfFQiEEAZqrgn7kz$$1__CINClXgNc8KC6TCs-W",
-    "sourcePort" : "Lwo-Ndu310DKiQ3RRpCC7$$7ffHo9Zv1jrZdkO5i_ayh",
-    "target" : "RMgdS9Oi-lHDvPyf-kAaJ$$BChQWNxCiGd0OC1-b1McD",
-    "targetPort" : "CksdzV6MKISJIeRoaJkoE$$YZynkAbfM-E4xMm5bS-9P"
-  }, {
-    "id" : "6bmQrbkemljsCChTn4_JG",
-    "source" : "0NtFOudFZAjlvBLJ5aOtB$$VtqXcK8QIjd7xAcyB05-r",
-    "sourcePort" : "c56VRoYSFa2Lzhrcx9ZsZ$$i9r4dtnQ1Fd0owfY2hfsv",
-    "target" : "V0mp7SkYrr7Z9nX-wREjJ$$IbJuQCNNwajZ5wPPzLouY",
-    "targetPort" : "J1Iqc5b_uLMTQvMrBgZ2O$$qegMaWVBAucT9S2f2S10A"
-  }, {
     "id" : "n_AzG1C8ob1TeEFnjeqts",
     "source" : "V0mp7SkYrr7Z9nX-wREjJ$$IbJuQCNNwajZ5wPPzLouY",
     "sourcePort" : "WpB9visjRedRuHPYiVT2J$$cDKwQK9uUIeEDsZ7oxHee",
     "target" : "6KE8_0nKzyq5aOUxJDbGb$$nfXFbWeKMNSRO3MlugmYy",
     "targetPort" : "ag7jVH8pgOK_YfbM7G1Vc$$Sk3jDLsmy1bddv-KTTHYI"
-  }, {
-    "id" : "HohLXU34kP2I2Ep9Xd4eo$$vkg-XDQFj5kAvNfe6oopq",
-    "source" : "6KE8_0nKzyq5aOUxJDbGb$$nfXFbWeKMNSRO3MlugmYy",
-    "sourcePort" : "V8iKM9E3ycL8ubKog0Ssy$$FNWeBA92hSpgdsL7ZlP_o",
-    "target" : "wHPSehZ8vYgTXll6eKR37$$HM_VU970ys_8nwrSfoahf",
-    "targetPort" : "87ZSizrJ8VSyMuHlc2M3e$$FRmw2hB9bGu39X78Vz5nr"
   }, {
     "id" : "qx60Ql7QCnZGHiF6eT_rH",
     "source" : "RKFr9f_e_q8k74RIRfpo2$$T0TIxm01CDmVANei2JJ9D",
@@ -154,29 +128,41 @@
     "target" : "Gn0qWpeC5ZvkTYBxB-_-n$$4AxT_7DNbM9JSt7Dh8_4y",
     "targetPort" : "F3XNk8IzReFhx3s_WVymH$$KLNuCOLlQccyuaW-38BvM"
   }, {
-    "id" : "SwG4hA5-jvuTpnHUD3jul",
-    "source" : "RMgdS9Oi-lHDvPyf-kAaJ$$BChQWNxCiGd0OC1-b1McD",
-    "sourcePort" : "PC0Qxt7gno5-_Ug-C1bMa$$YJtGzXtSw1Tz1rCzz94oY",
-    "target" : "PKsRwZMA7NcYQUY-R0F0l$$JOOZlbLPmy6Jil8yAKA4v",
-    "targetPort" : "WQj6w1N-qvqBqYp4t7pFO$$ejdcd38ZFViSAVeBBvOcK"
-  }, {
-    "id" : "HZMwSxEYYP1Kqd_YzDa-a",
-    "source" : "RMgdS9Oi-lHDvPyf-kAaJ$$BChQWNxCiGd0OC1-b1McD",
-    "sourcePort" : "PC0Qxt7gno5-_Ug-C1bMa$$YJtGzXtSw1Tz1rCzz94oY",
-    "target" : "_KdtjqsdtVyYt4s6BIm32$$8NnlZUm_levzwhriYGkXE",
-    "targetPort" : "Z0-pAqJy3MVdzE4mzCrO1$$FsYsVWW0OzNJGIPxht9mV"
-  }, {
-    "id" : "bjQtr0ahBQBDsZ0ATNXwZ$$yHtZ_nDY2YHVGasYB2H5M",
-    "source" : "PKsRwZMA7NcYQUY-R0F0l$$JOOZlbLPmy6Jil8yAKA4v",
-    "sourcePort" : "CYxCovYdtN3z0QHoMdczN$$ofEh1Z5JqhkHtOYzURtDK",
-    "target" : "Tc-aDTacnwAHfC9r-qHb2$$sB6CNKE8eOKCrMFjIC-ZO",
-    "targetPort" : "EV6rMUdUU3tlq89pVr8Hg$$6gQOKnD8LP04zoj25UvkG"
-  }, {
-    "id" : "TX-0K38VWVYFe2Hkd5Hql$$_lpFJ030I_mVwItTzS8cY",
-    "source" : "_KdtjqsdtVyYt4s6BIm32$$8NnlZUm_levzwhriYGkXE",
-    "sourcePort" : "3_ccbhUuXFC7fZ-rGS8Gk$$CSZmD6DtJWGIdgrNx0tiL",
+    "id" : "4f8cSwTh3zuG-fGYIQFQf$$VnrYrNzLDWlmvKW3UlZXr",
+    "source" : "FGdXivxfUY4PYWClSQOG-$$YMzfd5chOV6kWsJg_OZtE",
+    "sourcePort" : "b9dbcN4l0WnTwe3uOBQsh$$6xLv9T74-_3AI1cOOY1ad",
     "target" : "Hidw4971wESZyDtfDlDwX$$e4FhM829PSDI7grozaqYq",
     "targetPort" : "XnBMS7K3MTSb4cVbiyMxE$$Ob2ZmclISIDD4ehJ7RLv-"
+  }, {
+    "id" : "ry4VWvL1eKnFzwSawfm9X$$eMgV5xLobJC0l-OJU_hUM",
+    "source" : "5FUHhNfFQiEEAZqrgn7kz$$1__CINClXgNc8KC6TCs-W",
+    "sourcePort" : "Lwo-Ndu310DKiQ3RRpCC7$$7ffHo9Zv1jrZdkO5i_ayh",
+    "target" : "i0h0BTxVu8-WisRwCrr0C$$sTZW5e01w5HV0KjZg70JY",
+    "targetPort" : "-JLBPY54vXO1y6kn4Gw0u$$GDoJv4rWSsKkRo7xDM-bb"
+  }, {
+    "id" : "yK_mGHEuC4kLbNeWEExW1$$IKnK208Wl-s1DDWjqKpV_",
+    "source" : "cNcwJplAMgspOB5AA-gx2$$XNNfn8Hp5t1ZzkDu_nolk",
+    "sourcePort" : "3PKbAq0S-592yGvoL4uXA$$rpbrUCzBYfx8OtTvO9cwz",
+    "target" : "2YZmZ3pEAa9DinbeDn0Ni$$b5Zhze_Z471iVTrCvl_Li",
+    "targetPort" : "RIW1ETKjcz9UkA29WUSfP$$gbjAea8_mUaWgVAPlp6SN"
+  }, {
+    "id" : "LFeltUyCN1KfG5V1GKd24$$CqoLkjBEHK9ZjL8hh0s3X",
+    "source" : "2YZmZ3pEAa9DinbeDn0Ni$$b5Zhze_Z471iVTrCvl_Li",
+    "sourcePort" : "PSFdB22LsSIPj5gXFWcek$$sZRvUPzPp8QgmK7QgKYuX",
+    "target" : "V0mp7SkYrr7Z9nX-wREjJ$$IbJuQCNNwajZ5wPPzLouY",
+    "targetPort" : "J1Iqc5b_uLMTQvMrBgZ2O$$qegMaWVBAucT9S2f2S10A"
+  }, {
+    "id" : "saUlJYV8HOmANok8gphlx$$HHRxtuO4Mx16XHVul4Vx5",
+    "source" : "6KE8_0nKzyq5aOUxJDbGb$$nfXFbWeKMNSRO3MlugmYy",
+    "sourcePort" : "V8iKM9E3ycL8ubKog0Ssy$$FNWeBA92hSpgdsL7ZlP_o",
+    "target" : "sp7heAnY3UcNScIdtfQuf$$70ZJYqutmvziTL0zEYMit",
+    "targetPort" : "p86B61CoCGHD1ODdWeKZn$$C8dKVCGvxffKNTrkS1ueG"
+  }, {
+    "id" : "f-Cd-uGNCHJ8H97jA0zM2$$DDmjS-P0XYqCmLnw2tOvG",
+    "source" : "rYsN3KmoKxQK2AgikipMB$$F9cYhSS-phqp_HvpQCppz",
+    "sourcePort" : "j3Pc7oWL3iRE70Ckk8SGX$$lucpTDdeTPmTtsWHa-MQ1",
+    "target" : "7vfVj539dWoKmuy_ZnuRz$$u8khMSATMH7m6BhoqRnpd",
+    "targetPort" : "a6f3rm5M01gl0D-I6bHaO$$QApINWzEAMaatP6rQEaIs"
   } ],
   "processes" : {
     "V0mp7SkYrr7Z9nX-wREjJ$$IbJuQCNNwajZ5wPPzLouY" : {
@@ -195,109 +181,7 @@
       "ports" : {
         "inputs" : [ {
           "id" : "J1Iqc5b_uLMTQvMrBgZ2O$$qegMaWVBAucT9S2f2S10A",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "pinecone_matches",
-              "type" : {
-                "type" : "struct",
-                "fields" : [ {
-                  "name" : "id",
-                  "type" : "string",
-                  "nullable" : false,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "score",
-                  "type" : "float",
-                  "nullable" : false,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                } ]
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "text",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "ts",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "create_time",
-              "type" : "timestamp",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "id",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "embedding",
-              "type" : {
-                "type" : "array",
-                "elementType" : "float",
-                "containsNull" : true
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "content_chunk",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "url",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
+          "slug" : "in0"
         } ],
         "outputs" : [ {
           "id" : "WpB9visjRedRuHPYiVT2J$$cDKwQK9uUIeEDsZ7oxHee",
@@ -371,7 +255,7 @@
         "columnsSelector" : [ "J1Iqc5b_uLMTQvMrBgZ2O$$qegMaWVBAucT9S2f2S10A##url", "J1Iqc5b_uLMTQvMrBgZ2O$$qegMaWVBAucT9S2f2S10A##create_time", "J1Iqc5b_uLMTQvMrBgZ2O$$qegMaWVBAucT9S2f2S10A##id", "J1Iqc5b_uLMTQvMrBgZ2O$$qegMaWVBAucT9S2f2S10A##text", "J1Iqc5b_uLMTQvMrBgZ2O$$qegMaWVBAucT9S2f2S10A##pinecone_matches", "J1Iqc5b_uLMTQvMrBgZ2O$$qegMaWVBAucT9S2f2S10A##ts", "J1Iqc5b_uLMTQvMrBgZ2O$$qegMaWVBAucT9S2f2S10A##embedding", "J1Iqc5b_uLMTQvMrBgZ2O$$qegMaWVBAucT9S2f2S10A##content_chunk" ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.5&projectSubscriptionProjectId=289&path=gems/Reformat",
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -418,69 +302,7 @@
       "ports" : {
         "inputs" : [ {
           "id" : "ivnXJsLlU18Wf_pLLzvsL$$TGK2pvYlHAiCRJCLiKAe4",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "pinecone_matches",
-              "type" : {
-                "type" : "struct",
-                "fields" : [ {
-                  "name" : "id",
-                  "type" : "string",
-                  "nullable" : false,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "score",
-                  "type" : "float",
-                  "nullable" : false,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                } ]
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "text",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "ts",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "create_time",
-              "type" : "timestamp",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
+          "slug" : "in0"
         }, {
           "id" : "JFOQxHng_hyS3G3n_1DNn$$ZB_7IirNKQGtc7y6bNqvq",
           "slug" : "in1",
@@ -669,7 +491,7 @@
         "headAlias" : "in0"
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.5&projectSubscriptionProjectId=289&path=gems/Join",
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Join",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -801,16 +623,16 @@
         "columnsSelector" : [ "F3XNk8IzReFhx3s_WVymH$$KLNuCOLlQccyuaW-38BvM##timestamp", "F3XNk8IzReFhx3s_WVymH$$KLNuCOLlQccyuaW-38BvM##value.msg", "F3XNk8IzReFhx3s_WVymH$$KLNuCOLlQccyuaW-38BvM##value" ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.5&projectSubscriptionProjectId=289&path=gems/Reformat",
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
-    "_KdtjqsdtVyYt4s6BIm32$$8NnlZUm_levzwhriYGkXE" : {
-      "id" : "_KdtjqsdtVyYt4s6BIm32$$8NnlZUm_levzwhriYGkXE",
+    "FGdXivxfUY4PYWClSQOG-$$YMzfd5chOV6kWsJg_OZtE" : {
+      "id" : "FGdXivxfUY4PYWClSQOG-$$YMzfd5chOV6kWsJg_OZtE",
       "component" : "PineconeLookup",
       "metadata" : {
-        "label" : "vector_lookup",
-        "slug" : "vector_lookup",
+        "label" : "PineconeLookup_1",
+        "slug" : "PineconeLookup_1",
         "x" : -1840,
         "y" : -600,
         "phase" : 0,
@@ -820,7 +642,90 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "Z0-pAqJy3MVdzE4mzCrO1$$FsYsVWW0OzNJGIPxht9mV",
+          "id" : "UQwqb8xMx6ZzYMOsJPE2g$$8ZJNNdNtE1yXGPaH51yHW",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "b9dbcN4l0WnTwe3uOBQsh$$6xLv9T74-_3AI1cOOY1ad",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "index_name" : "",
+        "credential_type" : "databricks",
+        "credential_db_scope" : "pinecone",
+        "environment" : "us-east-1-aws",
+        "credential_db_key" : "token",
+        "vector_column_name" : "",
+        "top_k" : 3,
+        "credential_manual_api_key" : ""
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=https://github.com/prophecy-io/spark-machine-learning-python&subPath=/&tag=ProphecySparkMachineLearningPython/0.0.2&projectSubscriptionProjectId=16491&path=gems/PineconeLookup",
+        "projectName" : "ProphecySparkMachineLearningPython"
+      }
+    },
+    "2YZmZ3pEAa9DinbeDn0Ni$$b5Zhze_Z471iVTrCvl_Li" : {
+      "id" : "2YZmZ3pEAa9DinbeDn0Ni$$b5Zhze_Z471iVTrCvl_Li",
+      "component" : "Watermark",
+      "metadata" : {
+        "label" : "Watermark_1",
+        "slug" : "Watermark_1",
+        "x" : -1420,
+        "y" : -440,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "RIW1ETKjcz9UkA29WUSfP$$gbjAea8_mUaWgVAPlp6SN",
+          "slug" : "with_original_content"
+        } ],
+        "outputs" : [ {
+          "id" : "PSFdB22LsSIPj5gXFWcek$$sZRvUPzPp8QgmK7QgKYuX",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "watermarks" : [ {
+          "isStreamingDF" : null,
+          "portId" : "RIW1ETKjcz9UkA29WUSfP$$gbjAea8_mUaWgVAPlp6SN",
+          "disableTextBox" : true,
+          "portSlug" : "with_original_content",
+          "expression" : "",
+          "watermarkValue" : ""
+        } ],
+        "isWatermarkingEnabled" : false
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12656.git&subPath=&tag=0.0.2&projectSubscriptionProjectId=12656&path=gems/Watermark",
+        "projectName" : "ProphecyStreamingPython"
+      }
+    },
+    "i0h0BTxVu8-WisRwCrr0C$$sTZW5e01w5HV0KjZg70JY" : {
+      "id" : "i0h0BTxVu8-WisRwCrr0C$$sTZW5e01w5HV0KjZg70JY",
+      "component" : "OpenAI",
+      "metadata" : {
+        "label" : "OpenAI_1",
+        "slug" : "OpenAI_1",
+        "x" : -2020,
+        "y" : -600,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "-JLBPY54vXO1y6kn4Gw0u$$GDoJv4rWSsKkRo7xDM-bb",
           "slug" : "in0",
           "schema" : {
             "type" : "struct",
@@ -851,150 +756,35 @@
                 "mappings" : [ ],
                 "tags" : [ ]
               }
-            }, {
-              "name" : "openai_embedding",
-              "type" : {
-                "type" : "array",
-                "elementType" : "float",
-                "containsNull" : true
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "openai_error",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
             } ]
           },
-          "isStreaming" : false
+          "isStreaming" : true
         } ],
         "outputs" : [ {
-          "id" : "3_ccbhUuXFC7fZ-rGS8Gk$$CSZmD6DtJWGIdgrNx0tiL",
-          "slug" : "out",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "text",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "ts",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "create_time",
-              "type" : "timestamp",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "openai_embedding",
-              "type" : {
-                "type" : "array",
-                "elementType" : "float",
-                "containsNull" : true
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "openai_error",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "pinecone_matches",
-              "type" : {
-                "type" : "array",
-                "elementType" : {
-                  "type" : "struct",
-                  "fields" : [ {
-                    "name" : "id",
-                    "type" : "string",
-                    "nullable" : false,
-                    "metadata" : {
-                      "description" : "",
-                      "mappings" : [ ],
-                      "tags" : [ ]
-                    }
-                  }, {
-                    "name" : "score",
-                    "type" : "float",
-                    "nullable" : false,
-                    "metadata" : {
-                      "description" : "",
-                      "mappings" : [ ],
-                      "tags" : [ ]
-                    }
-                  } ]
-                },
-                "containsNull" : false
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "pinecone_error",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
+          "id" : "ah8FOdMhaxmz9nLNSmDn0$$ei3f9ppuoTMvvGGUAASBq",
+          "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : true,
+        "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
       },
       "properties" : {
-        "index_name" : "sumit-index",
+        "qa_query_column_name" : null,
         "credential_type" : "databricks",
-        "credential_db_scope" : "pinecone",
-        "environment" : "us-east-1-aws",
+        "order_by_column" : null,
+        "credential_db_scope" : "open_ai",
+        "credential_manual_token" : "",
+        "operation" : "embed_texts",
+        "embed_text_column_name" : null,
+        "qa_context_column_name" : null,
         "credential_db_key" : "token",
-        "vector_column_name" : "openai_embedding",
-        "top_k" : 3,
-        "credential_manual_api_key" : "3ae56859-c825-42fd-802e-271f15d7c114"
+        "limit" : "10",
+        "qa_template" : "Answer the question based on the context below.\nContext:\n```\n{context}\n```\nQuestion: \n```\n{query}\n```\nAnswer:\n",
+        "group_data" : true
       },
       "componentInfo" : {
-        "gemId" : "gems/PineconeLookup",
-        "projectName" : "optum_gen_ai_chatbot_template"
+        "gemId" : "gitUri=https://github.com/prophecy-io/spark-machine-learning-python&subPath=/&tag=ProphecySparkMachineLearningPython/0.0.2&projectSubscriptionProjectId=16491&path=gems/OpenAI",
+        "projectName" : "ProphecySparkMachineLearningPython"
       }
     },
     "Hidw4971wESZyDtfDlDwX$$e4FhM829PSDI7grozaqYq" : {
@@ -1013,104 +803,7 @@
       "ports" : {
         "inputs" : [ {
           "id" : "XnBMS7K3MTSb4cVbiyMxE$$Ob2ZmclISIDD4ehJ7RLv-",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "text",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "ts",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "create_time",
-              "type" : "timestamp",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "openai_embedding",
-              "type" : {
-                "type" : "array",
-                "elementType" : "float",
-                "containsNull" : true
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "openai_error",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "pinecone_matches",
-              "type" : {
-                "type" : "array",
-                "elementType" : {
-                  "type" : "struct",
-                  "fields" : [ {
-                    "name" : "id",
-                    "type" : "string",
-                    "nullable" : false,
-                    "metadata" : {
-                      "description" : "",
-                      "mappings" : [ ],
-                      "tags" : [ ]
-                    }
-                  }, {
-                    "name" : "score",
-                    "type" : "float",
-                    "nullable" : false,
-                    "metadata" : {
-                      "description" : "",
-                      "mappings" : [ ],
-                      "tags" : [ ]
-                    }
-                  } ]
-                },
-                "containsNull" : false
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "pinecone_error",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
+          "slug" : "in0"
         } ],
         "outputs" : [ {
           "id" : "-wVpOmGaI_jzyjoyorVjK$$h4hn8WP3Nbom-jtz5MmTi",
@@ -1230,265 +923,7 @@
         "delimiter" : "-"
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.5&projectSubscriptionProjectId=289&path=gems/FlattenSchema",
-        "projectName" : "ProphecySparkBasicsPython"
-      }
-    },
-    "RMgdS9Oi-lHDvPyf-kAaJ$$BChQWNxCiGd0OC1-b1McD" : {
-      "id" : "RMgdS9Oi-lHDvPyf-kAaJ$$BChQWNxCiGd0OC1-b1McD",
-      "component" : "OpenAI",
-      "metadata" : {
-        "label" : "vectorize_question",
-        "slug" : "vectorize_question",
-        "x" : -2020,
-        "y" : -600,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "CksdzV6MKISJIeRoaJkoE$$YZynkAbfM-E4xMm5bS-9P",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "text",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "ts",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "create_time",
-              "type" : "timestamp",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : true
-        } ],
-        "outputs" : [ {
-          "id" : "PC0Qxt7gno5-_Ug-C1bMa$$YJtGzXtSw1Tz1rCzz94oY",
-          "slug" : "out",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "text",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "ts",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "create_time",
-              "type" : "timestamp",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "openai_embedding",
-              "type" : {
-                "type" : "array",
-                "elementType" : "float",
-                "containsNull" : true
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "openai_error",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : true,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "qa_query_column_name" : null,
-        "credential_type" : "databricks",
-        "order_by_column" : "text",
-        "credential_db_scope" : "open_ai",
-        "credential_manual_token" : "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",
-        "operation" : "embed_texts",
-        "embed_text_column_name" : "text",
-        "qa_context_column_name" : null,
-        "credential_db_key" : "api_key",
-        "limit" : "10",
-        "qa_template" : "Answer the question based on the context below.\nContext:\n```\n{context}\n```\nQuestion: \n```\n{query}\n```\nAnswer:\n",
-        "group_data" : false
-      },
-      "componentInfo" : {
-        "gemId" : "gems/OpenAI",
-        "projectName" : "optum_gen_ai_chatbot_template"
-      }
-    },
-    "PKsRwZMA7NcYQUY-R0F0l$$JOOZlbLPmy6Jil8yAKA4v" : {
-      "id" : "PKsRwZMA7NcYQUY-R0F0l$$JOOZlbLPmy6Jil8yAKA4v",
-      "component" : "Reformat",
-      "metadata" : {
-        "label" : "Reformat_1",
-        "slug" : "Reformat_1",
-        "x" : -1800,
-        "y" : -880,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "WQj6w1N-qvqBqYp4t7pFO$$ejdcd38ZFViSAVeBBvOcK",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "text",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "ts",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "create_time",
-              "type" : "timestamp",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "openai_embedding",
-              "type" : {
-                "type" : "array",
-                "elementType" : "float",
-                "containsNull" : true
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "openai_error",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "CYxCovYdtN3z0QHoMdczN$$ofEh1Z5JqhkHtOYzURtDK",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
-        "expressions" : [ {
-          "target" : "text",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "text"
-          },
-          "description" : ""
-        }, {
-          "target" : "ts",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "ts"
-          },
-          "description" : ""
-        }, {
-          "target" : "create_time",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "create_time"
-          },
-          "description" : ""
-        }, {
-          "target" : "optum-embeddings",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "openai_embedding"
-          },
-          "description" : ""
-        }, {
-          "target" : "openai_error",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "openai_error"
-          },
-          "description" : ""
-        } ],
-        "importString" : "",
-        "activeTab" : "expressions",
-        "columnsSelector" : [ "WQj6w1N-qvqBqYp4t7pFO$$ejdcd38ZFViSAVeBBvOcK##create_time", "WQj6w1N-qvqBqYp4t7pFO$$ejdcd38ZFViSAVeBBvOcK##openai_error", "WQj6w1N-qvqBqYp4t7pFO$$ejdcd38ZFViSAVeBBvOcK##text", "WQj6w1N-qvqBqYp4t7pFO$$ejdcd38ZFViSAVeBBvOcK##openai_embedding", "WQj6w1N-qvqBqYp4t7pFO$$ejdcd38ZFViSAVeBBvOcK##ts" ]
-      },
-      "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.5&projectSubscriptionProjectId=289&path=gems/Reformat",
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/FlattenSchema",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -1570,407 +1005,8 @@
         "columnsSelector" : [ "F5HdWIpE-mtFKmMbQzp2o$$Ko6joCRpWGcDtF5EoqNHs##ts", "F5HdWIpE-mtFKmMbQzp2o$$Ko6joCRpWGcDtF5EoqNHs##text" ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.5&projectSubscriptionProjectId=289&path=gems/Reformat",
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
-      }
-    },
-    "wHPSehZ8vYgTXll6eKR37$$HM_VU970ys_8nwrSfoahf" : {
-      "id" : "wHPSehZ8vYgTXll6eKR37$$HM_VU970ys_8nwrSfoahf",
-      "component" : "OpenAI",
-      "metadata" : {
-        "label" : "answer_question",
-        "slug" : "answer_question",
-        "x" : -920,
-        "y" : -440,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "87ZSizrJ8VSyMuHlc2M3e$$FRmw2hB9bGu39X78Vz5nr",
-          "slug" : "Aggregate_1",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "create_time",
-              "type" : {
-                "type" : "struct",
-                "fields" : [ {
-                  "name" : "start",
-                  "type" : "timestamp",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "end",
-                  "type" : "timestamp",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                } ]
-              },
-              "nullable" : false,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "ts",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "content_chunk",
-              "type" : "string",
-              "nullable" : false,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "input",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "BfCfH2yxaqJS2bZHE8Bmk$$e70jvmFohTK59nGeRCB8D",
-          "slug" : "out",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "create_time",
-              "type" : {
-                "type" : "struct",
-                "fields" : [ {
-                  "name" : "start",
-                  "type" : "timestamp",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "end",
-                  "type" : "timestamp",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                } ]
-              },
-              "nullable" : false,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "ts",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "content_chunk",
-              "type" : "string",
-              "nullable" : false,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "input",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "openai_answer",
-              "type" : {
-                "type" : "struct",
-                "fields" : [ {
-                  "name" : "choices",
-                  "type" : {
-                    "type" : "array",
-                    "elementType" : "string",
-                    "containsNull" : true
-                  },
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "error",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                } ]
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : true,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "qa_query_column_name" : "input",
-        "credential_type" : "databricks",
-        "order_by_column" : null,
-        "credential_db_scope" : "open_ai",
-        "credential_manual_token" : "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",
-        "operation" : "answer_question",
-        "embed_text_column_name" : null,
-        "qa_context_column_name" : "content_chunk",
-        "credential_db_key" : "api_key",
-        "limit" : "10",
-        "qa_template" : "Answer the question based on the context below. \n\nContext:\n```\n{context}\n```\n\nQuestion: \n```\n{query}\n```\n\nAnswer:\n",
-        "group_data" : true
-      },
-      "componentInfo" : {
-        "gemId" : "gems/OpenAI",
-        "projectName" : "optum_gen_ai_chatbot_template"
-      }
-    },
-    "Tc-aDTacnwAHfC9r-qHb2$$sB6CNKE8eOKCrMFjIC-ZO" : {
-      "id" : "Tc-aDTacnwAHfC9r-qHb2$$sB6CNKE8eOKCrMFjIC-ZO",
-      "component" : "OpenSearchLookup",
-      "metadata" : {
-        "label" : "OpenSearchLookup_1",
-        "slug" : "OpenSearchLookup_1",
-        "x" : -1560,
-        "y" : -880,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "EV6rMUdUU3tlq89pVr8Hg$$6gQOKnD8LP04zoj25UvkG",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "text",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "ts",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "create_time",
-              "type" : "timestamp",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "optum-embeddings",
-              "type" : {
-                "type" : "array",
-                "elementType" : "float",
-                "containsNull" : true
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "openai_error",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "UiV5ZPDe_r686lVsPmwrw$$c9A5X60eYLZzrdAR_0yWk",
-          "slug" : "out",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "text",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "ts",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "create_time",
-              "type" : "timestamp",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "optum-embeddings",
-              "type" : {
-                "type" : "array",
-                "elementType" : "float",
-                "containsNull" : true
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "openai_error",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "opensearch_matches",
-              "type" : {
-                "type" : "array",
-                "elementType" : {
-                  "type" : "struct",
-                  "fields" : [ {
-                    "name" : "id",
-                    "type" : "string",
-                    "nullable" : false,
-                    "metadata" : {
-                      "description" : "",
-                      "mappings" : [ ],
-                      "tags" : [ ]
-                    }
-                  }, {
-                    "name" : "score",
-                    "type" : "float",
-                    "nullable" : false,
-                    "metadata" : {
-                      "description" : "",
-                      "mappings" : [ ],
-                      "tags" : [ ]
-                    }
-                  } ]
-                },
-                "containsNull" : false
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "opensearch_error",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : true,
-        "autoUpdateOnRun" : true
-      },
-      "properties" : {
-        "credential_manual_api_secrets" : "",
-        "credential_db_secrets" : "secret",
-        "index_name" : "optum-gen-ai-index",
-        "host" : "vrq94ns7ekrnmygy1lx6.eu-west-1.aoss.amazonaws.com",
-        "credential_type" : "databricks",
-        "credential_db_scope" : "opensearch_serverless",
-        "service" : "aoss",
-        "credential_db_key" : "access_key",
-        "region" : "eu-west-1",
-        "vector_column_name" : "optum-embeddings",
-        "top_k" : 3,
-        "credential_manual_api_key" : ""
-      },
-      "componentInfo" : {
-        "gemId" : "gems/OpenSearchLookup",
-        "projectName" : "optum_gen_ai_chatbot_template"
       }
     },
     "rYsN3KmoKxQK2AgikipMB$$F9cYhSS-phqp_HvpQCppz" : {
@@ -1989,103 +1025,7 @@
       "ports" : {
         "inputs" : [ {
           "id" : "CRQBVjQemL-Qaxco-yDPv$$vqqipp9QF4cnzp6PGw7ty",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "create_time",
-              "type" : {
-                "type" : "struct",
-                "fields" : [ {
-                  "name" : "start",
-                  "type" : "timestamp",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "end",
-                  "type" : "timestamp",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                } ]
-              },
-              "nullable" : false,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "ts",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "content_chunk",
-              "type" : "string",
-              "nullable" : false,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "input",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "openai_answer",
-              "type" : {
-                "type" : "struct",
-                "fields" : [ {
-                  "name" : "choices",
-                  "type" : {
-                    "type" : "array",
-                    "elementType" : "string",
-                    "containsNull" : true
-                  },
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "error",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                } ]
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
+          "slug" : "in0"
         } ],
         "outputs" : [ {
           "id" : "j3Pc7oWL3iRE70Ckk8SGX$$lucpTDdeTPmTtsWHa-MQ1",
@@ -2138,254 +1078,8 @@
         "columnsSelector" : [ "CRQBVjQemL-Qaxco-yDPv$$vqqipp9QF4cnzp6PGw7ty##openai_answer", "CRQBVjQemL-Qaxco-yDPv$$vqqipp9QF4cnzp6PGw7ty##create_time", "CRQBVjQemL-Qaxco-yDPv$$vqqipp9QF4cnzp6PGw7ty##create_time.start", "CRQBVjQemL-Qaxco-yDPv$$vqqipp9QF4cnzp6PGw7ty##input", "CRQBVjQemL-Qaxco-yDPv$$vqqipp9QF4cnzp6PGw7ty##openai_answer.choices" ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.5&projectSubscriptionProjectId=289&path=gems/Reformat",
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
-      }
-    },
-    "0NtFOudFZAjlvBLJ5aOtB$$VtqXcK8QIjd7xAcyB05-r" : {
-      "id" : "0NtFOudFZAjlvBLJ5aOtB$$VtqXcK8QIjd7xAcyB05-r",
-      "component" : "Watermark",
-      "metadata" : {
-        "label" : "with_watermark",
-        "slug" : "with_watermark",
-        "x" : -1400,
-        "y" : -440,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "Q2HzymJpxj2Piu7xv0Lpj$$j8EdQMtm_S3XNj9Cf1F9o",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "pinecone_matches",
-              "type" : {
-                "type" : "struct",
-                "fields" : [ {
-                  "name" : "id",
-                  "type" : "string",
-                  "nullable" : false,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "score",
-                  "type" : "float",
-                  "nullable" : false,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                } ]
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "text",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "ts",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "create_time",
-              "type" : "timestamp",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "id",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "embedding",
-              "type" : {
-                "type" : "array",
-                "elementType" : "float",
-                "containsNull" : true
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "content_chunk",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "url",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "c56VRoYSFa2Lzhrcx9ZsZ$$i9r4dtnQ1Fd0owfY2hfsv",
-          "slug" : "out",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "pinecone_matches",
-              "type" : {
-                "type" : "struct",
-                "fields" : [ {
-                  "name" : "id",
-                  "type" : "string",
-                  "nullable" : false,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "score",
-                  "type" : "float",
-                  "nullable" : false,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                } ]
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "text",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "ts",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "create_time",
-              "type" : "timestamp",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "id",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "embedding",
-              "type" : {
-                "type" : "array",
-                "elementType" : "float",
-                "containsNull" : true
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "content_chunk",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "url",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : true,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "watermarks" : [ {
-          "isStreamingDF" : false,
-          "portId" : "Q2HzymJpxj2Piu7xv0Lpj$$j8EdQMtm_S3XNj9Cf1F9o",
-          "disableTextBox" : true,
-          "portSlug" : "in0",
-          "expression" : "create_time",
-          "watermarkValue" : "1 second"
-        } ],
-        "isWatermarkingEnabled" : true
-      },
-      "componentInfo" : {
-        "gemId" : "gems/Watermark",
-        "projectName" : "optum_gen_ai_chatbot_template"
       }
     },
     "7vfVj539dWoKmuy_ZnuRz$$u8khMSATMH7m6BhoqRnpd" : {
@@ -2394,8 +1088,8 @@
       "metadata" : {
         "label" : "bot_message",
         "slug" : "bot_message",
-        "x" : -1300,
-        "y" : -880,
+        "x" : -600,
+        "y" : -440,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -2431,109 +1125,7 @@
       "ports" : {
         "inputs" : [ {
           "id" : "ag7jVH8pgOK_YfbM7G1Vc$$Sk3jDLsmy1bddv-KTTHYI",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "pinecone_matches",
-              "type" : {
-                "type" : "struct",
-                "fields" : [ {
-                  "name" : "id",
-                  "type" : "string",
-                  "nullable" : false,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "score",
-                  "type" : "float",
-                  "nullable" : false,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                } ]
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "text",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "ts",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "create_time",
-              "type" : "timestamp",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "id",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "embedding",
-              "type" : {
-                "type" : "array",
-                "elementType" : "float",
-                "containsNull" : true
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "content_chunk",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "url",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
+          "slug" : "in0"
         } ],
         "outputs" : [ {
           "id" : "V8iKM9E3ycL8ubKog0Ssy$$FNWeBA92hSpgdsL7ZlP_o",
@@ -2649,8 +1241,53 @@
         } ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=&tag=0.0.5&projectSubscriptionProjectId=289&path=gems/Aggregate",
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Aggregate",
         "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "sp7heAnY3UcNScIdtfQuf$$70ZJYqutmvziTL0zEYMit" : {
+      "id" : "sp7heAnY3UcNScIdtfQuf$$70ZJYqutmvziTL0zEYMit",
+      "component" : "OpenAI",
+      "metadata" : {
+        "label" : "OpenAI_2",
+        "slug" : "OpenAI_2",
+        "x" : -940,
+        "y" : -440,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "p86B61CoCGHD1ODdWeKZn$$C8dKVCGvxffKNTrkS1ueG",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "RrSrw8BCsg7CCyEYTcw_F$$hRfkSfs0OWpb-HadaYqUB",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "qa_query_column_name" : null,
+        "credential_type" : "databricks",
+        "order_by_column" : null,
+        "credential_db_scope" : "open_ai",
+        "credential_manual_token" : "",
+        "operation" : "embed_texts",
+        "embed_text_column_name" : null,
+        "qa_context_column_name" : null,
+        "credential_db_key" : "token",
+        "limit" : "10",
+        "qa_template" : "Answer the question based on the context below.\nContext:\n```\n{context}\n```\nQuestion: \n```\n{query}\n```\nAnswer:\n",
+        "group_data" : true
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=https://github.com/prophecy-io/spark-machine-learning-python&subPath=/&tag=ProphecySparkMachineLearningPython/0.0.2&projectSubscriptionProjectId=16491&path=gems/OpenAI",
+        "projectName" : "ProphecySparkMachineLearningPython"
       }
     },
     "cVKGmv1Rm05zgg4fwo13Y$$qobJXW2aSxAN5QSP42CHq" : {
@@ -2689,7 +1326,7 @@
     "autoUpdateOnRun" : false
   },
   "diagnostics" : [ {
-    "property" : "$.workflow.processes.7vfVj539dWoKmuy_ZnuRz$$u8khMSATMH7m6BhoqRnpd",
+    "property" : "$.workflow.processes.FGdXivxfUY4PYWClSQOG-$$YMzfd5chOV6kWsJg_OZtE",
     "range" : {
       "start" : {
         "line" : 0,
@@ -2702,6 +1339,342 @@
     },
     "severity" : 1,
     "message" : "Please connect input port in0",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.Hidw4971wESZyDtfDlDwX$$e4FhM829PSDI7grozaqYq",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.cNcwJplAMgspOB5AA-gx2$$XNNfn8Hp5t1ZzkDu_nolk",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.cNcwJplAMgspOB5AA-gx2$$XNNfn8Hp5t1ZzkDu_nolk.properties.conditions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column in0.pinecone_matches.id [Conditions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.2YZmZ3pEAa9DinbeDn0Ni$$b5Zhze_Z471iVTrCvl_Li",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.V0mp7SkYrr7Z9nX-wREjJ$$IbJuQCNNwajZ5wPPzLouY",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.V0mp7SkYrr7Z9nX-wREjJ$$IbJuQCNNwajZ5wPPzLouY.properties.expressions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column pinecone_matches",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.V0mp7SkYrr7Z9nX-wREjJ$$IbJuQCNNwajZ5wPPzLouY.properties.expressions[1].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column text",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.V0mp7SkYrr7Z9nX-wREjJ$$IbJuQCNNwajZ5wPPzLouY.properties.expressions[2].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column ts",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.V0mp7SkYrr7Z9nX-wREjJ$$IbJuQCNNwajZ5wPPzLouY.properties.expressions[3].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column create_time",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.V0mp7SkYrr7Z9nX-wREjJ$$IbJuQCNNwajZ5wPPzLouY.properties.expressions[4].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column id",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.V0mp7SkYrr7Z9nX-wREjJ$$IbJuQCNNwajZ5wPPzLouY.properties.expressions[5].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column embedding",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.V0mp7SkYrr7Z9nX-wREjJ$$IbJuQCNNwajZ5wPPzLouY.properties.expressions[6].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column content_chunk",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.V0mp7SkYrr7Z9nX-wREjJ$$IbJuQCNNwajZ5wPPzLouY.properties.expressions[7].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column url",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.i0h0BTxVu8-WisRwCrr0C$$sTZW5e01w5HV0KjZg70JY",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Unable to do schema Analysis. Python Sandbox Error: Error occurred while doing Schema Analysis: No module named 'spark_ai'",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.rYsN3KmoKxQK2AgikipMB$$F9cYhSS-phqp_HvpQCppz",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Please connect input port in0",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.rYsN3KmoKxQK2AgikipMB$$F9cYhSS-phqp_HvpQCppz.properties.expressions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column create_time.start",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.rYsN3KmoKxQK2AgikipMB$$F9cYhSS-phqp_HvpQCppz.properties.expressions[1].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column input",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.rYsN3KmoKxQK2AgikipMB$$F9cYhSS-phqp_HvpQCppz.properties.expressions[2].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "No match found for column openai_answer.choices",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.7vfVj539dWoKmuy_ZnuRz$$u8khMSATMH7m6BhoqRnpd",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.6KE8_0nKzyq5aOUxJDbGb$$nfXFbWeKMNSRO3MlugmYy",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.sp7heAnY3UcNScIdtfQuf$$70ZJYqutmvziTL0zEYMit",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
     "tags" : [ ],
     "relatedInformation" : [ ]
   } ]

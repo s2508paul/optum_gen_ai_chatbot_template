@@ -14,6 +14,5 @@ def formatting_timestamp(spark: SparkSession, in0: DataFrame) -> DataFrame:
         date_format(col("create_time"), "yyyy-MM-dd HH:mm:ss").cast(TimestampType()).alias("create_time"), 
         col("id"), 
         col("embedding"), 
-        col("content_chunk"), 
-        col("url")
+        col("content_chunk")
     )

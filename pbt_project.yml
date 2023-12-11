@@ -254,7 +254,7 @@ jobs:
       clusterMode:
         Single: {}
       clusterId: null
-    enabled: true
+    enabled: false
     createdAt: '2023-12-01 08:24:20'
     author: sumitpaul@prophecy.io
 gemContainer:
@@ -331,8 +331,8 @@ projectDependencies:
     projectUID: 16491
     projectName: ProphecySparkMachineLearningPython
     repositoryPath: gitUri=https://github.com/prophecy-io/spark-machine-learning-python&subPath=/
-    version: ProphecySparkMachineLearningPython/0.0.2
+    version: ProphecySparkMachineLearningPython/0.0.3
     isDefault: false
     author: null
-    createdAt: '2023-12-11 11:57:55'
+    createdAt: '2023-12-11 14:36:30'
 pipelineConfigurations: {}

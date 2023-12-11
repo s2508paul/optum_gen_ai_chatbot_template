@@ -269,7 +269,7 @@
         "chunk_overlap" : 2
       },
       "componentInfo" : {
-        "gemId" : "gitUri=https://github.com/prophecy-io/spark-machine-learning-python&subPath=/&tag=ProphecySparkMachineLearningPython/0.0.2&projectSubscriptionProjectId=16491&path=gems/TextProcessing",
+        "gemId" : "gitUri=https://github.com/prophecy-io/spark-machine-learning-python&subPath=/&tag=ProphecySparkMachineLearningPython/0.0.3&projectSubscriptionProjectId=16491&path=gems/TextProcessing",
         "projectName" : "ProphecySparkMachineLearningPython"
       }
     },
@@ -465,7 +465,7 @@
         "chunk_overlap" : 0
       },
       "componentInfo" : {
-        "gemId" : "gitUri=https://github.com/prophecy-io/spark-machine-learning-python&subPath=/&tag=ProphecySparkMachineLearningPython/0.0.2&projectSubscriptionProjectId=16491&path=gems/TextProcessing",
+        "gemId" : "gitUri=https://github.com/prophecy-io/spark-machine-learning-python&subPath=/&tag=ProphecySparkMachineLearningPython/0.0.3&projectSubscriptionProjectId=16491&path=gems/TextProcessing",
         "projectName" : "ProphecySparkMachineLearningPython"
       }
     },
@@ -1095,7 +1095,7 @@
         "credential_db_key" : "access_key"
       },
       "componentInfo" : {
-        "gemId" : "gitUri=https://github.com/prophecy-io/spark-machine-learning-python&subPath=/&tag=ProphecySparkMachineLearningPython/0.0.2&projectSubscriptionProjectId=16491&path=gems/Bedrock",
+        "gemId" : "gitUri=https://github.com/prophecy-io/spark-machine-learning-python&subPath=/&tag=ProphecySparkMachineLearningPython/0.0.3&projectSubscriptionProjectId=16491&path=gems/Bedrock",
         "projectName" : "ProphecySparkMachineLearningPython"
       }
     },
@@ -1516,7 +1516,7 @@
         "chunk_overlap" : 100
       },
       "componentInfo" : {
-        "gemId" : "gitUri=https://github.com/prophecy-io/spark-machine-learning-python&subPath=/&tag=ProphecySparkMachineLearningPython/0.0.2&projectSubscriptionProjectId=16491&path=gems/TextProcessing",
+        "gemId" : "gitUri=https://github.com/prophecy-io/spark-machine-learning-python&subPath=/&tag=ProphecySparkMachineLearningPython/0.0.3&projectSubscriptionProjectId=16491&path=gems/TextProcessing",
         "projectName" : "ProphecySparkMachineLearningPython"
       }
     },
@@ -1730,7 +1730,7 @@
         "chunk_overlap" : 0
       },
       "componentInfo" : {
-        "gemId" : "gitUri=https://github.com/prophecy-io/spark-machine-learning-python&subPath=/&tag=ProphecySparkMachineLearningPython/0.0.2&projectSubscriptionProjectId=16491&path=gems/TextProcessing",
+        "gemId" : "gitUri=https://github.com/prophecy-io/spark-machine-learning-python&subPath=/&tag=ProphecySparkMachineLearningPython/0.0.3&projectSubscriptionProjectId=16491&path=gems/TextProcessing",
         "projectName" : "ProphecySparkMachineLearningPython"
       }
     },
@@ -2280,7 +2280,7 @@
         "chunk_overlap" : 0
       },
       "componentInfo" : {
-        "gemId" : "gitUri=https://github.com/prophecy-io/spark-machine-learning-python&subPath=/&tag=ProphecySparkMachineLearningPython/0.0.2&projectSubscriptionProjectId=16491&path=gems/TextProcessing",
+        "gemId" : "gitUri=https://github.com/prophecy-io/spark-machine-learning-python&subPath=/&tag=ProphecySparkMachineLearningPython/0.0.3&projectSubscriptionProjectId=16491&path=gems/TextProcessing",
         "projectName" : "ProphecySparkMachineLearningPython"
       }
     },

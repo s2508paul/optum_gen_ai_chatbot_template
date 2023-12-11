@@ -6,20 +6,20 @@ from prophecy.libs import typed_lit
 from chatbotopensearchsagemaker.config.ConfigStore import *
 from chatbotopensearchsagemaker.udfs.UDFs import *
 
-def SageMakerEndpoint_1(spark: SparkSession, in0: DataFrame) -> DataFrame:
+def answer_question(spark: SparkSession, in0: DataFrame) -> DataFrame:
     from spark_ai.llms.sagemaker import SageMakerLLM
     from pyspark.sql.types import StringType
     from pyspark.dbutils import DBUtils
     (SageMakerLLM(
-          aws_access_key_id = DBUtils(spark).secrets.get(scope = "aws", key = "key"),
-          aws_secret_access_key = DBUtils(spark).secrets.get(scope = "aws", key = "secret"),
+          aws_access_key_id = DBUtils(spark).secrets.get(scope = "aws_main", key = "secret_key"),
+          aws_secret_access_key = DBUtils(spark).secrets.get(scope = "aws_main", key = "secret_value"),
           region_name = "us-east-1"
         )\
         .register_udfs(spark = spark))
 
     return in0\
-        .withColumn("_context", col(None))\
-        .withColumn("_query", col(None))\
+        .withColumn("_context", col("content_chunk"))\
+        .withColumn("_query", col("input"))\
         .withColumn(
           "_template",
           expr(

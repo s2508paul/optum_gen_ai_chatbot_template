@@ -13,8 +13,8 @@ def PineconeLookup_1(spark: SparkSession, in0: DataFrame) -> DataFrame:
     PineconeDB(DBUtils(spark).secrets.get(scope = "pinecone", key = "token"), "us-east-1-aws").register_udfs(spark)
 
     return in0\
-        .withColumn("_vector", col(""))\
-        .withColumn("_response", expr("pinecone_query(\"\", _vector, 3)"))\
+        .withColumn("_vector", col("openai_embedding"))\
+        .withColumn("_response", expr("pinecone_query(\"sumit-index\", _vector, 3)"))\
         .withColumn("pinecone_matches", col("_response.matches"))\
         .withColumn("pinecone_error", col("_response.error"))\
         .drop("_vector", "_response")

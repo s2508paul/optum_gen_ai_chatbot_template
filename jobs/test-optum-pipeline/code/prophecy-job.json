@@ -9,7 +9,7 @@
     "jobClusterMode" : {
       "clusterMode" : "Single"
     },
-    "enabled" : true,
+    "enabled" : false,
     "defaultClusterSize" : "sumitp",
     "alerting" : {
       "emails" : "sumitpaul@prophecy.io",

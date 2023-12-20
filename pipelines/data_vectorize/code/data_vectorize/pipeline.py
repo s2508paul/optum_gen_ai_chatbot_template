@@ -25,9 +25,10 @@ def pipeline(spark: SparkSession) -> None:
     df_bedrock_embeddings = bedrock_embeddings(spark, df_get_ids)
     df_remove_nulls = remove_nulls(spark, df_bedrock_embeddings)
     df_chunkify_docx = chunkify_docx(spark, df_document_ids_1)
+    df_FlattenSchema_1 = FlattenSchema_1(spark, df_test_chunk_overlap)
     df_flatten_docx = flatten_docx(spark, df_chunkify_docx)
     df_rename = rename(spark, df_remove_nulls)
-    populate_vector_db(spark, df_vector_read_catalog)
+    populate_vector_db(spark, df_rename)
 
 def main():
     spark = SparkSession.builder\

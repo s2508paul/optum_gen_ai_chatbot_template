@@ -1,0 +1,171 @@
+{
+  "id" : "QVk8bb7kH1vqG4FqIvP3N",
+  "component" : "Subgraph",
+  "metadata" : {
+    "label" : "",
+    "slug" : "",
+    "x" : 0,
+    "y" : 0,
+    "phase" : 0,
+    "cache" : false,
+    "detailedStats" : false,
+    "isImported" : false,
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "access_key",
+          "kind" : {
+            "type" : "databricks_secret",
+            "value" : "opensearch_serverless:access_key"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "secret_key",
+          "kind" : {
+            "type" : "databricks_secret",
+            "value" : "opensearch_serverless:secret"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        } ]
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ {
+      "id" : "rEJqZL2oER38mYDdatNTz",
+      "slug" : "in0",
+      "isStreaming" : false
+    } ],
+    "outputs" : [ {
+      "id" : "bKguTCu2BtAA1Q0hJFq6m",
+      "slug" : "out0",
+      "isStreaming" : false
+    } ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  },
+  "properties" : {
+    "packageName" : "BedrockSubgraph"
+  },
+  "connections" : [ {
+    "id" : "GpTO5nFetsmj123lWeL9L",
+    "source" : "Riy_RPNB_6acpUUkH6sPP",
+    "sourcePort" : "y5UmuAbUwIJ6O73txk7gR",
+    "target" : "QVk8bb7kH1vqG4FqIvP3N",
+    "targetPort" : "bKguTCu2BtAA1Q0hJFq6m"
+  }, {
+    "id" : "wrK_LdHEsNv85zIPq3NeQ",
+    "source" : "QVk8bb7kH1vqG4FqIvP3N",
+    "sourcePort" : "rEJqZL2oER38mYDdatNTz",
+    "target" : "Riy_RPNB_6acpUUkH6sPP",
+    "targetPort" : "lBKrIFyWmvTmcv-FQTHmu"
+  } ],
+  "processes" : {
+    "Riy_RPNB_6acpUUkH6sPP" : {
+      "id" : "Riy_RPNB_6acpUUkH6sPP",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Bedrock_script_2_2",
+        "slug" : "Bedrock_script_2_2",
+        "x" : -400,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "lBKrIFyWmvTmcv-FQTHmu",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "y5UmuAbUwIJ6O73txk7gR",
+          "slug" : "out0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "id",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_chunks",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_embedded",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
+      },
+      "properties" : {
+        "script" : "import json\nfrom typing import List\nimport boto3\nfrom pyspark.sql import SparkSession\nfrom pyspark.sql.types import StructType, StructField, ArrayType, StringType, FloatType\nfrom pyspark.dbutils import DBUtils\n\ndefault_embedding_model = 'amazon.titan-embed-text-v1'\n\ndef embed_texts(texts: List[str], access_key:str, secret_key:str, model: str = default_embedding_model):\n    \n    bedrock = boto3.client(\n        'bedrock-runtime',\n        aws_access_key_id=access_key,\n        aws_secret_access_key=secret_key,\n        region_name=\"us-east-1\"\n    )\n\n    try:\n        embeddings = []\n        for text in texts:\n            body = json.dumps({\"inputText\": text})\n            content_type = 'application/json'\n\n            response = bedrock.invoke_model(body=body, modelId=model, accept=content_type, contentType=content_type)\n            embeddings.append(json.loads(response['body'].read().decode('utf-8'))['embedding'])\n\n        return {'embeddings': embeddings, 'error': None}\n    except Exception as error:\n        return {'embeddings': None, 'error': str(error)}\n\n\n    \n\nfrom pyspark.sql import *\nfrom pyspark.sql.functions import *\nfrom pyspark.sql.types import *\nfrom pyspark.sql.types import StringType\n\n\n\n\nspark.udf.register('bedrock_embed_texts', embed_texts)\n\nout0 = in0\\\n    .withColumn(\"_texts\", array(col(\"result_chunks\"))) \\\n    .withColumn(\"_embedded\", expr(f\"bedrock_embed_texts(_texts,\\\"{Config.access_key}\\\",\\\"{Config.secret_key}\\\")\")) \\\n    .drop(col(\"_texts\"))\n\n    \n    \n",
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+        "scriptMethodFooter" : "    return out0"
+      }
+    }
+  },
+  "externalDependencies" : [ {
+    "type" : "pypi",
+    "package" : "opensearch-py",
+    "name" : "opensearchpy",
+    "enabled" : true,
+    "id" : "0d4Y6",
+    "editable" : true
+  }, {
+    "type" : "pypi",
+    "package" : "boto3==1.28.62",
+    "name" : "boto3",
+    "enabled" : true,
+    "id" : "I7lDQ",
+    "editable" : true
+  }, {
+    "type" : "pypi",
+    "package" : "pdf2image",
+    "name" : "pdf2image",
+    "enabled" : true,
+    "id" : "nRwR4",
+    "editable" : true
+  }, {
+    "type" : "pypi",
+    "package" : "unstructured==0.7.4",
+    "name" : "unstructured",
+    "enabled" : true,
+    "id" : "pip5l",
+    "editable" : true
+  }, {
+    "type" : "pypi",
+    "package" : "prophecy-spark-ai==0.1.11",
+    "name" : "prophecy_spark_ai",
+    "enabled" : false,
+    "id" : "Fql9s",
+    "editable" : false
+  } ]
+}

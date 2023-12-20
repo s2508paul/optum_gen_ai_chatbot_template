@@ -40,34 +40,39 @@
     "buildSystem" : "maven",
     "externalDependencies" : [ {
       "type" : "pypi",
-      "id" : "0d4Y6",
+      "package" : "opensearch-py",
       "name" : "opensearchpy",
       "enabled" : true,
-      "package" : "opensearch-py"
+      "id" : "0d4Y6",
+      "editable" : true
     }, {
       "type" : "pypi",
-      "id" : "I7lDQ",
+      "package" : "boto3==1.28.62",
       "name" : "boto3",
       "enabled" : true,
-      "package" : "boto3==1.28.62"
+      "id" : "I7lDQ",
+      "editable" : true
     }, {
       "type" : "pypi",
-      "id" : "nRwR4",
+      "package" : "pdf2image",
       "name" : "pdf2image",
       "enabled" : true,
-      "package" : "pdf2image"
+      "id" : "nRwR4",
+      "editable" : true
     }, {
       "type" : "pypi",
-      "id" : "pip5l",
+      "package" : "unstructured==0.7.4",
       "name" : "unstructured",
       "enabled" : true,
-      "package" : "unstructured==0.7.4"
+      "id" : "pip5l",
+      "editable" : true
     }, {
       "type" : "pypi",
-      "id" : "Fql9s",
+      "package" : "prophecy-spark-ai==0.1.11",
       "name" : "prophecy_spark_ai",
       "enabled" : false,
-      "package" : "prophecy-spark-ai==0.1.11"
+      "id" : "Fql9s",
+      "editable" : false
     } ],
     "dependentProjectExternalDependencies" : [ {
       "projectUID" : "12654",

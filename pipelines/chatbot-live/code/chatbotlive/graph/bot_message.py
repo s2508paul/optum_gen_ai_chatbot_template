@@ -9,7 +9,7 @@ from chatbotlive.udfs.UDFs import *
 def bot_message(spark: SparkSession, in0: DataFrame):
     in0.writeStream\
         .format("delta")\
-        .option("checkpointLocation", "dbfs:/data_engg/datasets/bot_amswers13")\
+        .option("checkpointLocation", "dbfs:/data_engg/datasets/bot_amswers101")\
         .queryName("StreamingTarget_1_7vfVj539dWoKmuy_ZnuRz$$u8khMSATMH7m6BhoqRnpd")\
-        .outputMode("complete")\
-        .toTable("hive_metastore.default.bot_answers13")
+        .outputMode("append")\
+        .toTable("hive_metastore.default.bot_answers101")

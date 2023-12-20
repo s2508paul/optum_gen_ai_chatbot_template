@@ -9,6 +9,7 @@ from .chunkify import chunkify
 from .test_chunk_overlap import test_chunk_overlap
 from .chunkify_docx import chunkify_docx
 from .docx_binaries import docx_binaries
+from .FlattenSchema_1 import FlattenSchema_1
 from .optum_pdf import optum_pdf
 from .flatten_docx import flatten_docx
 from .get_ids import get_ids

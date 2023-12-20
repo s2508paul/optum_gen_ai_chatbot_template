@@ -1,0 +1,18 @@
+version: 1
+dependencies:
+- type: workflow
+  id: 0d4Y6
+  name: opensearchpy
+  enabled: true
+- type: workflow
+  id: I7lDQ
+  name: boto3
+  enabled: true
+- type: workflow
+  id: nRwR4
+  name: pdf2image
+  enabled: true
+- type: workflow
+  id: pip5l
+  name: unstructured
+  enabled: true

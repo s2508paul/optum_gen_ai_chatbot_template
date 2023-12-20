@@ -40,34 +40,39 @@
     "buildSystem" : "maven",
     "externalDependencies" : [ {
       "type" : "pypi",
-      "id" : "0d4Y6",
+      "package" : "opensearch-py",
       "name" : "opensearchpy",
       "enabled" : true,
-      "package" : "opensearch-py"
+      "id" : "0d4Y6",
+      "editable" : true
     }, {
       "type" : "pypi",
-      "id" : "I7lDQ",
+      "package" : "boto3==1.28.62",
       "name" : "boto3",
       "enabled" : true,
-      "package" : "boto3==1.28.62"
+      "id" : "I7lDQ",
+      "editable" : true
     }, {
       "type" : "pypi",
-      "id" : "nRwR4",
+      "package" : "pdf2image",
       "name" : "pdf2image",
       "enabled" : true,
-      "package" : "pdf2image"
+      "id" : "nRwR4",
+      "editable" : true
     }, {
       "type" : "pypi",
-      "id" : "pip5l",
+      "package" : "unstructured==0.7.4",
       "name" : "unstructured",
       "enabled" : true,
-      "package" : "unstructured==0.7.4"
+      "id" : "pip5l",
+      "editable" : true
     }, {
       "type" : "pypi",
-      "id" : "Fql9s",
+      "package" : "prophecy-spark-ai==0.1.11",
       "name" : "prophecy_spark_ai",
       "enabled" : false,
-      "package" : "prophecy-spark-ai==0.1.11"
+      "id" : "Fql9s",
+      "editable" : false
     } ],
     "dependentProjectExternalDependencies" : [ {
       "projectUID" : "12654",
@@ -188,11 +193,17 @@
     "target" : "20_3NvsSzv70_JF3Thpzf$$G36EVXelhHveXI7nugPP9",
     "targetPort" : "qHZ188w5Bok_VDQ3UCpyD$$BOna0JosWk8HMsOQyw-Pn"
   }, {
-    "id" : "4q9vPVGM5ZUy5Wz3oQ8ID$$cyJSd-IKdtwBDtCZKCjrP",
-    "source" : "Lcyw-8Zu-OgU_AoWaBYNd$$blOL_yTf7jA3BilqMDaLp",
-    "sourcePort" : "pwrn_bjOkryDj4FqnnWVZ$$KrCEEo9CIMR024P45fziY",
+    "id" : "5H-10Z9iW5rgSQ7sk4xAZ$$7XMVvDqsBjv5dxoX1G6fJ",
+    "source" : "kJxdJDL1SZP1cuKZ_X7Nw$$0NpdwI1pFJF_WrSut7M8M",
+    "sourcePort" : "q6W2TCzAcOJZiZ1rEgyou$$-sJauq-e9pIVTSPHtCqdE",
     "target" : "fGRK4PmmcjKp3ye9PsnEb$$T5cXF_42jqTZLghIa0Gk_",
     "targetPort" : "Q_jhPpm7Hl-ikVy2mLfGQ$$GpZPdWzDpe0fVFqLU8EF6"
+  }, {
+    "id" : "hGRMDoq6LyQp3VpXB8JkR$$b0A8zyWdGLaFGNts3uhOV",
+    "source" : "6E1d8_RpAR-qwRPa-mViU$$IBZ9wLO140RzA_Nz_4jrt",
+    "sourcePort" : "DwapMGIGKj68k820PKth4$$8Kuzf05qsDY2c5shOGLNv",
+    "target" : "kOyQyTIldbKwNRAbBtz0D$$15hAc4Xb_RqmlF_CF32ZC",
+    "targetPort" : "9eu69W5m1OoxGPzgQ8Z1U$$vnrI2PN8bjUGT_X0nls1E"
   } ],
   "processes" : {
     "6E1d8_RpAR-qwRPa-mViU$$IBZ9wLO140RzA_Nz_4jrt" : {
@@ -201,7 +212,7 @@
       "metadata" : {
         "label" : "test_chunk_overlap",
         "slug" : "test_chunk_overlap",
-        "x" : -2500,
+        "x" : -2540,
         "y" : -360,
         "phase" : 0,
         "cache" : false,
@@ -348,7 +359,7 @@
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ ]
+        "columnsSelector" : [ "szvn6ziMVAveBHT7U8KqP$$AoLMKzL-3d0-kPwfiLSFY##text", "szvn6ziMVAveBHT7U8KqP$$AoLMKzL-3d0-kPwfiLSFY##path" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
@@ -461,8 +472,8 @@
       "properties" : {
         "operation" : "text_split_into_chunks",
         "column_name" : "text",
-        "split_chunk_size" : 1000,
-        "chunk_overlap" : 0
+        "split_chunk_size" : 100,
+        "chunk_overlap" : 20
       },
       "componentInfo" : {
         "gemId" : "gitUri=https://github.com/prophecy-io/spark-machine-learning-python&subPath=/&tag=ProphecySparkMachineLearningPython/0.0.3&projectSubscriptionProjectId=16491&path=gems/TextProcessing",
@@ -574,7 +585,7 @@
           "targetTokens" : [ "result_chunks" ],
           "target" : "result_chunks"
         } ],
-        "columnsSelector" : [ "T9gBuJQrwWWXxjNq_PzUF$$dpqUij3w4fIH7dDHraN2U##doc_id", "T9gBuJQrwWWXxjNq_PzUF$$dpqUij3w4fIH7dDHraN2U##result_chunks", "T9gBuJQrwWWXxjNq_PzUF$$dpqUij3w4fIH7dDHraN2U##path" ],
+        "columnsSelector" : [ "T9gBuJQrwWWXxjNq_PzUF$$dpqUij3w4fIH7dDHraN2U##doc_id", "T9gBuJQrwWWXxjNq_PzUF$$dpqUij3w4fIH7dDHraN2U##path", "T9gBuJQrwWWXxjNq_PzUF$$dpqUij3w4fIH7dDHraN2U##result_chunks" ],
         "explodeColumns" : [ ],
         "delimiter" : "-"
       },
@@ -937,7 +948,7 @@
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "3aUhtN30MZ9GFp2j3K6XH$$EwCizAE25zfvCI8rtLTnN##doc_id", "3aUhtN30MZ9GFp2j3K6XH$$EwCizAE25zfvCI8rtLTnN##result_chunks" ]
+        "columnsSelector" : [ "3aUhtN30MZ9GFp2j3K6XH$$EwCizAE25zfvCI8rtLTnN##result_chunks", "3aUhtN30MZ9GFp2j3K6XH$$EwCizAE25zfvCI8rtLTnN##doc_id" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
@@ -1734,6 +1745,84 @@
         "projectName" : "ProphecySparkMachineLearningPython"
       }
     },
+    "kOyQyTIldbKwNRAbBtz0D$$15hAc4Xb_RqmlF_CF32ZC" : {
+      "id" : "kOyQyTIldbKwNRAbBtz0D$$15hAc4Xb_RqmlF_CF32ZC",
+      "component" : "FlattenSchema",
+      "metadata" : {
+        "label" : "FlattenSchema_1",
+        "slug" : "FlattenSchema_1",
+        "x" : -2320,
+        "y" : -360,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "9eu69W5m1OoxGPzgQ8Z1U$$vnrI2PN8bjUGT_X0nls1E",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "col1",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_chunks",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "MqnR3uHP6ghN3Wg5JkOIk$$Kqal6QkDFIlP5DaiyzmuJ",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "explodedColsNewName" : [ {
+          "originalColToExplode" : "result_chunks",
+          "updatedColToExplode" : "result_chunks",
+          "colNameAfterExplode" : "result_chunks"
+        } ],
+        "fsExpressions" : [ {
+          "exploded" : "✓",
+          "flattenedExpression" : "result_chunks",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "result_chunks"
+          },
+          "targetTokens" : [ "result_chunks" ],
+          "target" : "result_chunks"
+        } ],
+        "columnsSelector" : [ "9eu69W5m1OoxGPzgQ8Z1U$$vnrI2PN8bjUGT_X0nls1E##result_chunks" ],
+        "explodeColumns" : [ ],
+        "delimiter" : "-"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/FlattenSchema",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
     "mdNDmsmeDOKpFavD9TCGk$$k0XGhD_ECbR4E8D22qgMP" : {
       "id" : "mdNDmsmeDOKpFavD9TCGk$$k0XGhD_ECbR4E8D22qgMP",
       "component" : "FlattenSchema",
@@ -1993,7 +2082,7 @@
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##id", "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##result_chunks", "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##bedrock_embedding", "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##doc_id" ]
+        "columnsSelector" : [ "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##id", "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##result_chunks", "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##doc_id", "ly5yZqK9ZAxZ5dByrKKQ9$$152hSBXu5uMzDy5XrSLq3##bedrock_embedding" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
@@ -2290,8 +2379,8 @@
       "metadata" : {
         "label" : "populate_vector_db",
         "slug" : "populate_vector_db",
-        "x" : -2560,
-        "y" : -200,
+        "x" : -1160,
+        "y" : -540,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,

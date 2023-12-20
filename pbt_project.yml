@@ -74,6 +74,21 @@ pipelines:
       outputs: []
     subgraphs: []
     dependencies: {}
+  pipelines/gem-builder:
+    name: gem-builder
+    description: ''
+    author: sumitpaul@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2023-12-20 08:42:01'
+    datasets:
+      inputs:
+      - datasets/read_pdf
+      outputs: []
+    subgraphs:
+    - subgraphs/BedrockSubgraph
+    dependencies: {}
 datasets:
   datasets/content_vectorized:
     name: content_vectorized
@@ -260,7 +275,18 @@ jobs:
 gemContainer:
   languageVersion: '3.10'
   gemLibsVersion: 1.3.4.0
-  gems: {}
+  gems:
+    gems/SimplifiedBedrock:
+      name: SimplifiedBedrock
+      category: Machine Learning
+      subCategory: ''
+      description: null
+      author: sumitpaul@prophecy.io
+      mode: batch
+      files:
+      - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/SimplifiedBedrock.py
+      dependencies: null
+      createdAt: '2023-12-20 15:06:32'
   dependencies: null
 functions:
   author: null
@@ -269,7 +295,15 @@ functions:
   udafs: {}
   expressions: {}
   airflowFunctions: {}
-subgraphs: {}
+subgraphs:
+  subgraphs/BedrockSubgraph:
+    name: BedrockSubgraph
+    description: ''
+    author: sumitpaul@prophecy.io
+    language: python
+    artefactID: ''
+    mode: batch
+    createdAt: '2023-12-20 13:06:21'
 sqlModels: {}
 sqlMacros: {}
 sqlSeeds: {}
@@ -278,30 +312,35 @@ sqlUnreferencedSources: {}
 sqlPipeline: null
 dependencies:
 - type: pypi
-  id: 0d4Y6
+  package: opensearch-py
   name: opensearchpy
   enabled: false
-  package: opensearch-py
+  id: 0d4Y6
+  editable: true
 - type: pypi
-  id: I7lDQ
+  package: boto3==1.28.62
   name: boto3
   enabled: false
-  package: boto3==1.28.62
+  id: I7lDQ
+  editable: true
 - type: pypi
-  id: nRwR4
+  package: pdf2image
   name: pdf2image
   enabled: false
-  package: pdf2image
+  id: nRwR4
+  editable: true
 - type: pypi
-  id: pip5l
+  package: unstructured==0.7.4
   name: unstructured
   enabled: false
-  package: unstructured==0.7.4
+  id: pip5l
+  editable: true
 - type: pypi
-  id: Fql9s
+  package: prophecy-spark-ai==0.1.11
   name: prophecy_spark_ai
   enabled: false
-  package: prophecy-spark-ai==0.1.11
+  id: Fql9s
+  editable: false
 projectDependencies:
   '12656':
     projectUID: 12656
@@ -335,4 +374,6 @@ projectDependencies:
     isDefault: false
     author: null
     createdAt: '2023-12-11 14:36:30'
+flags:
+  shouldAddDefaultDependenciesIfAbsent: true
 pipelineConfigurations: {}

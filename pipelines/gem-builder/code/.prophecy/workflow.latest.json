@@ -1,0 +1,1382 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1"
+    },
+    "codeGenConfiguration" : {
+      "editableConfig" : true
+    },
+    "id" : "1",
+    "uri" : "pipelines/gem-builder",
+    "language" : "python",
+    "fabricId" : "3572",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "sumitpaulprophecyioteam.optumgenaichatbottemplate.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions", "sumitpaulprophecyioteam.prophecysparkmachinelearningpython.functions", "prophecy.streaming.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "access_key",
+          "kind" : {
+            "type" : "databricks_secret",
+            "value" : "opensearch_serverless:access_key"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "secret_key",
+          "kind" : {
+            "type" : "databricks_secret",
+            "value" : "opensearch_serverless:secret"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "Bedrock_Subgraph",
+          "kind" : {
+            "type" : "record",
+            "fields" : [ {
+              "name" : "access_key",
+              "kind" : {
+                "type" : "databricks_secret",
+                "value" : "opensearch_serverless:access_key"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "secret_key",
+              "kind" : {
+                "type" : "databricks_secret",
+                "value" : "opensearch_serverless:secret"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            } ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : true,
+          "isReferenced" : false
+        } ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ {
+      "type" : "pypi",
+      "package" : "opensearch-py",
+      "name" : "opensearchpy",
+      "enabled" : true,
+      "id" : "0d4Y6",
+      "editable" : true
+    }, {
+      "type" : "pypi",
+      "package" : "boto3==1.28.62",
+      "name" : "boto3",
+      "enabled" : true,
+      "id" : "I7lDQ",
+      "editable" : true
+    }, {
+      "type" : "pypi",
+      "package" : "pdf2image",
+      "name" : "pdf2image",
+      "enabled" : true,
+      "id" : "nRwR4",
+      "editable" : true
+    }, {
+      "type" : "pypi",
+      "package" : "unstructured==0.7.4",
+      "name" : "unstructured",
+      "enabled" : true,
+      "id" : "pip5l",
+      "editable" : true
+    }, {
+      "type" : "pypi",
+      "package" : "prophecy-spark-ai==0.1.11",
+      "name" : "prophecy_spark_ai",
+      "enabled" : false,
+      "id" : "Fql9s",
+      "editable" : false
+    } ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "16491",
+      "projectName" : "ProphecySparkMachineLearningPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12656",
+      "projectName" : "ProphecyStreamingPython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "gembuilder",
+    "configurationVersion" : "v1"
+  },
+  "connections" : [ {
+    "id" : "qv39_0xEsN3z77FQq9WRn",
+    "source" : "y_P8rE5HpGl439fNnjfEp$$_Rcbscvn3cU19NCE-AbfV",
+    "sourcePort" : "szEO7PIsLyucLe5Eput6b$$n5T13SdSnI3dWZtPHS8x_",
+    "target" : "AIn1RWEXzwShXcoJAMpgb$$gQtZB8bEKXTHq8gxXBDGY",
+    "targetPort" : "DcXkMocpgZc6R2kv0jVCF$$o4XX2gv7sOVDlVjdNLlyb"
+  }, {
+    "id" : "Q06Fc5YXInP6IaWekAehr",
+    "source" : "f9Tub_motSgSERkfcZVj4$$Ej5ik9jXoj4dCKUuayxnL",
+    "sourcePort" : "JUf4YuUTPvyWIvQpZsDwa$$dvbf62XiA7dsF2fDwH1ma",
+    "target" : "9FmiDkno47m5qm6Qm0kK5$$Q3P_JMCIVuwiEfb6W8TZ7",
+    "targetPort" : "i1toUwJnaX5YYGYKPf-sN$$qqJIHYpwVMuWT8rvYb3v8"
+  }, {
+    "id" : "n40BwGHMPbBN4HoKClkXe",
+    "source" : "2dAmXNdeG_lFd8APCx3ov$$77twKKzL_T8NISZ1Y8uDH",
+    "sourcePort" : "JOA7yFpTEt94GZD_6sfDO$$FoENWxw2aSRYWR7vyDvvd",
+    "target" : "f9Tub_motSgSERkfcZVj4$$Ej5ik9jXoj4dCKUuayxnL",
+    "targetPort" : "VsnOyoyKgtWT61ufddB6V$$wlPEQsgmukG8HqjEFVXMg"
+  }, {
+    "id" : "BPBNsYYfuwzFj40Sj-xg-",
+    "source" : "AIn1RWEXzwShXcoJAMpgb$$gQtZB8bEKXTHq8gxXBDGY",
+    "sourcePort" : "LN57i4EIzqdKlZtpBk4p3$$WxNhUTOApFZo9Kgc0SZgM",
+    "target" : "XLJOJljLsWEoEClSw67xI$$4tn-H_99xzw4zYtpZ3Hpm",
+    "targetPort" : "xBvprNdANitsUZnp4yc4F$$6FBt3NJ11kZswBfkHA0-D"
+  }, {
+    "id" : "xNukACP_Ubsz1bsXClKWS$$4xFf5fqLVltjoFAZsAqOo",
+    "source" : "9FmiDkno47m5qm6Qm0kK5$$Q3P_JMCIVuwiEfb6W8TZ7",
+    "sourcePort" : "x6OMesfVXdcj3SZKEyRLL$$RjRwOnDRvfTqYZGwazrcq",
+    "target" : "33rxuoxmXHfK_rGQCrw8t$$diqzxLsuqVosfUBOeF9lo",
+    "targetPort" : "xIkagvvNWDH_WcuVTl62s$$UsaFfR8v2EWhQT8u-pEBd"
+  }, {
+    "id" : "JcquNWHJiPvBDWNCkjKH5$$v5XDwIyT8l6H7Lv7mGBjY",
+    "source" : "33rxuoxmXHfK_rGQCrw8t$$diqzxLsuqVosfUBOeF9lo",
+    "sourcePort" : "jkse90P4GfJOJmOrGG8HZ$$h9m66IeEG3bzijCA1MWbA",
+    "target" : "y_P8rE5HpGl439fNnjfEp$$_Rcbscvn3cU19NCE-AbfV",
+    "targetPort" : "QVIZMsow3uABQRfWlwUt9$$8p8zpltEDqfe-_G0v6l3E"
+  }, {
+    "id" : "RaPYz9iS5vuVD3EmjAvM0",
+    "source" : "AIn1RWEXzwShXcoJAMpgb$$gQtZB8bEKXTHq8gxXBDGY",
+    "sourcePort" : "LN57i4EIzqdKlZtpBk4p3$$WxNhUTOApFZo9Kgc0SZgM",
+    "target" : "9nZml90s1BjhwoeynSISD$$7D3bwnOB4wfyeYh8Qez4I",
+    "targetPort" : "fhyB33LM0lbR7YkR0auyY$$MI2X2v8gQBrjDGeuHsJgk"
+  }, {
+    "id" : "OofZS3EJdCigdySr9hLVj",
+    "source" : "AIn1RWEXzwShXcoJAMpgb$$gQtZB8bEKXTHq8gxXBDGY",
+    "sourcePort" : "LN57i4EIzqdKlZtpBk4p3$$WxNhUTOApFZo9Kgc0SZgM",
+    "target" : "QVk8bb7kH1vqG4FqIvP3N$$_PMRRamuUYK_Zd3J2VXuj",
+    "targetPort" : "rEJqZL2oER38mYDdatNTz$$-MJ83Pnf7Vtw9Mngg12Pu"
+  }, {
+    "id" : "4AnK7krNLRHaLB5uMBfFQ",
+    "source" : "AIn1RWEXzwShXcoJAMpgb$$gQtZB8bEKXTHq8gxXBDGY",
+    "sourcePort" : "LN57i4EIzqdKlZtpBk4p3$$WxNhUTOApFZo9Kgc0SZgM",
+    "target" : "IXwRey_WfyN__MMaKJztw$$iXBNRUB6MCOQ4ivLTUY5I",
+    "targetPort" : "8cgG0SBGWHSQXLQwaktLJ$$QsSN1pfeAS7chhhZciy2C"
+  } ],
+  "processes" : {
+    "33rxuoxmXHfK_rGQCrw8t$$diqzxLsuqVosfUBOeF9lo" : {
+      "id" : "33rxuoxmXHfK_rGQCrw8t$$diqzxLsuqVosfUBOeF9lo",
+      "component" : "TextProcessing",
+      "metadata" : {
+        "label" : "chunkify",
+        "slug" : "chunkify",
+        "x" : -960,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "xIkagvvNWDH_WcuVTl62s$$UsaFfR8v2EWhQT8u-pEBd",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "path",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "jkse90P4GfJOJmOrGG8HZ$$h9m66IeEG3bzijCA1MWbA",
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "path",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_chunks",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
+      },
+      "properties" : {
+        "operation" : "text_split_into_chunks",
+        "column_name" : "text",
+        "split_chunk_size" : 1000,
+        "chunk_overlap" : 20
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=https://github.com/prophecy-io/spark-machine-learning-python&subPath=/&tag=ProphecySparkMachineLearningPython/0.0.3&projectSubscriptionProjectId=16491&path=gems/TextProcessing",
+        "projectName" : "ProphecySparkMachineLearningPython"
+      }
+    },
+    "f9Tub_motSgSERkfcZVj4$$Ej5ik9jXoj4dCKUuayxnL" : {
+      "id" : "f9Tub_motSgSERkfcZVj4$$Ej5ik9jXoj4dCKUuayxnL",
+      "component" : "TextProcessing",
+      "metadata" : {
+        "label" : "parse_pdf",
+        "slug" : "parse_pdf",
+        "x" : -1280,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "VsnOyoyKgtWT61ufddB6V$$wlPEQsgmukG8HqjEFVXMg",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "path",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "modificationTime",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "length",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "content",
+              "type" : "binary",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "JUf4YuUTPvyWIvQpZsDwa$$dvbf62XiA7dsF2fDwH1ma",
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "path",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "modificationTime",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "length",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "content",
+              "type" : "binary",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_content",
+              "type" : {
+                "type" : "array",
+                "elementType" : {
+                  "type" : "struct",
+                  "fields" : [ {
+                    "name" : "element_id",
+                    "type" : "string",
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "coordinates",
+                    "type" : {
+                      "type" : "array",
+                      "elementType" : "float",
+                      "containsNull" : true
+                    },
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "text",
+                    "type" : "string",
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "type",
+                    "type" : "string",
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "metadata",
+                    "type" : {
+                      "type" : "struct",
+                      "fields" : [ {
+                        "name" : "filename",
+                        "type" : "string",
+                        "nullable" : true,
+                        "metadata" : {
+                          "description" : "",
+                          "mappings" : [ ],
+                          "tags" : [ ]
+                        }
+                      }, {
+                        "name" : "filetype",
+                        "type" : "string",
+                        "nullable" : true,
+                        "metadata" : {
+                          "description" : "",
+                          "mappings" : [ ],
+                          "tags" : [ ]
+                        }
+                      }, {
+                        "name" : "page_number",
+                        "type" : "integer",
+                        "nullable" : true,
+                        "metadata" : {
+                          "description" : "",
+                          "mappings" : [ ],
+                          "tags" : [ ]
+                        }
+                      } ]
+                    },
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  } ]
+                },
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
+      },
+      "properties" : {
+        "operation" : "pdf_parse",
+        "column_name" : "content",
+        "split_chunk_size" : 1000,
+        "chunk_overlap" : 0
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=https://github.com/prophecy-io/spark-machine-learning-python&subPath=/&tag=ProphecySparkMachineLearningPython/0.0.3&projectSubscriptionProjectId=16491&path=gems/TextProcessing",
+        "projectName" : "ProphecySparkMachineLearningPython"
+      }
+    },
+    "QVk8bb7kH1vqG4FqIvP3N$$_PMRRamuUYK_Zd3J2VXuj" : {
+      "id" : "QVk8bb7kH1vqG4FqIvP3N$$_PMRRamuUYK_Zd3J2VXuj",
+      "component" : "Subgraph",
+      "metadata" : {
+        "label" : "Bedrock_Subgraph",
+        "slug" : "Bedrock_Subgraph",
+        "x" : -340,
+        "y" : 60,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "rEJqZL2oER38mYDdatNTz$$-MJ83Pnf7Vtw9Mngg12Pu",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "id",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_chunks",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "bKguTCu2BtAA1Q0hJFq6m$$DCX2m8kFFEqSO0RuTNEdl",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "packageName" : "BedrockSubgraph",
+        "externalId" : "subgraphs/BedrockSubgraph",
+        "name" : "BedrockSubgraph"
+      },
+      "connections" : [ {
+        "id" : "GpTO5nFetsmj123lWeL9L",
+        "source" : "Riy_RPNB_6acpUUkH6sPP$$yjKZadSl7Hdh628jObu3Y",
+        "sourcePort" : "y5UmuAbUwIJ6O73txk7gR$$oyHMEodzDY4_5-KRZ8j5k",
+        "target" : "QVk8bb7kH1vqG4FqIvP3N$$_PMRRamuUYK_Zd3J2VXuj",
+        "targetPort" : "bKguTCu2BtAA1Q0hJFq6m$$DCX2m8kFFEqSO0RuTNEdl"
+      }, {
+        "id" : "wrK_LdHEsNv85zIPq3NeQ",
+        "source" : "QVk8bb7kH1vqG4FqIvP3N$$_PMRRamuUYK_Zd3J2VXuj",
+        "sourcePort" : "rEJqZL2oER38mYDdatNTz$$-MJ83Pnf7Vtw9Mngg12Pu",
+        "target" : "Riy_RPNB_6acpUUkH6sPP$$yjKZadSl7Hdh628jObu3Y",
+        "targetPort" : "lBKrIFyWmvTmcv-FQTHmu$$AW2FjZCktMH7_iXa5Zk26"
+      } ],
+      "processes" : {
+        "Riy_RPNB_6acpUUkH6sPP$$yjKZadSl7Hdh628jObu3Y" : {
+          "id" : "Riy_RPNB_6acpUUkH6sPP$$yjKZadSl7Hdh628jObu3Y",
+          "component" : "Script",
+          "metadata" : {
+            "label" : "Bedrock_script_2_2",
+            "slug" : "Bedrock_script_2_2",
+            "x" : -400,
+            "y" : -140,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "lBKrIFyWmvTmcv-FQTHmu$$AW2FjZCktMH7_iXa5Zk26",
+              "slug" : "in0",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "id",
+                  "type" : "string",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "result_chunks",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "y5UmuAbUwIJ6O73txk7gR$$oyHMEodzDY4_5-KRZ8j5k",
+              "slug" : "out0",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "id",
+                  "type" : "string",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "result_chunks",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "_embedded",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true,
+            "autoUpdateOnRun" : true
+          },
+          "properties" : {
+            "script" : "import json\nfrom typing import List\nimport boto3\nfrom pyspark.sql import SparkSession\nfrom pyspark.sql.types import StructType, StructField, ArrayType, StringType, FloatType\nfrom pyspark.dbutils import DBUtils\n\ndefault_embedding_model = 'amazon.titan-embed-text-v1'\n\ndef embed_texts(texts: List[str], access_key:str, secret_key:str, model: str = default_embedding_model):\n    \n    bedrock = boto3.client(\n        'bedrock-runtime',\n        aws_access_key_id=access_key,\n        aws_secret_access_key=secret_key,\n        region_name=\"us-east-1\"\n    )\n\n    try:\n        embeddings = []\n        for text in texts:\n            body = json.dumps({\"inputText\": text})\n            content_type = 'application/json'\n\n            response = bedrock.invoke_model(body=body, modelId=model, accept=content_type, contentType=content_type)\n            embeddings.append(json.loads(response['body'].read().decode('utf-8'))['embedding'])\n\n        return {'embeddings': embeddings, 'error': None}\n    except Exception as error:\n        return {'embeddings': None, 'error': str(error)}\n\n\n    \n\nfrom pyspark.sql import *\nfrom pyspark.sql.functions import *\nfrom pyspark.sql.types import *\nfrom pyspark.sql.types import StringType\n\n\n\n\nspark.udf.register('bedrock_embed_texts', embed_texts)\n\nout0 = in0\\\n    .withColumn(\"_texts\", array(col(\"result_chunks\"))) \\\n    .withColumn(\"_embedded\", expr(f\"bedrock_embed_texts(_texts,\\\"{Config.access_key}\\\",\\\"{Config.secret_key}\\\")\")) \\\n    .drop(col(\"_texts\"))\n\n    \n    \n",
+            "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+            "scriptMethodFooter" : "    return out0"
+          }
+        }
+      },
+      "externalDependencies" : [ {
+        "type" : "pypi",
+        "package" : "opensearch-py",
+        "name" : "opensearchpy",
+        "enabled" : true,
+        "id" : "0d4Y6",
+        "editable" : true
+      }, {
+        "type" : "pypi",
+        "package" : "boto3==1.28.62",
+        "name" : "boto3",
+        "enabled" : true,
+        "id" : "I7lDQ",
+        "editable" : true
+      }, {
+        "type" : "pypi",
+        "package" : "pdf2image",
+        "name" : "pdf2image",
+        "enabled" : true,
+        "id" : "nRwR4",
+        "editable" : true
+      }, {
+        "type" : "pypi",
+        "package" : "unstructured==0.7.4",
+        "name" : "unstructured",
+        "enabled" : true,
+        "id" : "pip5l",
+        "editable" : true
+      }, {
+        "type" : "pypi",
+        "package" : "prophecy-spark-ai==0.1.11",
+        "name" : "prophecy_spark_ai",
+        "enabled" : false,
+        "id" : "Fql9s",
+        "editable" : false
+      } ]
+    },
+    "IXwRey_WfyN__MMaKJztw$$iXBNRUB6MCOQ4ivLTUY5I" : {
+      "id" : "IXwRey_WfyN__MMaKJztw$$iXBNRUB6MCOQ4ivLTUY5I",
+      "component" : "SimplifiedBedrock",
+      "metadata" : {
+        "label" : "SimplifiedBedrock_1",
+        "slug" : "SimplifiedBedrock_1",
+        "x" : -480,
+        "y" : 180,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "8cgG0SBGWHSQXLQwaktLJ$$QsSN1pfeAS7chhhZciy2C",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "id",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_chunks",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "_hatmJ48ra8UoWRf6gkY4$$-1eGrWrgn1BtA_e3sqqRZ",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "aws_region" : "us-east-1",
+        "credential_db_scope" : "opensearch_serverless",
+        "credential_db_secret" : "secret",
+        "operation" : "embed_texts",
+        "embed_text_column_name" : "result_chunks",
+        "credential_db_key" : "access_key"
+      },
+      "componentInfo" : {
+        "gemId" : "gems/SimplifiedBedrock",
+        "projectName" : "optum_gen_ai_chatbot_template"
+      }
+    },
+    "9nZml90s1BjhwoeynSISD$$7D3bwnOB4wfyeYh8Qez4I" : {
+      "id" : "9nZml90s1BjhwoeynSISD$$7D3bwnOB4wfyeYh8Qez4I",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Bedrock_script_2",
+        "slug" : "Bedrock_script_2",
+        "x" : -360,
+        "y" : -360,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "fhyB33LM0lbR7YkR0auyY$$MI2X2v8gQBrjDGeuHsJgk",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "id",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_chunks",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "kLpeesDpiCowONKrZ09E9$$6ERyUXsTOiKDhCNKR_iRw",
+          "slug" : "out0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "id",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_chunks",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_embedded",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
+      },
+      "properties" : {
+        "script" : "import json\nfrom typing import List\nimport boto3\nfrom pyspark.sql import *\n\nfrom pyspark.dbutils import DBUtils\n\ndefault_embedding_model = 'amazon.titan-embed-text-v1'\n\ndef embed_texts(texts: List[str], access_key:str, secret_key:str, model: str = default_embedding_model):\n    \n    bedrock = boto3.client(\n        'bedrock-runtime',\n        aws_access_key_id=access_key,\n        aws_secret_access_key=secret_key,\n        region_name=\"us-east-1\"\n    )\n\n    try:\n        embeddings = []\n        for text in texts:\n            body = json.dumps({\"inputText\": text})\n            content_type = 'application/json'\n\n            response = bedrock.invoke_model(body=body, modelId=model, accept=content_type, contentType=content_type)\n            embeddings.append(json.loads(response['body'].read().decode('utf-8'))['embedding'])\n\n        return {'embeddings': embeddings, 'error': None}\n    except Exception as error:\n        return {'embeddings': None, 'error': str(error)}\n\n\nspark.udf.register('bedrock_embed_texts', embed_texts)\n\nout0 = in0\\\n    .withColumn(\"_texts\", array(col(\"result_chunks\"))) \\\n    .withColumn(\"_embedded\", expr(f\"bedrock_embed_texts(_texts,\\\"{Config.access_key}\\\",\\\"{Config.secret_key}\\\")\")) \\\n    .drop(col(\"_texts\"))\n\n    \n    \n",
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+        "scriptMethodFooter" : "    return out0"
+      }
+    },
+    "9FmiDkno47m5qm6Qm0kK5$$Q3P_JMCIVuwiEfb6W8TZ7" : {
+      "id" : "9FmiDkno47m5qm6Qm0kK5$$Q3P_JMCIVuwiEfb6W8TZ7",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "explode",
+        "slug" : "explode",
+        "x" : -1120,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "i1toUwJnaX5YYGYKPf-sN$$qqJIHYpwVMuWT8rvYb3v8",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "path",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "modificationTime",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "length",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "content",
+              "type" : "binary",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_content",
+              "type" : {
+                "type" : "array",
+                "elementType" : {
+                  "type" : "struct",
+                  "fields" : [ {
+                    "name" : "element_id",
+                    "type" : "string",
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "coordinates",
+                    "type" : {
+                      "type" : "array",
+                      "elementType" : "float",
+                      "containsNull" : true
+                    },
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "text",
+                    "type" : "string",
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "type",
+                    "type" : "string",
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "metadata",
+                    "type" : {
+                      "type" : "struct",
+                      "fields" : [ {
+                        "name" : "filename",
+                        "type" : "string",
+                        "nullable" : true,
+                        "metadata" : {
+                          "description" : "",
+                          "mappings" : [ ],
+                          "tags" : [ ]
+                        }
+                      }, {
+                        "name" : "filetype",
+                        "type" : "string",
+                        "nullable" : true,
+                        "metadata" : {
+                          "description" : "",
+                          "mappings" : [ ],
+                          "tags" : [ ]
+                        }
+                      }, {
+                        "name" : "page_number",
+                        "type" : "integer",
+                        "nullable" : true,
+                        "metadata" : {
+                          "description" : "",
+                          "mappings" : [ ],
+                          "tags" : [ ]
+                        }
+                      } ]
+                    },
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  } ]
+                },
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "x6OMesfVXdcj3SZKEyRLL$$RjRwOnDRvfTqYZGwazrcq",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "path",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "path"
+          },
+          "description" : ""
+        }, {
+          "target" : "text",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "concat_ws(', ', result_content.text)"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "i1toUwJnaX5YYGYKPf-sN$$qqJIHYpwVMuWT8rvYb3v8##path", "i1toUwJnaX5YYGYKPf-sN$$qqJIHYpwVMuWT8rvYb3v8##result_content", "i1toUwJnaX5YYGYKPf-sN$$qqJIHYpwVMuWT8rvYb3v8##result_content.text" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "XLJOJljLsWEoEClSw67xI$$4tn-H_99xzw4zYtpZ3Hpm" : {
+      "id" : "XLJOJljLsWEoEClSw67xI$$4tn-H_99xzw4zYtpZ3Hpm",
+      "component" : "Bedrock",
+      "metadata" : {
+        "label" : "bedrock_embeddings",
+        "slug" : "bedrock_embeddings",
+        "x" : -360,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "xBvprNdANitsUZnp4yc4F$$6FBt3NJ11kZswBfkHA0-D",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "id",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_chunks",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "3c1S_e1bqQsbOyWUR0beN$$dpFGU3ubgxHo8AE7gMOYu",
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "id",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_chunks",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bedrock_embedding",
+              "type" : {
+                "type" : "array",
+                "elementType" : "float",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bedrock_error",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
+      },
+      "properties" : {
+        "aws_region" : "us-east-1",
+        "credential_manual_secret" : "",
+        "credential_manual_key" : "",
+        "credential_type" : "databricks",
+        "credential_db_scope" : "opensearch_serverless",
+        "credential_db_secret" : "secret",
+        "operation" : "embed_texts",
+        "embed_text_column_name" : "result_chunks",
+        "credential_db_key" : "access_key"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=https://github.com/prophecy-io/spark-machine-learning-python&subPath=/&tag=ProphecySparkMachineLearningPython/0.0.3&projectSubscriptionProjectId=16491&path=gems/Bedrock",
+        "projectName" : "ProphecySparkMachineLearningPython"
+      }
+    },
+    "y_P8rE5HpGl439fNnjfEp$$_Rcbscvn3cU19NCE-AbfV" : {
+      "id" : "y_P8rE5HpGl439fNnjfEp$$_Rcbscvn3cU19NCE-AbfV",
+      "component" : "FlattenSchema",
+      "metadata" : {
+        "label" : "flatten_chunks",
+        "slug" : "flatten_chunks",
+        "x" : -800,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "QVIZMsow3uABQRfWlwUt9$$8p8zpltEDqfe-_G0v6l3E",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "path",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_chunks",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "szEO7PIsLyucLe5Eput6b$$n5T13SdSnI3dWZtPHS8x_",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "explodedColsNewName" : [ {
+          "originalColToExplode" : "result_chunks",
+          "updatedColToExplode" : "result_chunks",
+          "colNameAfterExplode" : "result_chunks"
+        } ],
+        "fsExpressions" : [ {
+          "exploded" : "",
+          "flattenedExpression" : "path",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "path"
+          },
+          "targetTokens" : [ "path" ],
+          "target" : "path"
+        }, {
+          "exploded" : "✓",
+          "flattenedExpression" : "result_chunks",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "result_chunks"
+          },
+          "targetTokens" : [ "result_chunks" ],
+          "target" : "result_chunks"
+        } ],
+        "columnsSelector" : [ "QVIZMsow3uABQRfWlwUt9$$8p8zpltEDqfe-_G0v6l3E##path", "QVIZMsow3uABQRfWlwUt9$$8p8zpltEDqfe-_G0v6l3E##result_chunks" ],
+        "explodeColumns" : [ ],
+        "delimiter" : "-"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/FlattenSchema",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "AIn1RWEXzwShXcoJAMpgb$$gQtZB8bEKXTHq8gxXBDGY" : {
+      "id" : "AIn1RWEXzwShXcoJAMpgb$$gQtZB8bEKXTHq8gxXBDGY",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "get_ids",
+        "slug" : "get_ids",
+        "x" : -640,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "DcXkMocpgZc6R2kv0jVCF$$o4XX2gv7sOVDlVjdNLlyb",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "path",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_chunks",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "LN57i4EIzqdKlZtpBk4p3$$WxNhUTOApFZo9Kgc0SZgM",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "concat('text-', monotonically_increasing_id())"
+          },
+          "description" : ""
+        }, {
+          "target" : "result_chunks",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "result_chunks"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "DcXkMocpgZc6R2kv0jVCF$$o4XX2gv7sOVDlVjdNLlyb##result_chunks" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "2dAmXNdeG_lFd8APCx3ov$$77twKKzL_T8NISZ1Y8uDH" : {
+      "id" : "2dAmXNdeG_lFd8APCx3ov$$77twKKzL_T8NISZ1Y8uDH",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "read_pdf",
+        "slug" : "read_pdf",
+        "x" : -1440,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "JOA7yFpTEt94GZD_6sfDO$$FoENWxw2aSRYWR7vyDvvd",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/read_pdf"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.IXwRey_WfyN__MMaKJztw$$iXBNRUB6MCOQ4ivLTUY5I",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Unable to do schema Analysis. Python Sandbox Error: Error occurred while doing Schema Analysis: No module named 'spark_ai'",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
+}

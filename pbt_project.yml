@@ -1,6 +1,6 @@
 name: optum_gen_ai_chatbot_template
 description: ''
-version: '1.5'
+version: 0.0.1
 author: sumitpaul@prophecy.io
 language: python
 buildSystem: ''

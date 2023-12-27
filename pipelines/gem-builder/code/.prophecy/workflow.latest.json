@@ -169,12 +169,6 @@
     "target" : "f9Tub_motSgSERkfcZVj4$$Ej5ik9jXoj4dCKUuayxnL",
     "targetPort" : "VsnOyoyKgtWT61ufddB6V$$wlPEQsgmukG8HqjEFVXMg"
   }, {
-    "id" : "BPBNsYYfuwzFj40Sj-xg-",
-    "source" : "AIn1RWEXzwShXcoJAMpgb$$gQtZB8bEKXTHq8gxXBDGY",
-    "sourcePort" : "LN57i4EIzqdKlZtpBk4p3$$WxNhUTOApFZo9Kgc0SZgM",
-    "target" : "XLJOJljLsWEoEClSw67xI$$4tn-H_99xzw4zYtpZ3Hpm",
-    "targetPort" : "xBvprNdANitsUZnp4yc4F$$6FBt3NJ11kZswBfkHA0-D"
-  }, {
     "id" : "xNukACP_Ubsz1bsXClKWS$$4xFf5fqLVltjoFAZsAqOo",
     "source" : "9FmiDkno47m5qm6Qm0kK5$$Q3P_JMCIVuwiEfb6W8TZ7",
     "sourcePort" : "x6OMesfVXdcj3SZKEyRLL$$RjRwOnDRvfTqYZGwazrcq",
@@ -198,12 +192,6 @@
     "sourcePort" : "LN57i4EIzqdKlZtpBk4p3$$WxNhUTOApFZo9Kgc0SZgM",
     "target" : "QVk8bb7kH1vqG4FqIvP3N$$_PMRRamuUYK_Zd3J2VXuj",
     "targetPort" : "rEJqZL2oER38mYDdatNTz$$-MJ83Pnf7Vtw9Mngg12Pu"
-  }, {
-    "id" : "4AnK7krNLRHaLB5uMBfFQ",
-    "source" : "AIn1RWEXzwShXcoJAMpgb$$gQtZB8bEKXTHq8gxXBDGY",
-    "sourcePort" : "LN57i4EIzqdKlZtpBk4p3$$WxNhUTOApFZo9Kgc0SZgM",
-    "target" : "IXwRey_WfyN__MMaKJztw$$iXBNRUB6MCOQ4ivLTUY5I",
-    "targetPort" : "8cgG0SBGWHSQXLQwaktLJ$$QsSN1pfeAS7chhhZciy2C"
   } ],
   "processes" : {
     "33rxuoxmXHfK_rGQCrw8t$$diqzxLsuqVosfUBOeF9lo" : {
@@ -522,8 +510,8 @@
       "metadata" : {
         "label" : "Bedrock_Subgraph",
         "slug" : "Bedrock_Subgraph",
-        "x" : -340,
-        "y" : 60,
+        "x" : -360,
+        "y" : -140,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -571,13 +559,13 @@
         "name" : "BedrockSubgraph"
       },
       "connections" : [ {
-        "id" : "GpTO5nFetsmj123lWeL9L",
+        "id" : "CbLEovbf8RvqSOAPXIfPe",
         "source" : "Riy_RPNB_6acpUUkH6sPP$$yjKZadSl7Hdh628jObu3Y",
         "sourcePort" : "y5UmuAbUwIJ6O73txk7gR$$oyHMEodzDY4_5-KRZ8j5k",
         "target" : "QVk8bb7kH1vqG4FqIvP3N$$_PMRRamuUYK_Zd3J2VXuj",
         "targetPort" : "bKguTCu2BtAA1Q0hJFq6m$$DCX2m8kFFEqSO0RuTNEdl"
       }, {
-        "id" : "wrK_LdHEsNv85zIPq3NeQ",
+        "id" : "zsrl-oNS3Z6fFNSgL5W8T",
         "source" : "QVk8bb7kH1vqG4FqIvP3N$$_PMRRamuUYK_Zd3J2VXuj",
         "sourcePort" : "rEJqZL2oER38mYDdatNTz$$-MJ83Pnf7Vtw9Mngg12Pu",
         "target" : "Riy_RPNB_6acpUUkH6sPP$$yjKZadSl7Hdh628jObu3Y",
@@ -709,76 +697,14 @@
         "editable" : false
       } ]
     },
-    "IXwRey_WfyN__MMaKJztw$$iXBNRUB6MCOQ4ivLTUY5I" : {
-      "id" : "IXwRey_WfyN__MMaKJztw$$iXBNRUB6MCOQ4ivLTUY5I",
-      "component" : "SimplifiedBedrock",
-      "metadata" : {
-        "label" : "SimplifiedBedrock_1",
-        "slug" : "SimplifiedBedrock_1",
-        "x" : -480,
-        "y" : 180,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "8cgG0SBGWHSQXLQwaktLJ$$QsSN1pfeAS7chhhZciy2C",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "id",
-              "type" : "string",
-              "nullable" : false,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "result_chunks",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "_hatmJ48ra8UoWRf6gkY4$$-1eGrWrgn1BtA_e3sqqRZ",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "aws_region" : "us-east-1",
-        "credential_db_scope" : "opensearch_serverless",
-        "credential_db_secret" : "secret",
-        "operation" : "embed_texts",
-        "embed_text_column_name" : "result_chunks",
-        "credential_db_key" : "access_key"
-      },
-      "componentInfo" : {
-        "gemId" : "gems/SimplifiedBedrock",
-        "projectName" : "optum_gen_ai_chatbot_template"
-      }
-    },
     "9nZml90s1BjhwoeynSISD$$7D3bwnOB4wfyeYh8Qez4I" : {
       "id" : "9nZml90s1BjhwoeynSISD$$7D3bwnOB4wfyeYh8Qez4I",
       "component" : "Script",
       "metadata" : {
-        "label" : "Bedrock_script_2",
-        "slug" : "Bedrock_script_2",
+        "label" : "Bedrock_script",
+        "slug" : "Bedrock_script",
         "x" : -360,
-        "y" : -360,
+        "y" : -320,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -1042,118 +968,8 @@
         "columnsSelector" : [ "i1toUwJnaX5YYGYKPf-sN$$qqJIHYpwVMuWT8rvYb3v8##path", "i1toUwJnaX5YYGYKPf-sN$$qqJIHYpwVMuWT8rvYb3v8##result_content", "i1toUwJnaX5YYGYKPf-sN$$qqJIHYpwVMuWT8rvYb3v8##result_content.text" ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "gemId" : "gitUri=&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
-      }
-    },
-    "XLJOJljLsWEoEClSw67xI$$4tn-H_99xzw4zYtpZ3Hpm" : {
-      "id" : "XLJOJljLsWEoEClSw67xI$$4tn-H_99xzw4zYtpZ3Hpm",
-      "component" : "Bedrock",
-      "metadata" : {
-        "label" : "bedrock_embeddings",
-        "slug" : "bedrock_embeddings",
-        "x" : -360,
-        "y" : -140,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "xBvprNdANitsUZnp4yc4F$$6FBt3NJ11kZswBfkHA0-D",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "id",
-              "type" : "string",
-              "nullable" : false,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "result_chunks",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "3c1S_e1bqQsbOyWUR0beN$$dpFGU3ubgxHo8AE7gMOYu",
-          "slug" : "out",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "id",
-              "type" : "string",
-              "nullable" : false,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "result_chunks",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "bedrock_embedding",
-              "type" : {
-                "type" : "array",
-                "elementType" : "float",
-                "containsNull" : true
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "bedrock_error",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : true,
-        "autoUpdateOnRun" : true
-      },
-      "properties" : {
-        "aws_region" : "us-east-1",
-        "credential_manual_secret" : "",
-        "credential_manual_key" : "",
-        "credential_type" : "databricks",
-        "credential_db_scope" : "opensearch_serverless",
-        "credential_db_secret" : "secret",
-        "operation" : "embed_texts",
-        "embed_text_column_name" : "result_chunks",
-        "credential_db_key" : "access_key"
-      },
-      "componentInfo" : {
-        "gemId" : "gitUri=https://github.com/prophecy-io/spark-machine-learning-python&subPath=/&tag=ProphecySparkMachineLearningPython/0.0.3&projectSubscriptionProjectId=16491&path=gems/Bedrock",
-        "projectName" : "ProphecySparkMachineLearningPython"
       }
     },
     "y_P8rE5HpGl439fNnjfEp$$_Rcbscvn3cU19NCE-AbfV" : {
@@ -1248,7 +1064,7 @@
         "delimiter" : "-"
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/FlattenSchema",
+        "gemId" : "gitUri=&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/FlattenSchema",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -1323,7 +1139,7 @@
         "columnsSelector" : [ "DcXkMocpgZc6R2kv0jVCF$$o4XX2gv7sOVDlVjdNLlyb##result_chunks" ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "gemId" : "gitUri=&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -1361,22 +1177,5 @@
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  },
-  "diagnostics" : [ {
-    "property" : "$.workflow.processes.IXwRey_WfyN__MMaKJztw$$iXBNRUB6MCOQ4ivLTUY5I",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Unable to do schema Analysis. Python Sandbox Error: Error occurred while doing Schema Analysis: No module named 'spark_ai'",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  } ]
+  }
 }

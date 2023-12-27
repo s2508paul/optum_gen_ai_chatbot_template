@@ -1,0 +1,117 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1"
+    },
+    "codeGenConfiguration" : {
+      "editableConfig" : true
+    },
+    "id" : "1",
+    "uri" : "pipelines/gem-builder-test",
+    "language" : "python",
+    "fabricId" : "3572",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "sumitpaulprophecyioteam.optumgenaichatbottemplate.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions", "sumitpaulprophecyioteam.prophecysparkmachinelearningpython.functions", "prophecy.streaming.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ {
+      "type" : "pypi",
+      "package" : "opensearch-py",
+      "name" : "opensearchpy",
+      "enabled" : false,
+      "id" : "0d4Y6",
+      "editable" : true
+    }, {
+      "type" : "pypi",
+      "package" : "boto3==1.28.62",
+      "name" : "boto3",
+      "enabled" : false,
+      "id" : "I7lDQ",
+      "editable" : true
+    }, {
+      "type" : "pypi",
+      "package" : "pdf2image",
+      "name" : "pdf2image",
+      "enabled" : false,
+      "id" : "nRwR4",
+      "editable" : true
+    }, {
+      "type" : "pypi",
+      "package" : "unstructured==0.7.4",
+      "name" : "unstructured",
+      "enabled" : false,
+      "id" : "pip5l",
+      "editable" : true
+    }, {
+      "type" : "pypi",
+      "package" : "prophecy-spark-ai==0.1.11",
+      "name" : "prophecy_spark_ai",
+      "enabled" : false,
+      "id" : "Fql9s",
+      "editable" : false
+    } ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "16491",
+      "projectName" : "ProphecySparkMachineLearningPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12656",
+      "projectName" : "ProphecyStreamingPython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "gembuildertest",
+    "configurationVersion" : "v1"
+  },
+  "connections" : [ ],
+  "processes" : { },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}

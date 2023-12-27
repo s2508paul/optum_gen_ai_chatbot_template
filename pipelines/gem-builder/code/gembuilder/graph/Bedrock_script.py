@@ -6,7 +6,7 @@ from prophecy.libs import typed_lit
 from gembuilder.config.ConfigStore import *
 from gembuilder.udfs.UDFs import *
 
-def Bedrock_script_2(spark: SparkSession, in0: DataFrame) -> DataFrame:
+def Bedrock_script(spark: SparkSession, in0: DataFrame) -> DataFrame:
     import json
     from typing import List
     import boto3

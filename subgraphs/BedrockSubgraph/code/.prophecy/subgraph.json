@@ -54,13 +54,13 @@
     "packageName" : "BedrockSubgraph"
   },
   "connections" : [ {
-    "id" : "GpTO5nFetsmj123lWeL9L",
+    "id" : "CbLEovbf8RvqSOAPXIfPe",
     "source" : "Riy_RPNB_6acpUUkH6sPP",
     "sourcePort" : "y5UmuAbUwIJ6O73txk7gR",
     "target" : "QVk8bb7kH1vqG4FqIvP3N",
     "targetPort" : "bKguTCu2BtAA1Q0hJFq6m"
   }, {
-    "id" : "wrK_LdHEsNv85zIPq3NeQ",
+    "id" : "zsrl-oNS3Z6fFNSgL5W8T",
     "source" : "QVk8bb7kH1vqG4FqIvP3N",
     "sourcePort" : "rEJqZL2oER38mYDdatNTz",
     "target" : "Riy_RPNB_6acpUUkH6sPP",

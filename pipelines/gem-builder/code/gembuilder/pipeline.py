@@ -15,8 +15,7 @@ def pipeline(spark: SparkSession) -> None:
     df_flatten_chunks = flatten_chunks(spark, df_chunkify)
     df_get_ids = get_ids(spark, df_flatten_chunks)
     df_Bedrock_Subgraph = Bedrock_Subgraph(spark, Config.Bedrock_Subgraph, df_get_ids)
-    df_Bedrock_script_2 = Bedrock_script_2(spark, df_get_ids)
-    df_bedrock_embeddings = bedrock_embeddings(spark, df_get_ids)
+    df_Bedrock_script = Bedrock_script(spark, df_get_ids)
 
 def main():
     spark = SparkSession.builder\

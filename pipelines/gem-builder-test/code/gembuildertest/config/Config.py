@@ -1,3 +1,4 @@
+from gembuildertest.graph.bedrock_subgraph2.config.Config import SubgraphConfig as bedrock_subgraph2_Config
 from prophecy.config import ConfigBase
 
 

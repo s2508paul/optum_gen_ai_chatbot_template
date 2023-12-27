@@ -1,3 +1,4 @@
 version: 1
 configurations:
+- config1
 - default

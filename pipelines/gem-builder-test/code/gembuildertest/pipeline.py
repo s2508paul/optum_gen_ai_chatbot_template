@@ -5,9 +5,12 @@ from prophecy.utils import *
 from gembuildertest.config.ConfigStore import *
 from gembuildertest.udfs.UDFs import *
 from prophecy.utils import *
+from gembuildertest.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    pass
+    df_Bedrock_script = Bedrock_script(spark)
+    df_bedrock_subgraph2_out0, df_bedrock_subgraph2_out1 = bedrock_subgraph2(spark, Config.bedrock_subgraph2)
+    df_SimplifiedBedrock_1 = SimplifiedBedrock_1(spark)
 
 def main():
     spark = SparkSession.builder\

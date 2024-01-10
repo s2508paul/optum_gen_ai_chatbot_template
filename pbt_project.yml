@@ -89,20 +89,6 @@ pipelines:
     subgraphs:
     - subgraphs/BedrockSubgraph
     dependencies: {}
-  pipelines/gem-builder-test:
-    name: gem-builder-test
-    description: ''
-    author: sumitpaul@prophecy.io
-    mode: batch
-    artefactID: ''
-    language: python
-    createdAt: '2023-12-26 14:12:15'
-    datasets:
-      inputs: []
-      outputs: []
-    subgraphs:
-    - subgraphs/bedrock_subgraph2
-    dependencies: {}
 datasets:
   datasets/content_vectorized:
     name: content_vectorized
@@ -301,6 +287,116 @@ gemContainer:
       - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/SimplifiedBedrock.py
       dependencies: null
       createdAt: '2023-12-27 16:36:57'
+    gems/Bedrock:
+      name: Bedrock
+      category: Machine Learning
+      subCategory: ''
+      description: null
+      author: sumitpaul@prophecy.io
+      mode: batch
+      files:
+      - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/Bedrock.py
+      dependencies: []
+      createdAt: '2024-01-10 11:54:29'
+    gems/Binary:
+      name: Binary
+      category: Source/Target
+      subCategory: File
+      description: null
+      author: sumitpaul@prophecy.io
+      mode: batch
+      files:
+      - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/BinaryFormat.py
+      dependencies: []
+      createdAt: '2024-01-10 11:55:51'
+    gems/OpenAI:
+      name: OpenAI
+      category: Machine Learning
+      subCategory: ''
+      description: null
+      author: sumitpaul@prophecy.io
+      mode: batch
+      files:
+      - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/OpenAISpec.py
+      dependencies: []
+      createdAt: '2024-01-10 11:56:37'
+    gems/OpenSearchLookup:
+      name: OpenSearchLookup
+      category: Machine Learning
+      subCategory: ''
+      description: null
+      author: sumitpaul@prophecy.io
+      mode: batch
+      files:
+      - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/OpenSearchLookup.py
+      dependencies: []
+      createdAt: '2024-01-10 11:57:37'
+    gems/pinecone:
+      name: pinecone
+      category: Source/Target
+      subCategory: Warehouse
+      description: null
+      author: sumitpaul@prophecy.io
+      mode: batch
+      files:
+      - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/PineconeFormatSpec.py
+      dependencies: []
+      createdAt: '2024-01-10 11:58:14'
+    gems/PineconeLookup:
+      name: PineconeLookup
+      category: Machine Learning
+      subCategory: ''
+      description: null
+      author: sumitpaul@prophecy.io
+      mode: batch
+      files:
+      - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/PineconeLookup.py
+      dependencies: []
+      createdAt: '2024-01-10 11:58:50'
+    gems/SageMakerEndpoint:
+      name: SageMakerEndpoint
+      category: Machine Learning
+      subCategory: ''
+      description: null
+      author: sumitpaul@prophecy.io
+      mode: batch
+      files:
+      - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/SageMakerEndpoint.py
+      dependencies: []
+      createdAt: '2024-01-10 11:59:28'
+    gems/TextProcessing:
+      name: TextProcessing
+      category: Machine Learning
+      subCategory: ''
+      description: null
+      author: sumitpaul@prophecy.io
+      mode: batch
+      files:
+      - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/TextProcessing.py
+      dependencies: []
+      createdAt: '2024-01-10 12:00:17'
+    gems/Watermark:
+      name: Watermark
+      category: Transform
+      subCategory: ''
+      description: null
+      author: sumitpaul@prophecy.io
+      mode: batch
+      files:
+      - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/Watermark.py
+      dependencies: []
+      createdAt: '2024-01-10 12:01:13'
+    gems/OpenSearch:
+      name: OpenSearch
+      category: Source/Target
+      subCategory: Warehouse
+      description: null
+      author: sumitpaul@prophecy.io
+      mode: batch
+      files:
+      - sumitpaulprophecyioteam_optumgenaichatbottemplate/gems/OpenSearch.py
+      dependencies: []
+      createdAt: '2024-01-10 15:13:07'
   dependencies: null
 functions:
   author: null
@@ -388,14 +484,6 @@ projectDependencies:
     isDefault: true
     author: null
     createdAt: '2023-12-05 15:13:03'
-  '16491':
-    projectUID: 16491
-    projectName: ProphecySparkMachineLearningPython
-    repositoryPath: gitUri=https://github.com/prophecy-io/spark-machine-learning-python&subPath=/
-    version: ProphecySparkMachineLearningPython/0.0.3
-    isDefault: false
-    author: null
-    createdAt: '2023-12-11 14:36:30'
 flags:
   shouldAddDefaultDependenciesIfAbsent: true
 pipelineConfigurations: {}

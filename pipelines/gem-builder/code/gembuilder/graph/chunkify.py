@@ -11,4 +11,4 @@ def chunkify(spark: SparkSession, in0: DataFrame) -> DataFrame:
     from spark_ai.files.text import FileTextUtils
     FileTextUtils().register_udfs(spark)
 
-    return in0.withColumn("result_chunks", expr("text_split_into_chunks(text, 1000, 20)"))
+    return in0.withColumn("result_chunks", expr("text_split_into_chunks(text, 1000, 0)"))

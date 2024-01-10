@@ -13,7 +13,7 @@
       "language" : "python",
       "udfs" : [ ],
       "functionPackageName" : "sumitpaulprophecyioteam.optumgenaichatbottemplate.functions",
-      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions", "sumitpaulprophecyioteam.prophecysparkmachinelearningpython.functions", "prophecy.streaming.functions" ]
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.streaming.functions", "prophecy.warehouse.functions" ]
     },
     "udafs" : {
       "language" : "python",
@@ -79,16 +79,12 @@
       "projectName" : "ProphecySparkBasicsPython",
       "externalDependencies" : [ ]
     }, {
-      "projectUID" : "12655",
-      "projectName" : "ProphecyWarehousePython",
-      "externalDependencies" : [ ]
-    }, {
-      "projectUID" : "16491",
-      "projectName" : "ProphecySparkMachineLearningPython",
-      "externalDependencies" : [ ]
-    }, {
       "projectUID" : "12656",
       "projectName" : "ProphecyStreamingPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
       "externalDependencies" : [ ]
     } ],
     "isImported" : false,
@@ -133,61 +129,189 @@
     "target" : "SBU0JkDz6gi57TbGVQGXG$$6Sav0KMPv0_mLmDyKXr0J",
     "targetPort" : "jolLHWiVpkXCSoQuZiAek$$OgsPrLdF8p9ch00f3gJzh"
   }, {
-    "id" : "tocYCQZqyBKohUbuJ1GhW$$-vUuF59z0NozWk2kiMJEx",
-    "source" : "6822Z9fX0XH3fLg815XxD$$FGKNXRRWamK8HYzA1nNeN",
-    "sourcePort" : "I_qsXmw_GyiBoHG90s8IX$$Z-t9F0CqkUN5kQe_DMbgs",
-    "target" : "-6Vpfx0gnXXwq98byDZfa$$JDGVuM5i38rjigMB9T2Sk",
-    "targetPort" : "dg4HrKjHQuTYmcxbVnfiU$$ZEzKeU9uue8izEUcKVaMH"
-  }, {
-    "id" : "kt_zZc2FjfokX-p3Itzbv$$l33cUVHSGz-B2pPIK0Gto",
-    "source" : "O3ocFm1u4bZd-Pu1XwkcG$$_eMxxZX0aBK0tICJ1vb3z",
-    "sourcePort" : "7tHgpYT-ijEA31gZzCDKE$$5JuuiJCpmFhEbs7UnQp-j",
-    "target" : "6822Z9fX0XH3fLg815XxD$$FGKNXRRWamK8HYzA1nNeN",
-    "targetPort" : "8p7JEQ2oA903WkzjpiC8p$$mzxR3eIWgYr5LxBM7-2Pk"
-  }, {
-    "id" : "cOvutyWcR9Eg3QKBoeaL0$$z1gKvBF8eSqJQWoNJ2IZT",
-    "source" : "2ByY-qRkZfuR9j39wYOAW$$RQdObqwrv3KaPasd9A4Jw",
-    "sourcePort" : "byetsazB0EbvOtbHxU9i0$$iANBqf67Ox7wbZ1k9bg4r",
-    "target" : "O3ocFm1u4bZd-Pu1XwkcG$$_eMxxZX0aBK0tICJ1vb3z",
-    "targetPort" : "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA"
-  }, {
-    "id" : "30TvE-Ge05GwZZHN5LuhK$$4vv_gNhRJi_CMWhy8IIeH",
-    "source" : "7YaXJlNyanLhwaDCDJ1zT$$PysBaot86CYLBz7bgGtuA",
-    "sourcePort" : "EI6ejugowh4dB07TppxO6$$hfEQPy1ccx5yS6-x0emWN",
-    "target" : "DuUDj1SWZ18Bi4gVwdGYo$$5MS1EfEzcSSYArRwZ0gZw",
-    "targetPort" : "osX01bftP6RjQV7uhUcyu$$MVPm3eSk-KQDyrbr4RrsM"
-  }, {
-    "id" : "8Pr98blhsoIga8iLgolFR",
-    "source" : "V-EnuQ3erLe0KhG1AH2is$$3KbNbs7tNfDZyhki3AVmQ",
-    "sourcePort" : "wsaGOrINdOSzYmKXG48u6$$PCANZnyovYM_xYIweR27p",
-    "target" : "2ByY-qRkZfuR9j39wYOAW$$RQdObqwrv3KaPasd9A4Jw",
-    "targetPort" : "dI5RPAZF9AMS8cgqCySRY$$LXCArym5Vf984xT6rwEzU"
-  }, {
-    "id" : "nZAK2YIfc3vzvAZpEuTtm",
-    "source" : "DuUDj1SWZ18Bi4gVwdGYo$$5MS1EfEzcSSYArRwZ0gZw",
-    "sourcePort" : "_43Q5lQOvxCY0Mb6QM468$$I51tEotPm1dW3NsbNFdOT",
-    "target" : "iVRrshQ2a37FwtUpZ7zR5$$hgyniJjhayuF3q3rcKTSE",
-    "targetPort" : "xAFKJ0pLHZJ3vp9ZJFijL$$Z5G_CdL0TNAimHcrJeUiR"
-  }, {
-    "id" : "e6mfMr7UIzya2ZsGgsNKE$$cptuyq-pDYQneVvdvUOpx",
-    "source" : "SBU0JkDz6gi57TbGVQGXG$$6Sav0KMPv0_mLmDyKXr0J",
-    "sourcePort" : "uO1tKVkIEFK6443_yCBIr$$zn_JGueSil90LqIBp8fzO",
-    "target" : "O_kocRGAudOYxKoIO7mHE$$boqqY1hughkbZJHVEm7ZC",
-    "targetPort" : "de0celOKN-fvC3Vqqs-O_$$AtJQOvhEb52Uf7NBBN67T"
-  }, {
-    "id" : "EREem_Nqv-Xk-C4jzAEtx",
-    "source" : "O_kocRGAudOYxKoIO7mHE$$boqqY1hughkbZJHVEm7ZC",
-    "sourcePort" : "K3r6nO8V0wbqsik49AvFi$$cdwi1i2YwK1kScwhcTXOP",
-    "target" : "FtwvIbY6NtkCIMfDbfV-T$$j43gl4SYzyrYzBaKoWnnY",
-    "targetPort" : "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D"
-  }, {
     "id" : "myLl-hWabE2Be7hxmzHyS$$mWpaT3TZLwfAEMoB-xGcl",
     "source" : "iVRrshQ2a37FwtUpZ7zR5$$hgyniJjhayuF3q3rcKTSE",
     "sourcePort" : "_G7WQB1-WUMsNIGtOWCw6$$NAdQN76yFkXdU8k8NFZTF",
     "target" : "-qgmT2pV_023b84WIhRQp$$YOetBy6th6Tp3Z46okao6",
     "targetPort" : "5scM-GNFADzekppgB4pKZ$$gXvMkwtJ0qHrv8lCXt_Gs"
+  }, {
+    "id" : "tOFW9rZcVmli30YbR291_$$JgmnlZyACPd__Q1pgrHey",
+    "source" : "9cGcwRHKQECc4zdrHrwNW$$joy1bp2Gx1WlUy6FO48S-",
+    "sourcePort" : "DftVrkuzaxhf-pZp3ypM4$$LU2syaw6JhE5WaQpGGznM",
+    "target" : "O3ocFm1u4bZd-Pu1XwkcG$$_eMxxZX0aBK0tICJ1vb3z",
+    "targetPort" : "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA"
+  }, {
+    "id" : "4fuXXscDbyISs_jwZl60u",
+    "source" : "V-EnuQ3erLe0KhG1AH2is$$3KbNbs7tNfDZyhki3AVmQ",
+    "sourcePort" : "wsaGOrINdOSzYmKXG48u6$$PCANZnyovYM_xYIweR27p",
+    "target" : "9cGcwRHKQECc4zdrHrwNW$$joy1bp2Gx1WlUy6FO48S-",
+    "targetPort" : "jcs-ZmTVcs_SuJB41ekwp$$znx_Nh5x8QCF5pyp_sDko"
+  }, {
+    "id" : "wblndO1hzHLfbDWvJbLFc$$OXwumGsaQkldtgvUHHuvv",
+    "source" : "O3ocFm1u4bZd-Pu1XwkcG$$_eMxxZX0aBK0tICJ1vb3z",
+    "sourcePort" : "7tHgpYT-ijEA31gZzCDKE$$5JuuiJCpmFhEbs7UnQp-j",
+    "target" : "WaFdQrjdxf1G3armN14yZ$$wiZ141USWScZ-XJXKBE_p",
+    "targetPort" : "LW9n6EAmuBVksZy1GgVXH$$0g3m9yFTK5MET5yYSAj_i"
+  }, {
+    "id" : "pC6TtICOHVxMyecAwKshS",
+    "source" : "WaFdQrjdxf1G3armN14yZ$$wiZ141USWScZ-XJXKBE_p",
+    "sourcePort" : "BTuc0PbvQVS5vro61XYBW$$Y3tUjBhJIOzChaJyNByDr",
+    "target" : "-6Vpfx0gnXXwq98byDZfa$$JDGVuM5i38rjigMB9T2Sk",
+    "targetPort" : "dg4HrKjHQuTYmcxbVnfiU$$ZEzKeU9uue8izEUcKVaMH"
+  }, {
+    "id" : "ojDlgHFNOV-2r-FQ_EXnO$$NmTNciRr-DUSKKEMTw2nU",
+    "source" : "7YaXJlNyanLhwaDCDJ1zT$$PysBaot86CYLBz7bgGtuA",
+    "sourcePort" : "EI6ejugowh4dB07TppxO6$$hfEQPy1ccx5yS6-x0emWN",
+    "target" : "YFbvUXZsp1qWvTEBdJezd$$tuOc5-_0GQQAhldx9LYLA",
+    "targetPort" : "nMjrOwpEEPZxESdhgJr3M$$TN8xC8iM08OM7-cBfSFv5"
+  }, {
+    "id" : "b_otbv96AkeQRNF3_Oo3c",
+    "source" : "YFbvUXZsp1qWvTEBdJezd$$tuOc5-_0GQQAhldx9LYLA",
+    "sourcePort" : "bvYtKWVSRy2nXjmhDwcwO$$XG4cPIbcmeAWhckOEJmqc",
+    "target" : "iVRrshQ2a37FwtUpZ7zR5$$hgyniJjhayuF3q3rcKTSE",
+    "targetPort" : "xAFKJ0pLHZJ3vp9ZJFijL$$Z5G_CdL0TNAimHcrJeUiR"
+  }, {
+    "id" : "23M6cm4y0VdmS_3QIuWBr",
+    "source" : "SBU0JkDz6gi57TbGVQGXG$$6Sav0KMPv0_mLmDyKXr0J",
+    "sourcePort" : "uO1tKVkIEFK6443_yCBIr$$zn_JGueSil90LqIBp8fzO",
+    "target" : "8DJv8Mrq5gQMzjMQKhHtS$$iOvplel64FUSHj7Wvueia",
+    "targetPort" : "R70_zH1bGrW295AMxFt54$$zzqUo4cVBW7XW826PFHbN"
+  }, {
+    "id" : "eqd0fExPFZGCrbOyOvK7V$$R3xyONPYxSJ-ykYzmnh04",
+    "source" : "8DJv8Mrq5gQMzjMQKhHtS$$iOvplel64FUSHj7Wvueia",
+    "sourcePort" : "2w-i6SGYgLs4SUXhEKgm2$$zvu9ewdVPfe72xmUtZtDS",
+    "target" : "FtwvIbY6NtkCIMfDbfV-T$$j43gl4SYzyrYzBaKoWnnY",
+    "targetPort" : "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D"
   } ],
   "processes" : {
+    "9cGcwRHKQECc4zdrHrwNW$$joy1bp2Gx1WlUy6FO48S-" : {
+      "id" : "9cGcwRHKQECc4zdrHrwNW$$joy1bp2Gx1WlUy6FO48S-",
+      "component" : "Bedrock",
+      "metadata" : {
+        "label" : "text_embeddings",
+        "slug" : "text_embeddings",
+        "x" : -560,
+        "y" : -240,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "jcs-ZmTVcs_SuJB41ekwp$$znx_Nh5x8QCF5pyp_sDko",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "create_time",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : true
+        } ],
+        "outputs" : [ {
+          "id" : "DftVrkuzaxhf-pZp3ypM4$$LU2syaw6JhE5WaQpGGznM",
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "text",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "create_time",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bedrock_embedding",
+              "type" : {
+                "type" : "array",
+                "elementType" : "float",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bedrock_error",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
+      },
+      "properties" : {
+        "aws_region" : "us-east-1",
+        "credential_manual_secret" : "",
+        "credential_manual_key" : "",
+        "credential_type" : "databricks",
+        "credential_db_scope" : "aws_main",
+        "credential_db_secret" : "secret_value",
+        "operation" : "embed_texts",
+        "embed_text_column_name" : "text",
+        "credential_db_key" : "secret_key"
+      },
+      "componentInfo" : {
+        "gemId" : "gems/Bedrock",
+        "projectName" : "optum_gen_ai_chatbot_template"
+      }
+    },
     "0Au1n1rc93bQnavHWu8FH$$FQgXN29miTpgD-DJwKZbb" : {
       "id" : "0Au1n1rc93bQnavHWu8FH$$FQgXN29miTpgD-DJwKZbb",
       "component" : "Reformat",
@@ -316,18 +440,18 @@
         "columnsSelector" : [ "eAdmnSRtgPnqAxeWqbqyV$$aKdv393LQblxf7tbs5tY6##timestamp", "eAdmnSRtgPnqAxeWqbqyV$$aKdv393LQblxf7tbs5tY6##value.msg", "eAdmnSRtgPnqAxeWqbqyV$$aKdv393LQblxf7tbs5tY6##value" ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "gemId" : "gitUri=&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
-    "DuUDj1SWZ18Bi4gVwdGYo$$5MS1EfEzcSSYArRwZ0gZw" : {
-      "id" : "DuUDj1SWZ18Bi4gVwdGYo$$5MS1EfEzcSSYArRwZ0gZw",
-      "component" : "SageMakerEndpoint",
+    "WaFdQrjdxf1G3armN14yZ$$wiZ141USWScZ-XJXKBE_p" : {
+      "id" : "WaFdQrjdxf1G3armN14yZ$$wiZ141USWScZ-XJXKBE_p",
+      "component" : "OpenSearchLookup",
       "metadata" : {
-        "label" : "answer_question",
-        "slug" : "answer_question",
-        "x" : 860,
-        "y" : -80,
+        "label" : "OpenSearchLookup",
+        "slug" : "OpenSearchLookup",
+        "x" : -260,
+        "y" : -240,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -335,35 +459,14 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "osX01bftP6RjQV7uhUcyu$$MVPm3eSk-KQDyrbr4RrsM",
+          "id" : "LW9n6EAmuBVksZy1GgVXH$$0g3m9yFTK5MET5yYSAj_i",
           "slug" : "in0",
           "schema" : {
             "type" : "struct",
             "fields" : [ {
-              "name" : "create_time",
-              "type" : {
-                "type" : "struct",
-                "fields" : [ {
-                  "name" : "start",
-                  "type" : "timestamp",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "end",
-                  "type" : "timestamp",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                } ]
-              },
-              "nullable" : false,
+              "name" : "text",
+              "type" : "string",
+              "nullable" : true,
               "metadata" : {
                 "description" : "",
                 "mappings" : [ ],
@@ -379,16 +482,29 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "content_chunk",
-              "type" : "string",
-              "nullable" : false,
+              "name" : "create_time",
+              "type" : "timestamp",
+              "nullable" : true,
               "metadata" : {
                 "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "input",
+              "name" : "embeddings",
+              "type" : {
+                "type" : "array",
+                "elementType" : "float",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bedrock_error",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
@@ -401,35 +517,14 @@
           "isStreaming" : false
         } ],
         "outputs" : [ {
-          "id" : "_43Q5lQOvxCY0Mb6QM468$$I51tEotPm1dW3NsbNFdOT",
+          "id" : "BTuc0PbvQVS5vro61XYBW$$Y3tUjBhJIOzChaJyNByDr",
           "slug" : "out",
           "schema" : {
             "type" : "struct",
             "fields" : [ {
-              "name" : "create_time",
-              "type" : {
-                "type" : "struct",
-                "fields" : [ {
-                  "name" : "start",
-                  "type" : "timestamp",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "end",
-                  "type" : "timestamp",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                } ]
-              },
-              "nullable" : false,
+              "name" : "text",
+              "type" : "string",
+              "nullable" : true,
               "metadata" : {
                 "description" : "",
                 "mappings" : [ ],
@@ -445,16 +540,29 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "content_chunk",
-              "type" : "string",
-              "nullable" : false,
+              "name" : "create_time",
+              "type" : "timestamp",
+              "nullable" : true,
               "metadata" : {
                 "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "input",
+              "name" : "embeddings",
+              "type" : {
+                "type" : "array",
+                "elementType" : "float",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bedrock_error",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
@@ -463,33 +571,42 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "sagemaker_answer",
+              "name" : "opensearch_matches",
               "type" : {
-                "type" : "struct",
-                "fields" : [ {
-                  "name" : "choices",
-                  "type" : {
-                    "type" : "array",
-                    "elementType" : "string",
-                    "containsNull" : true
-                  },
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "error",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                } ]
+                "type" : "array",
+                "elementType" : {
+                  "type" : "struct",
+                  "fields" : [ {
+                    "name" : "id",
+                    "type" : "string",
+                    "nullable" : false,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "score",
+                    "type" : "float",
+                    "nullable" : false,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  } ]
+                },
+                "containsNull" : false
               },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "opensearch_error",
+              "type" : "string",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -505,29 +622,23 @@
         "autoUpdateOnRun" : true
       },
       "properties" : {
-        "model_max_new_tokens" : 512,
-        "aws_region" : "us-east-1",
-        "credential_manual_secret" : "",
-        "qa_query_column_name" : "input",
-        "credential_manual_key" : "",
-        "model_top_p" : "0.9",
+        "credential_manual_api_secrets" : "",
+        "credential_db_secrets" : "secret",
+        "index_name" : "optum-gen-ai-pdf-index",
+        "host" : "vrq94ns7ekrnmygy1lx6.eu-west-1.aoss.amazonaws.com",
+        "vector_id_column_name" : "vector_ids",
         "credential_type" : "databricks",
-        "order_by_column" : null,
-        "credential_db_scope" : "aws_main",
-        "model_temperature" : "0.6",
-        "credential_db_secret" : "secret_value",
-        "operation" : "answer_question",
-        "embed_text_column_name" : null,
-        "qa_context_column_name" : "content_chunk",
-        "credential_db_key" : "secret_key",
-        "model_endpoint_name" : "meta-textgeneration-llama-2-7b-f-2023-10-09-19-36-35-366",
-        "limit" : "10",
-        "qa_template" : "Answer the question based on the context below.\nContext:\n```\n{context}\n```\nQuestion: \n```\n{query}\n```\nAnswer:\n",
-        "group_data" : true
+        "credential_db_scope" : "opensearch_serverless",
+        "service" : "aoss",
+        "credential_db_key" : "access_key",
+        "region" : "eu-west-1",
+        "vector_column_name" : "embeddings",
+        "top_k" : 5,
+        "credential_manual_api_key" : ""
       },
       "componentInfo" : {
-        "gemId" : "gitUri=https://github.com/prophecy-io/spark-machine-learning-python&subPath=/&tag=ProphecySparkMachineLearningPython/0.0.3&projectSubscriptionProjectId=16491&path=gems/SageMakerEndpoint",
-        "projectName" : "ProphecySparkMachineLearningPython"
+        "gemId" : "gems/OpenSearchLookup",
+        "projectName" : "optum_gen_ai_chatbot_template"
       }
     },
     "e4jpRg8cLPUWrINL_HUZt$$zTipQzlB6GBaLotPryge-" : {
@@ -635,7 +746,7 @@
         "columnsSelector" : [ "eU8yXRwvM0wAMyEEzm-95$$87lCPjpqm2Stz4cD3i1iO##ts", "eU8yXRwvM0wAMyEEzm-95$$87lCPjpqm2Stz4cD3i1iO##text" ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "gemId" : "gitUri=&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -872,8 +983,218 @@
         "delimiter" : "-"
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/FlattenSchema",
+        "gemId" : "gitUri=&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/FlattenSchema",
         "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "YFbvUXZsp1qWvTEBdJezd$$tuOc5-_0GQQAhldx9LYLA" : {
+      "id" : "YFbvUXZsp1qWvTEBdJezd$$tuOc5-_0GQQAhldx9LYLA",
+      "component" : "SageMakerEndpoint",
+      "metadata" : {
+        "label" : "answer_question",
+        "slug" : "answer_question",
+        "x" : 860,
+        "y" : -80,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "nMjrOwpEEPZxESdhgJr3M$$TN8xC8iM08OM7-cBfSFv5",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "create_time",
+              "type" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "start",
+                  "type" : "timestamp",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "end",
+                  "type" : "timestamp",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "content_chunk",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "input",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "bvYtKWVSRy2nXjmhDwcwO$$XG4cPIbcmeAWhckOEJmqc",
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "create_time",
+              "type" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "start",
+                  "type" : "timestamp",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "end",
+                  "type" : "timestamp",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ts",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "content_chunk",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "input",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "sagemaker_answer",
+              "type" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "choices",
+                  "type" : {
+                    "type" : "array",
+                    "elementType" : "string",
+                    "containsNull" : true
+                  },
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "error",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
+      },
+      "properties" : {
+        "model_max_new_tokens" : 512,
+        "aws_region" : "us-east-1",
+        "credential_manual_secret" : "",
+        "qa_query_column_name" : "input",
+        "credential_manual_key" : "",
+        "model_top_p" : "0.9",
+        "credential_type" : "databricks",
+        "order_by_column" : null,
+        "credential_db_scope" : "aws_main",
+        "model_temperature" : "0.6",
+        "credential_db_secret" : "secret_value",
+        "operation" : "answer_question",
+        "embed_text_column_name" : null,
+        "qa_context_column_name" : "content_chunk",
+        "credential_db_key" : "secret_key",
+        "model_endpoint_name" : "meta-textgeneration-llama-2-7b-f-2023-10-09-19-36-35-366",
+        "limit" : "10",
+        "qa_template" : "Answer the question based on the context below.\nContext:\n```\n{context}\n```\nQuestion: \n```\n{query}\n```\nAnswer:\n",
+        "group_data" : true
+      },
+      "componentInfo" : {
+        "gemId" : "gems/SageMakerEndpoint",
+        "projectName" : "optum_gen_ai_chatbot_template"
       }
     },
     "qD_DL12zv8byiKjzKPNim$$7F8yKldV0V2od5bdKUk6j" : {
@@ -1068,7 +1389,7 @@
         "columnsSelector" : [ "xAFKJ0pLHZJ3vp9ZJFijL$$Z5G_CdL0TNAimHcrJeUiR##create_time.start", "xAFKJ0pLHZJ3vp9ZJFijL$$Z5G_CdL0TNAimHcrJeUiR##sagemaker_answer", "xAFKJ0pLHZJ3vp9ZJFijL$$Z5G_CdL0TNAimHcrJeUiR##sagemaker_answer.choices", "xAFKJ0pLHZJ3vp9ZJFijL$$Z5G_CdL0TNAimHcrJeUiR##input", "xAFKJ0pLHZJ3vp9ZJFijL$$Z5G_CdL0TNAimHcrJeUiR##create_time" ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "gemId" : "gitUri=&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -1297,205 +1618,8 @@
         } ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Aggregate",
+        "gemId" : "gitUri=&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Aggregate",
         "projectName" : "ProphecySparkBasicsPython"
-      }
-    },
-    "6822Z9fX0XH3fLg815XxD$$FGKNXRRWamK8HYzA1nNeN" : {
-      "id" : "6822Z9fX0XH3fLg815XxD$$FGKNXRRWamK8HYzA1nNeN",
-      "component" : "OpenSearchLookup",
-      "metadata" : {
-        "label" : "OpenSearchLookup",
-        "slug" : "OpenSearchLookup",
-        "x" : -260,
-        "y" : -240,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "8p7JEQ2oA903WkzjpiC8p$$mzxR3eIWgYr5LxBM7-2Pk",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "text",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "ts",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "create_time",
-              "type" : "timestamp",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "embeddings",
-              "type" : {
-                "type" : "array",
-                "elementType" : "float",
-                "containsNull" : true
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "bedrock_error",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "I_qsXmw_GyiBoHG90s8IX$$Z-t9F0CqkUN5kQe_DMbgs",
-          "slug" : "out",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "text",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "ts",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "create_time",
-              "type" : "timestamp",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "embeddings",
-              "type" : {
-                "type" : "array",
-                "elementType" : "float",
-                "containsNull" : true
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "bedrock_error",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "opensearch_matches",
-              "type" : {
-                "type" : "array",
-                "elementType" : {
-                  "type" : "struct",
-                  "fields" : [ {
-                    "name" : "id",
-                    "type" : "string",
-                    "nullable" : false,
-                    "metadata" : {
-                      "description" : "",
-                      "mappings" : [ ],
-                      "tags" : [ ]
-                    }
-                  }, {
-                    "name" : "score",
-                    "type" : "float",
-                    "nullable" : false,
-                    "metadata" : {
-                      "description" : "",
-                      "mappings" : [ ],
-                      "tags" : [ ]
-                    }
-                  } ]
-                },
-                "containsNull" : false
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "opensearch_error",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : true,
-        "autoUpdateOnRun" : true
-      },
-      "properties" : {
-        "credential_manual_api_secrets" : "",
-        "credential_db_secrets" : "secret",
-        "index_name" : "optum-gen-ai-pdf-index",
-        "host" : "vrq94ns7ekrnmygy1lx6.eu-west-1.aoss.amazonaws.com",
-        "vector_id_column_name" : "vector_ids",
-        "credential_type" : "databricks",
-        "credential_db_scope" : "opensearch_serverless",
-        "service" : "aoss",
-        "credential_db_key" : "access_key",
-        "region" : "eu-west-1",
-        "vector_column_name" : "embeddings",
-        "top_k" : 5,
-        "credential_manual_api_key" : ""
-      },
-      "componentInfo" : {
-        "gemId" : "gitUri=https://github.com/prophecy-io/spark-machine-learning-python&subPath=/&tag=ProphecySparkMachineLearningPython/0.0.3&projectSubscriptionProjectId=16491&path=gems/OpenSearchLookup",
-        "projectName" : "ProphecySparkMachineLearningPython"
       }
     },
     "FtwvIbY6NtkCIMfDbfV-T$$j43gl4SYzyrYzBaKoWnnY" : {
@@ -1674,7 +1798,7 @@
         "columnsSelector" : [ "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##embedding", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##ts", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##create_time", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##content_chunk", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##id", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##opensearch_matches", "ENyHXFlUYVUvpnAdgYC4N$$ZNB74rTqSTboIMy3zJ51D##text" ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "gemId" : "gitUri=&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -1719,141 +1843,13 @@
         "datasetId" : "datasets/bot_message"
       }
     },
-    "2ByY-qRkZfuR9j39wYOAW$$RQdObqwrv3KaPasd9A4Jw" : {
-      "id" : "2ByY-qRkZfuR9j39wYOAW$$RQdObqwrv3KaPasd9A4Jw",
-      "component" : "Bedrock",
-      "metadata" : {
-        "label" : "Bedrock",
-        "slug" : "Bedrock",
-        "x" : -560,
-        "y" : -240,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "dI5RPAZF9AMS8cgqCySRY$$LXCArym5Vf984xT6rwEzU",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "text",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "ts",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "create_time",
-              "type" : "timestamp",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : true
-        } ],
-        "outputs" : [ {
-          "id" : "byetsazB0EbvOtbHxU9i0$$iANBqf67Ox7wbZ1k9bg4r",
-          "slug" : "out",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "text",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "ts",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "create_time",
-              "type" : "timestamp",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "bedrock_embedding",
-              "type" : {
-                "type" : "array",
-                "elementType" : "float",
-                "containsNull" : true
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "bedrock_error",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : true,
-        "autoUpdateOnRun" : true
-      },
-      "properties" : {
-        "aws_region" : "us-east-1",
-        "credential_manual_secret" : "",
-        "credential_manual_key" : "",
-        "credential_type" : "databricks",
-        "credential_db_scope" : "aws_main",
-        "credential_db_secret" : "secret_value",
-        "operation" : "embed_texts",
-        "embed_text_column_name" : "text",
-        "credential_db_key" : "secret_key"
-      },
-      "componentInfo" : {
-        "gemId" : "gitUri=https://github.com/prophecy-io/spark-machine-learning-python&subPath=/&tag=ProphecySparkMachineLearningPython/0.0.3&projectSubscriptionProjectId=16491&path=gems/Bedrock",
-        "projectName" : "ProphecySparkMachineLearningPython"
-      }
-    },
-    "O_kocRGAudOYxKoIO7mHE$$boqqY1hughkbZJHVEm7ZC" : {
-      "id" : "O_kocRGAudOYxKoIO7mHE$$boqqY1hughkbZJHVEm7ZC",
+    "8DJv8Mrq5gQMzjMQKhHtS$$iOvplel64FUSHj7Wvueia" : {
+      "id" : "8DJv8Mrq5gQMzjMQKhHtS$$iOvplel64FUSHj7Wvueia",
       "component" : "Watermark",
       "metadata" : {
         "label" : "with_watermark",
         "slug" : "with_watermark",
-        "x" : 320,
+        "x" : 300,
         "y" : -80,
         "phase" : 0,
         "cache" : false,
@@ -1862,7 +1858,7 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "de0celOKN-fvC3Vqqs-O_$$AtJQOvhEb52Uf7NBBN67T",
+          "id" : "R70_zH1bGrW295AMxFt54$$zzqUo4cVBW7XW826PFHbN",
           "slug" : "in0",
           "schema" : {
             "type" : "struct",
@@ -1959,7 +1955,7 @@
           "isStreaming" : false
         } ],
         "outputs" : [ {
-          "id" : "K3r6nO8V0wbqsik49AvFi$$cdwi1i2YwK1kScwhcTXOP",
+          "id" : "2w-i6SGYgLs4SUXhEKgm2$$zvu9ewdVPfe72xmUtZtDS",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
@@ -1969,7 +1965,7 @@
       "properties" : {
         "watermarks" : [ {
           "isStreamingDF" : false,
-          "portId" : "de0celOKN-fvC3Vqqs-O_$$AtJQOvhEb52Uf7NBBN67T",
+          "portId" : "R70_zH1bGrW295AMxFt54$$zzqUo4cVBW7XW826PFHbN",
           "disableTextBox" : true,
           "portSlug" : "in0",
           "expression" : "create_time",
@@ -1978,8 +1974,8 @@
         "isWatermarkingEnabled" : true
       },
       "componentInfo" : {
-        "gemId" : "gitUri=https://github.com/prophecy-io/spark-machine-learning-python&subPath=/&tag=ProphecySparkMachineLearningPython/0.0.3&projectSubscriptionProjectId=16491&path=gems/Watermark",
-        "projectName" : "ProphecySparkMachineLearningPython"
+        "gemId" : "gems/Watermark",
+        "projectName" : "optum_gen_ai_chatbot_template"
       }
     },
     "SBU0JkDz6gi57TbGVQGXG$$6Sav0KMPv0_mLmDyKXr0J" : {
@@ -2240,7 +2236,7 @@
         "headAlias" : "in0"
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Join",
+        "gemId" : "gitUri=&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Join",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -2367,7 +2363,7 @@
         "columnsSelector" : [ "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA##bedrock_embedding", "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA##ts", "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA##text", "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA##bedrock_error", "vfSAGvGpdNG6SglJSNogG$$VTGPGh5otKK05E58wDamA##create_time" ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "gemId" : "gitUri=&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
       }
     }

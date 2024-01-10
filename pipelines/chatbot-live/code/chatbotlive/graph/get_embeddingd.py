@@ -6,7 +6,7 @@ from prophecy.libs import typed_lit
 from chatbotlive.config.ConfigStore import *
 from chatbotlive.udfs.UDFs import *
 
-def OpenAI(spark: SparkSession, in0: DataFrame) -> DataFrame:
+def get_embeddingd(spark: SparkSession, in0: DataFrame) -> DataFrame:
     from spark_ai.llms.openai import OpenAiLLM
     from pyspark.dbutils import DBUtils
     OpenAiLLM(api_key = DBUtils(spark).secrets.get(scope = "open_ai", key = "api_key")).register_udfs(spark = spark)

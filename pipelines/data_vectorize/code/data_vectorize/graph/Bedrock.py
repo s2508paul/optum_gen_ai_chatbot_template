@@ -6,7 +6,7 @@ from prophecy.libs import typed_lit
 from data_vectorize.config.ConfigStore import *
 from data_vectorize.udfs.UDFs import *
 
-def bedrock_embeddings(spark: SparkSession, in0: DataFrame) -> DataFrame:
+def Bedrock(spark: SparkSession, in0: DataFrame) -> DataFrame:
     from spark_ai.llms.bedrock import BedrockLLM
     from pyspark.sql.types import StringType
     from pyspark.dbutils import DBUtils

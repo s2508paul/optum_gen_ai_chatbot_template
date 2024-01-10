@@ -8,20 +8,20 @@ from prophecy.utils import *
 from chatbotlive.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_extract_fields = extract_fields(spark)
+    df_getQueries_msk = getQueries_msk(spark)
+    df_extract_fields = extract_fields(spark, df_getQueries_msk)
     df_formatting = formatting(spark, df_extract_fields)
-    df_OpenAI = OpenAI(spark, df_formatting)
-    df_PineconeLookup_1 = PineconeLookup_1(spark, df_OpenAI)
-    df_explode_matches = explode_matches(spark, df_PineconeLookup_1)
+    df_get_embeddingd = get_embeddingd(spark, df_formatting)
+    df_PineconeLookup_2 = PineconeLookup_2(spark, df_get_embeddingd)
+    df_explode_matches = explode_matches(spark, df_PineconeLookup_2)
     df_content_vectorized = content_vectorized(spark)
     df_with_original_content = with_original_content(spark, df_explode_matches, df_content_vectorized)
     df_with_watermark = with_watermark(spark, df_with_original_content)
     df_formatting_timestamp = formatting_timestamp(spark, df_with_watermark)
-    df_getQueries_msk = getQueries_msk(spark)
     df_collect_results = collect_results(spark, df_formatting_timestamp)
     df_answer_question = answer_question(spark, df_collect_results)
     df_prepare_payload = prepare_payload(spark, df_answer_question)
-    bot_message(spark, df_getQueries_msk)
+    bot_message(spark, df_prepare_payload)
 
 def main():
     spark = SparkSession.builder\

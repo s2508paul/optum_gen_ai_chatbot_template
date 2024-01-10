@@ -6,7 +6,7 @@ from prophecy.libs import typed_lit
 from chatbotlive.config.ConfigStore import *
 from chatbotlive.udfs.UDFs import *
 
-def PineconeLookup_1(spark: SparkSession, in0: DataFrame) -> DataFrame:
+def PineconeLookup_2(spark: SparkSession, in0: DataFrame) -> DataFrame:
     from pyspark.sql.functions import expr, array, struct
     from spark_ai.dbs.pinecone import PineconeDB, IdVector
     from pyspark.dbutils import DBUtils

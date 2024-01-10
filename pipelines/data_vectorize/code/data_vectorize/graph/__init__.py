@@ -10,12 +10,12 @@ from .test_chunk_overlap import test_chunk_overlap
 from .chunkify_docx import chunkify_docx
 from .docx_binaries import docx_binaries
 from .FlattenSchema_1 import FlattenSchema_1
+from .Bedrock import Bedrock
 from .optum_pdf import optum_pdf
 from .flatten_docx import flatten_docx
 from .get_ids import get_ids
 from .sample_df import sample_df
 from .parse_docx import parse_docx
-from .bedrock_embeddings import bedrock_embeddings
 from .document_ids import document_ids
 from .explode import explode
 from .rename import rename

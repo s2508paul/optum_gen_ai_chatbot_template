@@ -6,10 +6,10 @@ from .extract_fields import extract_fields
 from .Reformat import Reformat
 from .content_vectorized import content_vectorized
 from .bot_message import bot_message
-from .Bedrock import Bedrock
 from .prepare_payload import prepare_payload
 from .explode_matches import explode_matches
 from .getQueries_msk import getQueries_msk
 from .formatting_timestamp import formatting_timestamp
 from .collect_results import collect_results
+from .text_embeddings import text_embeddings
 from .with_original_content import with_original_content
